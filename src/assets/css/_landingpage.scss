@@ -75,9 +75,9 @@
 				    @media only screen and (max-width: 600px) {
 				    	margin-top: 0px;
 				    	height: auto;
-				    	width: 100%;
-				    	min-width: 375px;
-				    	margin-left: -6px;
+				    	width: 103%;
+				    	/*min-width: 400px;*/
+				    	
 				    }
 				    
 					.row{
@@ -175,9 +175,9 @@
 					}
 					@media only screen and (max-width: 600px) {
 						display: block;
-						width: 100%;
+						width: 103%;
 						height: auto;
-						min-width: 375px;
+						/*min-width: 400px;*/
 					}
 				}
 			}
@@ -191,61 +191,72 @@
 		}
 		.container {
 			.trust-company-logo {
+
 				img {
-					max-width: 200px;
-					@media only screen and (max-width: 600px) {
-						max-width: 70px;
+					@media only screen and (min-width: 600px) {
+						&:first-child {
+							margin-left: 0px;
+						}
+						margin-left: 60px;
 					}
 				}
+				#apple-logo{
+					@media only screen and (min-width: 600px) {
+						max-width: 82px;
+						max-height: 71px;
+						margin-top: 17px;
+					}
+					@media only screen and (max-width: 600px) {
+						    max-width: 40px;
+    						max-height: 20px;
+					}
+					
+				}
+				#celcom-logo{
+					max-width: 199px;
+					@media only screen and (max-width: 600px) {
+						    max-width: 77px;
+					}
 
+				}
+				#maxis-logo{
+					@media only screen and (min-width: 600px) {
+						max-width: 200px;
+						max-height: 73px;
+						margin-top: 17px;
+					}
+					@media only screen and (max-width: 600px) {
+						max-width: 63px;
+    					max-height: 20px;
+					}
+				}
+				#shell-logo{
+					@media only screen and (min-width: 600px) {
+						max-width: 294px;
+	    				max-height: 85px;
+	    				margin-top: 17px;
+    				}
+    				@media only screen and (max-width: 600px) {
+						    max-width: 80px;
+    						max-height: 20px;
+					}
+				}
+				#samsung-logo{
+					@media only screen and (min-width: 600px) {
+						max-width: 199px;
+						max-height: 30px;
+						margin-top: 46px;
+					}
+					@media only screen and (max-width: 600px) {
+						max-width: 79px;
+					    max-height: 11px;
+					    margin-top: 7px;
+					}
+				}
+			
 			}
 		}
 	}
-	.announcement-section {
-		background: #FFA2A2 0% 0% no-repeat padding-box;
-		border: 1px solid #FF0000;
-		padding-top: 20px;
-		.container-warning {
-			@media only screen and (min-width: 600px) {
-				max-width: 1378px;
-			}
-			.warning-img-title {
-				img{
-					width: 84px;
-					@media only screen and (max-width: 600px) {
-						width: 44px;
-						margin-left: 20px;
-					}
-					float: left;
-				}
-				h4{
-					margin: 0 0 50px 130px;
-					@media only screen and (max-width: 600px) {
-						margin: 0px 0 35px 105px;
-						font-size: 18px;
-						padding-top: 10px;
-					}
-					font-weight: 300;
-					color: #E91421;
-					font-size: 30px
-				}
 
-			}
-			.warning-description{
-				margin-left: 130px;
-				@media only screen and (max-width: 600px) {
-					margin-left: 20px;
-				}
-				p{
-					color: #E91421;
-					font-size: 18px;
-					@media only screen and (max-width: 600px) {
-						font-size: 14px;
-
-					}
-				}
-			}
-		}
-	}
 	
 }

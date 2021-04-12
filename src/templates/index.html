@@ -11,12 +11,12 @@
 {% block content %}
 <div class="main">
 	<div class="sank-rectangle"></div>
-	<div class="container container-herobanner">
+	<div class="container-fluid px-0 container-herobanner">
 		<div class="row herobanner">
-			<div class="herobanner-img-mobile">
-				<img src="assets/img/landingpage/Mask Group 21@2x.png">
+			<div class="herobanner-img-mobile col-md-12 col-sm-12 ">
+				<img src="{{f.landing_page_img('Mask Group 21@2x.png')}}">
 			</div>
-			<div class="col-lg-5 herobanner-title">
+			<div class="col-lg-5 col-md-12 col-sm-12 herobanner-title">
 				<h3>Lorem ipsum dolor sit amet, consectetur</h3>
 				<div class="search-box">
 					<div class="row">
@@ -51,7 +51,7 @@
 				</div>
 			</div>
 			<div class="col-lg-7 herobanner-img">
-				<img src="assets/img/landingpage/Mask Group 21@2x.png">
+				<img src="{{f.landing_page_img('Mask Group 21@2x.png')}}">
 			</div>
 		</div>
 		<div class="row trust-by-section">
@@ -60,26 +60,28 @@
 					<p>We are trusted by</p>
 				</div>
 				<div class="row trust-company-logo">
-					<img src="assets/img/companies/main/Image 620@2x.png">
-					<img src="assets/img/companies/main/Image 620@2x.png">
-					<img src="assets/img/companies/main/Image 620@2x.png">
-					<img src="assets/img/companies/main/Image 620@2x.png">
-					<img src="assets/img/companies/main/Image 620@2x.png">
+					<img id="apple-logo" src="{{f.companies_main_img('apple.png')}}">
+					<img id="celcom-logo" src="{{f.companies_main_img('celcom.png')}}">
+					<img id="maxis-logo" src="{{f.companies_main_img('maxis.jpeg')}}">
+					<img id="shell-logo" src="{{f.companies_main_img('shell.png')}}">
+					<img id="samsung-logo" src="{{f.companies_main_img('samsung.png')}}">
+				
 				</div>
 			</div>
 		</div>
 		
+		
 	</div>
-	<div class="row announcement-section">
-		<div class="container container-warning">
-			<div class="warning-img-title">
-				<img src="assets/img/landingpage/Icon metro-warning@2x.png">
-				<h4>Announcement/alert section</h4>
-			</div>
-			<div class="warning-description">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor diam eget consequat varius. Aenean eget lectus sit amet dolor facilisis tempus. Etiam commodo felis in odio gravida, a porta dolor congue. In in gravida lorem, eu elementum odio. Ut suscipit arcu tellus, in venenatis urna volutpat quis. Duis molestie congue maximus. Quisque gravida nulla sed cursus euismod. In placerat quis enim in scelerisque. In sed elementum orci. Proin scelerisque ut tortor auctor rutrum. Nunc fringilla orci ullamcorper lorem accumsan, quis suscipit mauris semper.</p>
-			</div>
+	
+	{% include 'partials/_announcement_alert_section.html' %}
+	{% include 'partials/_announcement_section.html' %}
+	<div class="row looking-job-section">
+		<div class="col-lg-6 col-sm-12">
+			<h4>Looking For Jobs?</h4>
 		</div>
+		<div class="col-lg-6 col-sm-12">
+			<h4>Looking For People?</h4>
+		</div>	
 	</div>
 </div>
 <!-- {% include 'components/_carousel-sliders.html' %} -->
