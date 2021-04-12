@@ -1,4 +1,7 @@
  body footer {
+  a {
+      text-decoration: none;
+  }
   .job-location {
     top: 6722px;
     .title {
@@ -164,4 +167,26 @@
       }
     }
   }
+  .split {
+    display: inline-block;
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
+  }
+  ul {
+      list-style-type: none;
+      li {
+          display: inline-block;
+      }
+  }
+
+  @media only screen and (max-width: 600px) {
+     .job-location li:nth-of-type(even) {
+        margin-left: 150px;
+     }
+     .job-skills li:nth-of-type(even) {
+        margin-left: 210px;
+     }
+  }
+
 }

@@ -52,62 +52,26 @@
         <div class="container-fluid">
             <div class="row  job-location mb-3">
                 <p>
-                <div class="col-sm-6 col-md-3 col-lg-3 title mb-3">
-                    <h6>Jobs by Location</h6>
-                    <!-- <p class="mt-4">
-                    <h6>Job by Skills</h6>
-                    {% for i in range(1,16) %}
-                    {% if i > 1 %} | {% endif %}<a href="#">{{ 'Jobs Name' | title }} </a>
-                    {% endfor %}
-                    </p> -->
-                </div>
-                <div class="col-sm-6 col-md-9 col-lg-9 mr-3 list">
-                    {% for i in range(1,10) %}
-                        {% if i > 1 %} | {% endif %}<a href="#">{{ 'Jobs in Kuala Lumpur' | title }} </a>
-                    {% endfor %}
-                </div></p>
-                <!-- <div class="col-sm col-md-5 col-lg-3">
-                    <p>
-                    <h6>{{s.get_touch()}}</h6>
-                    {#
-                    <address>
-                        <strong>Job Majestic Sdn. Bhd.</strong><br>
-                        Pacific Place, Jln PJU A1/4<br>
-                        47301 Ara Damansara, Selangor, Malaysia.
-                    </address>
-                    #}
-                    </p>
-                    <p>
-                        {# <i class="fas fa-phone-alt"></i> (+60) 182-643363 <br>#}
-                        <i class="far fa-envelope"></i> <a
-                            href="mailto:contact@jobmajestic.com?subject=General%20Enquiry">contact@jobmajestic.com</a>
-                    </p>
-                    <p class="social-buttons">
-                        <a href="{{ s.facebook_url() }}"
-                           target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="{{ s.instagram_url() }}"
-                           target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="{{ s.youtube_url() }}"
-                           target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="{{ s.linkedin_url() }}"
-                           target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="{{ s.tiktok_url() }}"
-                           target="_blank"><i class="fab fa-tiktok"></i></a>
-                        <a href="{{ s.whatsapp_url() }}"
-                           target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    </p>
-                </div> -->
+                    <div class="col-sm-6 col-md-3 col-lg-3 title mb-3">
+                        <h6>Jobs by Location</h6>
+                    </div>
+                    <ul class="col-sm-8 col-md-9 col-lg-9 list">
+                        {% for i in range(1,10) %}
+                             <li class="mr-3 mb-3">{% if i > 1 %}<span class="split">|</span> {% endif %}<a href="#" >{{ 'Jobs in Kuala Lumpur' | title }} </a></li>
+                        {% endfor %}
+                    </ul>
+                </p>
             </div>
             <div class="row job-skills mt-3">
                 <p>
                     <div class="col-sm-6 col-md-3 col-lg-3 title mb-3">
                         <h6>Jobs by Skill</h6>
                     </div>
-                    <div class="col-sm-6 col-md-9 col-lg-9 mr-3 list mb-3">
+                    <ul class="col-sm-6 col-md-9 col-lg-9 list">
                         {% for i in range(1,16) %}
-                            {% if i > 1 %} | {% endif %}<a href="#">{{ 'Jobs Name' | title }} </a>
+                            <li class="mr-3 mb-3">{% if i > 1 %}<span class="split">|</span> {% endif %}<a href="#">{{ 'Jobs Name' | title }} </a></li>
                         {% endfor %}
-                    </div>
+                    </ul>
                 </p>
             </div>
             <div class="row international-jobs mt-3">
@@ -115,11 +79,11 @@
                     <div class="col-sm-6 col-md-3 col-lg-3 title mb-3">
                         <h6>International Jobs</h6>
                     </div>
-                    <div class="col-sm-6 col-md-9 col-lg-9 mr-3 list mb-3">
+                    <ul class="col-sm-6 col-md-9 col-lg-9 mr-3 list mb-3">
                         {% for i in range(1,16) %}
-                            {% if i > 1 %} | {% endif %}<a href="#">{{ 'Jobs Name' | title }} </a>
+                            <li>{% if i > 1 %} | {% endif %}<a href="#">{{ 'Jobs Name' | title }} </a></li>
                         {% endfor %}
-                    </div>
+                    </ul>
                 </p>
             </div>
             <div class="row border1 mt-3">
