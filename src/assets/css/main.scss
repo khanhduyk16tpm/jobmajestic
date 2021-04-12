@@ -35,7 +35,7 @@ body {
   }
 
   .social-buttons i, .social-buttons a {
-    color: $prime1;
+    color: $prime6;
     font-size: 22px;
     margin-right: 5px;
   }
@@ -115,6 +115,22 @@ body {
   footer {
       margin-top: auto;
   }
+    .social-buttons .circle{
+        border-radius: 50%;
+        //padding: 5px;
+        // margin: 0.15em;
+        // font-size: 3em;
+    }
+    .fa-facebook {
+        background: $prime3;
+        color: $prime6;
+        padding: .15em .35em;
+    }
+    .fa-instagram, .fa-twitter, .fa-linkedin-square {
+        background: $prime3;
+        color: $prime6;
+        padding: 0.15em .2em !important;
+    }
 }
 
 
