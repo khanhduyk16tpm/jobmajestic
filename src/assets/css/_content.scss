@@ -16,3 +16,96 @@ img.card-logo {
 .margin-10 {
   margin: 10px;
 }
+.announcement-alert-section{
+	background: #FFA2A2 0% 0% no-repeat padding-box;
+	border: 1px solid #FF0000;
+	padding-top: 20px;
+	.container-warning {
+		@media only screen and (min-width: 600px) {
+			max-width: 1378px;
+		}
+		.warning-img-title {
+			img{
+				width: 84px;
+				@media only screen and (max-width: 600px) {
+					width: 44px;
+					margin-left: 20px;
+				}
+				float: left;
+			}
+			h4{
+				margin: 0 0 50px 130px;
+				@media only screen and (max-width: 600px) {
+					margin: 0px 0 35px 105px;
+					font-size: 18px;
+					padding-top: 10px;
+				}
+				font-weight: 300;
+				color: #E91421;
+				font-size: 30px
+			}
+
+		}
+		.warning-description{
+			margin-left: 130px;
+			@media only screen and (max-width: 600px) {
+				margin-left: 20px;
+			}
+			p{
+				color: #E91421;
+				font-size: 18px;
+				@media only screen and (max-width: 600px) {
+					font-size: 14px;
+
+				}
+			}
+		}
+	}
+}
+.announcement-section{
+	margin-top: 15px;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	border: 3px solid #FFCC33;
+	padding-top: 20px;
+	.container-warning {
+		@media only screen and (min-width: 600px) {
+			max-width: 1378px;
+		}
+		.warning-img-title {
+			img{
+				width: 84px;
+				@media only screen and (max-width: 600px) {
+					width: 44px;
+					margin-left: 20px;
+				}
+				float: left;
+			}
+			h4{
+				margin: 0 0 50px 130px;
+				@media only screen and (max-width: 600px) {
+					margin: 0px 0 35px 105px;
+					font-size: 18px;
+					padding-top: 10px;
+				}
+				font-weight: 300;
+				color: $navBgColor;
+				font-size: 30px
+			}
+
+		}
+		.warning-description{
+			margin-left: 130px;
+			@media only screen and (max-width: 600px) {
+				margin-left: 20px;
+			}
+			p{
+				color: $navBgColor;
+				font-size: 18px;
+				@media only screen and (max-width: 600px) {
+					font-size: 14px;
+
+				}
+			}
+		}
+	}
+}
