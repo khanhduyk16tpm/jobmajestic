@@ -10,11 +10,11 @@
 
 {% block content %}
 <div class="main">
-	<div class="sank-rectangle"></div>
+	<div class="row sank-rectangle"></div>
 	<div class="container-fluid px-0 container-herobanner">
 		<div class="row herobanner">
 			<div class="herobanner-img-mobile col-md-12 col-sm-12 ">
-				<img src="{{f.landing_page_img('Mask Group 21@2x.png')}}">
+				<img class="img-fluid" src="{{f.landing_page_img('mask-group-21-2x.png')}}">
 			</div>
 			<div class="col-lg-5 col-md-12 col-sm-12 herobanner-title">
 				<h3>Lorem ipsum dolor sit amet, consectetur</h3>
@@ -51,7 +51,7 @@
 				</div>
 			</div>
 			<div class="col-lg-7 herobanner-img">
-				<img src="{{f.landing_page_img('Mask Group 21@2x.png')}}">
+				<img src="{{f.landing_page_img('mask-group-21-2x.png')}}">
 			</div>
 		</div>
 		<div class="row trust-by-section">
@@ -76,12 +76,59 @@
 	{% include 'partials/_announcement_alert_section.html' %}
 	{% include 'partials/_announcement_section.html' %}
 	<div class="row looking-job-section">
-		<div class="col-lg-6 col-sm-12">
+		<div class="col-lg-6 col-sm-12 child" id="looking-job">
 			<h4>Looking For Jobs?</h4>
+			<p>Discover Jobs</p>
 		</div>
-		<div class="col-lg-6 col-sm-12">
+		<div class="col-lg-6 col-sm-12 child" id="looking-people">
+			<div id="array-dots-mobile-1">
+				<img src="{{f.landing_page_img('group-3848.png')}}">
+			</div>
 			<h4>Looking For People?</h4>
+			<p>Search Candidates</p>
+			<div id="array-dots-mobile-2">
+				<img src="{{f.landing_page_img('group-3848.png')}}">
+			</div>
 		</div>	
+	</div>
+	<div class="row explore-jobs-section">
+
+		<div id="array-dots-desktop-1">
+			<img src="{{f.landing_page_img('group-3848.png')}}" class="float-start">
+		</div>
+		<div class="container-fluid explore-jobs-container align-items-center">
+			<div class="row">
+				<div class="col-6 col-sm-3 explore-jobs-title">
+					<h4>Explore jobs by</h4>
+					<p>category</p>
+				</div>
+			{% for i in range(1,7) %}
+				<div class="col-6 col-sm-3 category-item-container text-center">
+					<div class="item-container">
+						<a href="#">
+							<h3>Lorem ipsum</h3>
+							<p>Lorem ipsum dolor sit amet,</p>
+						</a>
+					</div>
+				</div>
+                 {% if i == 3 %} 
+                 </div>
+                 <div class="row">
+            	{% endif %}
+            {% endfor %}
+            	<div class="col-6 col-sm-3 category-item-container text-center">
+					<div class="item-container">
+						<a href="#">
+							<h3>100+ More</h3>
+							<h3>Categories</h3>
+						</a>
+					</div>
+				</div>
+        	</div>
+		</div>
+		<div id="array-dots-desktop-2">
+			<img src="{{f.landing_page_img('group-3848.png')}}" class="float-end">
+		</div>
 	</div>
 </div>
 <!-- {% include 'components/_carousel-sliders.html' %} -->
