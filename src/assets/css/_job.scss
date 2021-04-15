@@ -1,0 +1,637 @@
+.job-description {
+    //.full-page {
+        // background: #F4F4F6 0% 0% no-repeat padding-box;
+        // top: 0;
+        // left: 0;
+        @media only screen and(min-width: 600px)  {
+            //width: 1920px;
+            min-width: 104%;
+            height: 3096px;
+            // margin-top: -100px;
+            // margin-left: -300px;
+            background: #F4F4F6 0% 0% no-repeat padding-box;
+            top: 0;
+            left: 0;
+        }
+        @media only screen and(max-width: 600px) {
+            width: 375px;//505px;
+            height: 3953px;
+            margin-left: -10px;
+        }
+        opacity: 1;
+        /*main image*/
+        .main-image {
+            opacity: 1;
+            position: absolute;
+            @media only screen and (min-width: 600px) {
+                top: 225px;
+                left: 341px;//353px;
+                width: 1240px; //1215px;
+                height: 316px;
+            }
+            @media only screen and (max-width: 600px) {
+                top: 100px;
+                left: 0;
+                width: 400px;//375px;
+                height: 115px;
+            }
+        }
+        /*end main image*/
+
+        /*job scope*/
+        .job-scope {
+            position: absolute;
+            opacity: 1;
+            @media only screen and (min-width:600px) {
+                top: 540px;
+                left: 353px;
+                width: 1215px;
+                height: 221px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                display: block;
+            }
+            @media only screen and (max-width:600px){
+                position: absolute;
+               // display: none;
+            }
+            /*job title*/
+            .job-title {
+                font-style: normal;
+                opacity: 1;
+                letter-spacing: 0px;
+                color: #222E3C;
+                @media only screen and (min-width: 600px) {
+                    top: 570px;
+                    left: 384px;
+                    width: 208px;
+                    height: 37px;
+                    text-align: center;
+                    font-size: 30px;
+                }
+                @media only screen and (max-width: 600px) {
+                    top: 222px;
+                    left: 27px;
+                    width: 97px;
+                    height: 18px;
+                    font-size: 14px;
+                    text-align: left;
+                    position: absolute;
+                }
+            }
+            /*end job title*/
+            /*job-company*/
+            .job-company {
+                text-align: left;
+                letter-spacing: 0px;
+                color: #222E3C;
+                opacity: 1;
+                @media only screen and (min-width: 600px) {
+                    top: 615px;
+                    left: 383px;
+                    width: 320px;
+                    height: 22px;
+                    margin-left: 5px;
+                    font-size: 18px;
+                }
+                @media only screen and (max-width: 600px) {
+                    top: 222px;
+                    left: 27px;
+                    width: 213px;
+                    height: 15px;
+                    position: absolute;
+                    font-size: 12px;
+                }
+            }
+            .job-field {
+                @media only screen and (min-width: 600px) {
+                    display: none;
+                }
+                @media only screen and (max-width: 600px) {
+                    top: 265px;
+                    /*left: 27px;*/
+                    width: 120px;
+                    height: 15px;
+                    text-align: left;
+                    letter-spacing: 0px;
+                    color: #7F7F7F;
+                    opacity: 1;
+                    font-size: 12px;
+                    margin-left: 15px;
+                    position: absolute;
+                }
+            }
+            /*end job-company*/
+            /*company logo*/
+            .company-logo  {
+                @media only screen and (max-width: 600px) {
+                    top: 222px;
+                    left: 287px;//390px
+                    position: absolute;
+                }
+                img {
+                    float:  right;
+                    @media only screen and (min-width: 600px){
+                        top: 558px;
+                        left: 1446px;
+                        width: 104px;
+                        height: 104px;
+                    }
+                    @media only screen and (max-width: 600px){
+                        /*top: 222px;
+                        left: 390px;*/
+                        width: 60px;
+                        height: 60px;
+                        position: absolute;
+                        opacity: 1;
+                    }
+                }
+            }
+            /*end company logo*/
+
+            /*job-base*/
+            .job-base {
+                @media only screen and (max-width: 600px) {
+                    margin-top: 20px;
+                }
+                img {
+                    opacity: 1;
+                    @media only screen and (min-width: 600px) {
+                        top: 667px;
+                        left: 386px;
+                        width: 15px;
+                        height: 21px;
+                    }
+                    @media only screen and (max-width: 600px) {
+                        top: 295px;//285px;
+                        left: 27px;
+                        width: 10px;
+                        height: 14px;
+                        position: absolute;
+                    }
+                }
+                span {
+                    @media only screen and (min-width: 600px) {
+                        margin-left: 5px;
+                    }
+                    @media only screen and (max-width: 600px) {
+                        top: 292px;//282px;
+                        left: 48px;
+                        width: 47px;
+                        height: 15px;
+                        position: absolute;
+                        letter-spacing: 0px;
+                        color: #222E3C;
+                        font-size: 12px;
+                        text-align: left;
+                    }
+                }
+            }
+            /*end job-base*/
+
+            /*salary*/
+            .salary {
+                .coins-icon {
+                    @media only screen and (min-width: 600px) {
+                        top: 668px;
+                        left: 815px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                    @media only screen and (max-width: 600px) {
+                        top: 336px;//326px;
+                        left: 28px;
+                        width: 11px;
+                        height: 11px;
+                        position: absolute;
+                    }
+                }
+                .lock-icon {
+                    @media only screen and (min-width: 600px) {
+                        top: 670px;
+                        left: 905px;
+                        width: 15px;
+                        height: 17px;
+                    }
+                    @media only screen and (max-width: 600px) {
+                        top: 335px;//325px;
+                        left: 87px;
+                        width: 11px;
+                        height: 12px;
+                        position: absolute;
+                    }
+                }
+                span {
+                    @media only screen and (min-width: 600px) {
+                        margin: 0 5px 0 5px;
+                    }
+                    @media only screen and (max-width: 600px) {
+                        top: 332px;//322px;
+                        left: 49px;
+                        width: 33px;
+                        height: 15px;
+                        position: absolute;
+                        letter-spacing: 0px;
+                        color: #222E3C;
+                        opacity: 1;
+                        text-align: left;
+                        font-size: 12px;
+                    }
+                }
+            }
+            /*end salary*/
+
+            /*job-type*/
+            .job-type {
+                //margin-left: 5px;
+                .clock-icon {
+                    top: 711px;
+                    left: 384px;
+                    width: 18px;
+                    height: 18px;
+                    @media only screen and (max-width: 600px) {
+                        display: none;
+                    }
+                }
+                .btn-job-type {
+                    background: #5E72E4 0% 0% no-repeat padding-box;
+                    opacity: 1;
+                    border-radius: 0;
+                    @media only screen and (min-width: 600px) {
+                        top: 701px;
+                        left: 414px;
+                        width: 122px;
+                        height: 36px;
+                    }
+                    @media only screen and(max-width: 600px) {
+                        top: 184px;
+                        left: 27px;
+                        width: 88px;
+                        height: 26px;
+                        position: absolute;
+                    }
+                    span  {
+                        letter-spacing: 1.26px;
+                        color: #FFFFFF;
+                        opacity: 1;
+                        @media only screen and (min-width: 600px) {
+                            font-size: 18px;
+                            text-align: center;
+                        }
+                        @media only screen and (max-width: 600px) {
+                            //top: 187px;
+                            left: 38px;
+                            width: 64px;
+                            height: 18px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            /*end job-type*/
+
+            /*job-experience*/
+            .job-experience {
+                .briefcase-icon {
+                    @media only screen and (min-width: 600px) {
+                        top: 711px;
+                        left: 815px;
+                        width: 20px;
+                        height: 18px;
+                    }
+                    @media only screen and (max-width: 600px) {
+                        top: 316px;//306px;
+                        left: 27px;
+                        width: 12px;
+                        height: 11px;
+                        position: absolute;
+                    }
+                }
+                span {
+                    @media only screen and (max-width: 600px) {
+                        top: 312px;//302px;
+                        left: 49px;
+                        width: 110px;
+                        height: 15px;
+                        position: absolute;
+                        letter-spacing: 0px;
+                        color: #222E3C;
+                        opacity: 1;
+                        text-align: left;
+                        font-size: 12px;
+                    }
+                }
+            }
+            /*end job-experience*/
+
+            /*job-post*/
+            .job-post {
+                @media only screen and (max-width: 600px) {
+                    display: none;
+                }
+                span {
+                    top: 713px;
+                    left: 1424px;
+                    width: 124px;
+                    height: 18px;
+                    letter-spacing: 0px;
+                    color: #ACADB1;
+                    opacity: 1;
+                    font-size: 14px;//18px;
+                    text-align: left;
+                    float:  right;
+                }
+            }
+            /*end job-post*/
+        }
+        /*end job scope*/
+        /*button range*/
+        .buttons-range {
+            @media only screen and (min-width: 600px) {
+                top: 761px;
+                left: 353px;
+                width: 1215px;
+                height: 51px;
+                position: absolute;
+            }
+            @media only screen and (max-width: 600px) {
+                top: 418px;
+                position: absolute;
+            }
+            button {
+                text-transform: uppercase;
+                border-radius: 0;
+                @media only screen and (min-width: 600px) {
+                    width: 303px;
+                    height: 50px;
+                }
+                @media only screen and (max-width: 600px) {
+                    width: 193px;
+                }
+                span {
+                    margin-left: 3px;
+                }
+            }
+            .btn-share  {
+                margin-left: 1px;
+                @media only screen and (max-width :600px) {
+                    left: 193px;
+                }
+            }
+            .btn-save {
+                @media only screen and (max-width :600px) {
+                    left: 0px;
+                }
+            }
+            .btn-view-location, .btn-apply {
+                margin-left: 1px;
+                @media only screen and (max-width: 600px) {
+                    display: none;
+                }
+            }
+        }
+        /*end button range*/
+        /* map */
+        .gg-map {
+            @media only screen and (min-width: 600px) {
+                display: none;
+            }
+            @media only screen and (max-width: 600px) {
+                position: absolute;
+                top: 457px;
+                left: 14px;
+                width: 482px;
+                height: 269px;
+                background: transparent url('../img/job/map.png') 0% 0% no-repeat padding-box;
+                opacity: 1;
+            }
+        }
+        /*end map */
+        /*job requirement*/
+        .details-job-requirement {
+            @media only screen and (min-width: 600px) {
+                top: 831px;
+                left: 353px;
+                width: 1060px;
+                height: 1071px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                opacity: 1;
+                position: absolute;
+            }
+            @media only screen and (max-width: 600px) {
+                top: 770px;
+                left: 26px;
+                width: 322px;
+                height: 997px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                box-shadow: 0px 0px 3px #00000059;
+                opacity: 1;
+                position: absolute;
+            }
+            .row-requirement {
+                .title {
+                    top: 881px;
+                    left: 383px;
+                    width: 189px;
+                    height: 37px;
+                    margin-top: 50px;
+                    letter-spacing: 0px;
+                    color: #222E3C;
+                    opacity: 1;
+                    font-size: 30px;
+                }
+                .details {
+                    top: 882px;
+                    left: 633px;
+                    width: 716px;
+                    height: 148px;
+                    letter-spacing: 0px;
+                    color: #222E3C;
+                    opacity: 1;
+                    font-size: 15px;
+                    text-align: left;
+                    margin-top: 50px;
+                    margin-left: 50px;
+                }
+            }
+            .row-scope {
+                margin-top: 150px;
+                .title {
+                    top: 1180px;
+                    left: 383px;
+                    width: 225px;
+                    height: 75px;
+                    text-align: left;
+                    font-size: 30px;
+                    letter-spacing: 0px;
+                    color: #222E3C;
+                    opacity: 1;
+                }
+                .details {
+                    top: 1181px;
+                    left: 633px;
+                    width: 683px;
+                    height: 70px;
+                    margin-left: 10px;
+                    text-align: left;
+                    font-size: 15px;
+                    letter-spacing: 0px;
+                    color: #222E3C;
+                    opacity: 1;
+                }
+            }
+            .row-info {
+                margin-top: 150px;
+                .title {
+                    top: 1401px;
+                    left: 383px;
+                    width: 212px;//201px;
+                    height: 37px;
+                    letter-spacing: 0px;
+                    color: #222E3C;
+                    opacity: 1;
+                    font-size: 30px;
+                    text-align: left;
+                }
+                .details {
+                    top: 1401px;
+                    left: 633px;
+                    width: 750px;
+                    height: 126px;
+                    margin-left: 25px;
+                    letter-spacing: 0px;
+                    color: #222E3C;
+                    opacity: 1;
+                    font-size: 15px;
+                    text-align: left;
+                }
+            }
+            .row-website {
+                margin-top: 50px;
+                .title {
+                    top: 1587px;
+                    left: 383px;
+                    width: 112px;
+                    height: 37px;
+                    letter-spacing: 0px;
+                    color: #222E3C;
+                    opacity: 1;
+                    text-align: left;
+                    font-size: 30px;
+                }
+                .details {
+                    top: 1587px;
+                    left: 633px;
+                    width: 225px;
+                    height: 18px;
+                    letter-spacing: 0px;
+                    color: #222E3C;
+                    opacity: 1;
+                    text-align: left;
+                    font-size: 15px;
+                    margin-left: 125px;
+                }
+            }
+            .company-size {
+                margin-top: 50px;
+                .title {
+                    top: 1684px;
+                    left: 383px;
+                    width: 220px;//195px
+                    height: 37px;
+                    letter-spacing: 0px;
+                    color: #222E3C;
+                    opacity: 1;
+                    text-align: left;
+                    font-size: 30px;
+                }
+                .size {
+                    top: 1684px;
+                    left: 633px;
+                    width: 118px;
+                    height: 18px;
+                    letter-spacing: 0px;
+                    color: #222E3C;
+                    opacity: 1;
+                    text-align: left;
+                    font-size: 15px;
+                    margin-left: 15px;
+                }
+            }
+            .row-benefit {
+                margin-top: 50px;
+                .title {
+                    top: 1781px;
+                    left: 383px;
+                    width: 137px;
+                    height: 71px;
+                    letter-spacing: 0px;
+                    color: #222E3C;
+                    opacity: 1;
+                    text-align: left;
+                    font-size: 30px;
+                }
+                .details {
+                    top: 1781px;
+                    left: 633px;
+                    width: 45px;
+                    height: 70px;
+                    letter-spacing: 0px;
+                    color: #222E3C;
+                    opacity: 1;
+                    text-align: left;
+                    font-size: 15px;
+                    margin-left: 100px;
+                }
+            }
+        }
+        /*end job requirement*/
+        .advertisement-1 {
+            @media only screen and (max-width: 600px) {
+                display: none;
+            }
+            position: absolute;
+            top: 831px;
+            left: 1418px;
+            width: 139px;
+            height: 137px;
+            background: transparent url('../img/job/right_banner_add_1.png') 0% 0% no-repeat padding-box;
+            opacity: 1;
+        }
+        .advertisement-2 {
+            @media only screen and (max-width: 600px) {
+                display: none;
+            }
+            top: 985px;
+            left: 1418px;
+            width: 139px;
+            height: 718px;
+            background: transparent url('../img/job/right_banner_add_2.png') 0% 0% no-repeat padding-box;
+            opacity: 1;
+            position: absolute;
+        }
+        .row-similar-job {
+            top: 1962px;
+            left: 401px;
+            width: 170px;
+            height: 37px;
+            position: absolute;
+            letter-spacing: 0px;
+            color: #222E3C;
+            opacity: 1;
+            font-size: 30px;
+            text-align: left;
+        }
+        .see-all {
+            top: 1969px;
+            left: 1318px;
+            width: 56px;
+            height: 22px;
+            position: absolute;
+            letter-spacing: 0px;
+            color: #F8483B;
+            opacity: 1;
+            font-size: 18px;
+            text-align: left;
+        }
+    //}
+}
