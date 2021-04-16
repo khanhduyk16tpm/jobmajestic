@@ -7,18 +7,18 @@
 		height: 800px;
 		margin-top: -100px;
 		position: absolute;
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 992px) {
 			display: none;
 		}
 
 	}
 
 	.container-herobanner {
-		@media only screen and (min-width: 600px) {
+		@media only screen and (min-width: 992px) {
 			margin-top: 100px;
 			max-width: 1378px;
 		}
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 992px) {
 			margin-top: 40px;
 			padding-left:0px;
 
@@ -30,18 +30,18 @@
 				h3{
 					font-weight: bold;
 					font-size: 48px;
-					@media only screen and (max-width: 600px) {
+					@media only screen and (max-width: 992px) {
 						display: none;
 					}
 				}
 				.categories{
-					@media only screen and (max-width: 600px) {
+					@media only screen and (max-width: 992px) {
 						margin-left: 20px;
 					}
 					button{
 						padding: 15px 20px;
 						height: 52px;
-						@media only screen and (max-width: 600px) {
+						@media only screen and (max-width: 992px) {
 							height: 29px;
 							padding: 5px 10px;
 							font-size: 9px;
@@ -57,7 +57,7 @@
 				}
 				p{
 					margin-top: 280px;
-					@media only screen and (max-width: 600px) {
+					@media only screen and (max-width: 992px) {
 						margin-top: 250px;
 						margin-left: 20px
 					}
@@ -73,7 +73,7 @@
 				    border-right: 0;
 				    padding: 20px 15px 15px 15px;
 				    margin-top: 80px;
-				    @media only screen and (max-width: 600px) {
+				    @media only screen and (max-width: 992px) {
 				    	margin-top: 0px;
 				    	height: auto;
 				    	/*width: 103%;*/
@@ -89,7 +89,7 @@
 							padding-left: 0px;
 							padding-right: 0px;
 							margin-right: 5px;
-							@media only screen and (max-width: 600px) {
+							@media only screen and (max-width: 992px) {
 								min-width: 320px;
 								text-align: center;
 								margin: auto;
@@ -99,7 +99,7 @@
 								border: none;
 				    			border-radius: 0;
 								font-family:Arial, FontAwesome;
-								@media only screen and (max-width: 600px) {
+								@media only screen and (max-width: 992px) {
 									font-size: 12px;
 								}
 							}
@@ -108,7 +108,7 @@
 						#search-by-title-skill {
 							width: 355px;
 							margin-left: 17px;
-							@media only screen and (max-width: 600px) {
+							@media only screen and (max-width: 992px) {
 								width: 320px;
 								min-width: 320px;
 								margin-left: auto;
@@ -116,19 +116,19 @@
 						}
 						#search-by-location, #search-by-category {
 							width: 200px;
-							@media only screen and (max-width: 600px) {
+							@media only screen and (max-width: 992px) {
 								min-width: 320px;
 							}
 						}
 						
 						#search-button {
 							width: 186px;
-							@media only screen and (max-width: 600px) {
+							@media only screen and (max-width: 992px) {
 								min-width: 320px;
 							}
 							button {
 								width: 186px;
-								@media only screen and (max-width: 600px) {
+								@media only screen and (max-width: 992px) {
 									min-width: 320px;
 								}
 								border: none;
@@ -143,7 +143,7 @@
 					.advanced-search {
 						margin-top: 8px;
 						margin-left: -8px;
-						@media only screen and (max-width: 600px) {
+						@media only screen and (max-width: 992px) {
 							text-align: center;
 							font-size: 14px;
 						}
@@ -159,21 +159,23 @@
 			
 			.herobanner-img {
 				padding-right: 0px;
-				@media only screen and (max-width: 600px) {
+				@media only screen and (max-width: 992px) {
 					display: none;
 
 				}
 				img{
-					width: 775px;
+					@media only screen and (min-width: 992px) {
+						/*max-width: 775px;*/
+					}
 				}
 			}
 			.herobanner-img-mobile {
 				padding-right: 0px;
 				img{
-					@media only screen and (min-width: 600px) {
+					@media only screen and (min-width: 992px) {
 						display: none;
 					}
-					@media only screen and (max-width: 600px) {			
+					@media only screen and (max-width: 992px) {			
 						width: 100% !important;
 						
 					}
@@ -184,14 +186,14 @@
 	}
 	.trust-by-section{
 		margin: 100px 0px 50px 0px;
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 992px) {
 			margin: 50px 0px 50px 0px;
 		}
 		.container {
 			.trust-company-logo {
 
 				img {
-					@media only screen and (min-width: 600px) {
+					@media only screen and (min-width: 992px) {
 						&:first-child {
 							margin-left: 0px;
 						}
@@ -199,12 +201,12 @@
 					}
 				}
 				#apple-logo{
-					@media only screen and (min-width: 600px) {
+					@media only screen and (min-width: 992px) {
 						max-width: 82px;
 						max-height: 71px;
 						margin-top: 17px;
 					}
-					@media only screen and (max-width: 600px) {
+					@media only screen and (max-width: 992px) {
 						    max-width: 40px;
     						max-height: 20px;
 					}
@@ -212,40 +214,40 @@
 				}
 				#celcom-logo{
 					max-width: 199px;
-					@media only screen and (max-width: 600px) {
+					@media only screen and (max-width: 992px) {
 						    max-width: 77px;
 					}
 
 				}
 				#maxis-logo{
-					@media only screen and (min-width: 600px) {
+					@media only screen and (min-width: 992px) {
 						max-width: 200px;
 						max-height: 73px;
 						margin-top: 17px;
 					}
-					@media only screen and (max-width: 600px) {
+					@media only screen and (max-width: 992px) {
 						max-width: 63px;
     					max-height: 20px;
 					}
 				}
 				#shell-logo{
-					@media only screen and (min-width: 600px) {
+					@media only screen and (min-width: 992px) {
 						max-width: 294px;
 	    				max-height: 85px;
 	    				margin-top: 17px;
     				}
-    				@media only screen and (max-width: 600px) {
+    				@media only screen and (max-width: 992px) {
 						    max-width: 80px;
     						max-height: 20px;
 					}
 				}
 				#samsung-logo{
-					@media only screen and (min-width: 600px) {
+					@media only screen and (min-width: 992px) {
 						max-width: 199px;
 						max-height: 30px;
 						margin-top: 46px;
 					}
-					@media only screen and (max-width: 600px) {
+					@media only screen and (max-width: 992px) {
 						max-width: 79px;
 					    max-height: 11px;
 					    margin-top: 7px;
@@ -264,23 +266,23 @@
 			flex-direction: column;
 			justify-content: center;
 			overflow: auto;
-			@media only screen and (min-width: 600px) {
+			@media only screen and (min-width: 992px) {
 				width: 49.5%;
 				height: 671px;
 			}
-			@media only screen and (max-width: 600px) {
+			@media only screen and (max-width: 992px) {
 				height: 264px;
 			}
 			h4{
 				font-weight: bold;
 				font-size: 48px;
-				@media only screen and (max-width: 600px) {
+				@media only screen and (max-width: 992px) {
 					font-size:18px;
 				}
 			}
 			p{
 				font-size: 30px;
-				@media only screen and (max-width: 600px) {
+				@media only screen and (max-width: 992px) {
 					font-size:12px;
 				}
 			}
@@ -294,14 +296,14 @@
     		background-blend-mode: overlay;
 			background-size:cover;
 			opacity: 0.9;
-			@media only screen and (min-width: 600px) {
+			@media only screen and (min-width: 992px) {
 				margin-left: 1%;
 			}
 			#array-dots-mobile-1 {
-				@media only screen and (min-width: 600px) {
+				@media only screen and (min-width: 992px) {
 					display: none;
 				}
-				@media only screen and (max-width: 600px) {
+				@media only screen and (max-width: 992px) {
 					position: absolute;
 				    width: 50%;
 				    margin-bottom: 40%;
@@ -318,10 +320,10 @@
 				}
 			}
 			#array-dots-mobile-2{
-				@media only screen and (min-width: 600px) {
+				@media only screen and (min-width: 992px) {
 					display: none;
 				}
-				@media only screen and (max-width: 600px) {
+				@media only screen and (max-width: 992px) {
 					position: absolute;
 				    /*width: 100%;*/
 				    margin-top: 70%;
@@ -341,7 +343,8 @@
 		#array-dots-desktop-1{
 			position: absolute;
     		margin-top: 60px;
-    		@media only screen and (max-width: 600px) {
+    		z-index: 10;
+    		@media only screen and (max-width: 992px) {
 				display: none;
 			}
 			img{
@@ -356,8 +359,8 @@
 			position: relative;
     		margin-bottom: 60px;
     		width: 100%;
-
-    		@media only screen and (max-width: 600px) {
+    		z-index: 10;
+    		@media only screen and (max-width: 992px) {
 				display: none;
 			}
 			img{
@@ -374,15 +377,16 @@
 			margin-top: 200px;
 			margin-bottom: 100px;
 
-			@media only screen and (max-width: 600px) {
-				max-width: 333px;
+			@media only screen and (max-width: 992px) {
+				/*max-width: 333px;*/
 				margin-top: 80px;
 				margin-bottom: 80px;
+				/*padding-left: 10px;*/
 			}
 			.explore-jobs-title {
 				padding-left: 50px;
 				padding-top: 10px;
-				@media only screen and (max-width: 600px) {
+				@media only screen and (max-width: 992px) {
 					padding-left: 23px;
 					padding-top: 0px;
 				}
@@ -391,7 +395,7 @@
 					font-size: 30px;
 					color: $navBgColor;
 					font-weight: bold;
-					@media only screen and (max-width: 600px) {
+					@media only screen and (max-width: 992px) {
 						font-size: 16px;
 					}
 				}
@@ -401,13 +405,13 @@
 			}
 			.row{
 				margin-bottom: 30px;
-				@media only screen and (max-width: 600px) {
+				@media only screen and (max-width: 992px) {
 					margin-bottom: 0px;
 				}
 			}
 			.category-item-container{
 
-				@media only screen and (max-width: 600px) {
+				@media only screen and (max-width: 992px) {
 					padding-bottom: 10px;
 					padding-right: 10px;
 				}
@@ -415,7 +419,7 @@
 					width: 292px;
 					height: 116px;
 					padding-top: 29px;
-					@media only screen and (max-width: 600px) {
+					@media only screen and (max-width: 992px) {
 						width: 156px;
 						height: 62px;
 						padding-top: 10px;
@@ -434,14 +438,14 @@
 						h3{
 							font-size: 20px;
 							font-weight: bold;
-							@media only screen and (max-width: 600px) {
+							@media only screen and (max-width: 992px) {
 								font-size: 14px;
 							}
 						}
 						p{
 							color: $textGrayColor;
 							font-size: 15px;
-							@media only screen and (max-width: 600px) {
+							@media only screen and (max-width: 992px) {
 								font-size: 10px;
 							}
 						}
@@ -463,18 +467,18 @@
 			max-width: 1220px;
 			margin-top: 100px;
 			margin-bottom: 80px;
-			@media only screen and (max-width: 600px) {
+			@media only screen and (max-width: 992px) {
 				margin-top: 50px;
 				margin-bottom: 30px;
 			}
 			.title-wrapper{
 				margin-bottom: 10px;
-				@media only screen and (max-width: 600px) {
+				@media only screen and (max-width: 992px) {
 					padding: 10px 30px 10px 30px;
 				}
 				h4 {
 					font-size: 30px;
-					@media only screen and (max-width: 600px) {
+					@media only screen and (max-width: 992px) {
 						font-size: 16px;
 					}
 					color: $bigBtnBgColor;
@@ -484,7 +488,7 @@
 				}
 				p{
 					font-size: 18px;
-					@media only screen and (max-width: 600px) {
+					@media only screen and (max-width: 992px) {
 						font-size: 14px;
 						font-weight: 100;
 					}
@@ -496,7 +500,7 @@
 				.job-card-show-more{
 					.job-card-container{
 						height: 100%;
-						@media only screen and (max-width: 600px) {
+						@media only screen and (max-width: 992px) {
 							height: 400px;
 						}
 						text-align: center;
