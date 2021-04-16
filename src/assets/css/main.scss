@@ -8,21 +8,28 @@
 body {
   background-color: $bgColor;
   color: $fontColor;
+  overflow-x: hidden;
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
 
   .alert {
     background-color: $alertColor;
     top: 0px;
     height: 38px;
     position: fixed;
-    z-index: 100; 
-    width: 100%; 
+    z-index: 100;
+    width: 100%;
     text-align: center;
     color: $bigBtnBgColor;
     padding: 4px;
     border-radius: 0;
   }
 
-  a, a:hover {
+  a,
+  a:hover {
     color: $linkColor;
   }
 
@@ -34,7 +41,8 @@ body {
     background-color: $modalHeaderBgColor;
   }
 
-  .social-buttons i, .social-buttons a {
+  .social-buttons i,
+  .social-buttons a {
     color: $prime6;
     font-size: 22px;
     margin-right: 5px;
@@ -99,7 +107,8 @@ body {
     border-color: $btnSecondaryColor;
   }
 
-  .dropdown-item.active, .dropdown-item:active {
+  .dropdown-item.active,
+  .dropdown-item:active {
     color: $dropdownMenuBgColor;
     text-decoration: none;
     background-color: $btnSecondaryColor;
@@ -113,28 +122,24 @@ body {
     color: $cardTextColor;
   }
   footer {
-      margin-top: auto;
+    margin-top: auto;
   }
-    .social-buttons .circle{
-        border-radius: 50%;
-        //padding: 5px;
-        // margin: 0.15em;
-        // font-size: 3em;
-    }
-    .fa-facebook {
-        background: $prime3;
-        color: $prime6;
-        padding: .15em .35em;
-    }
-    .fa-instagram, .fa-twitter, .fa-linkedin-square {
-        background: $prime3;
-        color: $prime6;
-        padding: 0.15em .2em !important;
-    }
+  .social-buttons .circle {
+    border-radius: 50%;
+    //padding: 5px;
+    // margin: 0.15em;
+    // font-size: 3em;
+  }
+  .fa-facebook {
+    background: $prime3;
+    color: $prime6;
+    padding: 0.15em 0.35em;
+  }
+  .fa-instagram,
+  .fa-twitter,
+  .fa-linkedin-square {
+    background: $prime3;
+    color: $prime6;
+    padding: 0.15em 0.2em !important;
+  }
 }
-
-
-/*main > .container {
-  font-size: smaller;
-}*/
-
