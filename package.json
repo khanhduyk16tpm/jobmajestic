@@ -33,12 +33,12 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "Datepicker.js": "^0.1.1",
     "bootstrap": "^5.0.0-beta3",
     "bootstrap-icons": "^1.4.1",
     "browserslist": "^4.14.6",
     "caniuse-lite": "^1.0.30001156",
     "config": "^3.3.2",
-    "Datepicker.js": "^0.1.1",
     "gulp-htmlmin": "^5.0.1",
     "yargs-parser": "^19.0.4"
   }

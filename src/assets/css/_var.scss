@@ -4,14 +4,26 @@ https://coolors.co/4c4d4f-14342b-e7e63c-bbdfc5-ffffff
 https://coolors.co/4c4d4f-14342b-e7e63c-e2f3e8-ffffff
 https://coolors.co/4c4d4f-14342b-e7e63c-fdfded-ffffff
  */
-$prime1: #E7E63C; /* yellow */
-$prime2: #222E3C; /* grey */
-$prime3: #FFFFFF; /* white */
-$prime4: #14342B; /* dark green */
-$prime5: #FDFDED; /* ivory */
 
-$yellowButton : #FFCC33;;
-$alertColor: #E91421;
+@import "../../../node_modules/bootstrap/scss/_functions";
+@import "../../../node_modules/bootstrap/scss/_variables";
+@import "../../../node_modules/bootstrap/scss/_mixins";
+@import "../../../node_modules/bootstrap/scss/mixins/_breakpoints";
+
+// COMMON
+$fontSize14: 14px;
+$fontSize12: 12px;
+
+// COLOR
+$prime1: #e7e63c; /* yellow */
+$prime2: #222e3c; /* grey */
+$prime3: #ffffff; /* white */
+$prime4: #14342b; /* dark green */
+$prime5: #fdfded; /* ivory */
+$prime6: #000;
+
+$yellowButton: #ffcc33;
+$alertColor: #e91421;
 $textColor: #707070;
 $navFontColor: $prime3;
 $navHighlightFontColor: $prime1;
