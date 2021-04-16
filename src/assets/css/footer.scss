@@ -1,0 +1,174 @@
+@import "var";
+
+footer {
+    .sitemap {
+        .container-fluid {
+            max-width: 1215px;
+            margin-top: 40px;
+            a {
+                text-decoration: none;
+            }
+            .jobs-by {
+                h6 {
+                    font-size: $fontSize14;
+                    color: $prime3;
+                    margin-left: -10px;
+                }
+                ul.list {
+                    padding-left: 0;
+                    li.mr-3.align {
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+            .horizontal-line {
+                border-bottom: 1px solid $prime5;
+            }
+            .space-line {
+                height: 40px;
+                margin-bottom: 60px;
+            }
+            .bottom-section {
+                .font-item {
+                    font-size: $fontSize12;
+                    margin-bottom: 5px;
+                    min-width: 150px;
+                }
+                .footleft-text {
+                    width: 400px;
+                }
+                .row-cols-auto {
+                    margin-left: -12px;
+                    margin-top: 20px;
+                    span {
+                        margin-left: 5px;
+                    }
+                }
+                @include media-breakpoint-up(lg) {
+                    .hide-on-desktop {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+// WILL REMOVE/REPLACE THIS UNUSED CODE....
+body footer {
+    .bottom-section {
+        .footer-about {
+            .f-about {
+                top: 7094px;
+                left: 814px;
+                width: 35px;
+                height: 15px;
+                margin-left: 0;
+            }
+            .f-item {
+                left: 814px;
+                width: 77px; //71?
+                height: 14px;
+            }
+            .f-item1 {
+                top: 7133px;
+                margin-right: 100px;
+            }
+            .f-item2 {
+                top: 7159px;
+            }
+            .f-item3 {
+                top: 7185px;
+                margin-right: 100px;
+            }
+            .f-item4 {
+                top: 7211px;
+            }
+        }
+        .col-foot3 {
+            .f-lorem {
+                margin-left: 0;
+            }
+            p {
+                left: 1045px;
+                width: 77px;
+                height: 15px;
+            }
+            p:first-child {
+                top: 7094px;
+            }
+            .f-item1 {
+                top: 7133px;
+                margin-right: 100px;
+            }
+            .f-item2 {
+                top: 7159px;
+            }
+            .f-item3 {
+                top: 7185px;
+                margin-right: 100px;
+            }
+            .f-item4 {
+                top: 7211px;
+            }
+        }
+        .col-foot4 {
+            p {
+                left: 1276px;
+            }
+            p:first-child {
+                top: 7094px;
+                width: 61px;
+                height: 15px;
+            }
+            p:nth-child(2) {
+                .fa {
+                    width: 14px;
+                    height: 14px;
+                }
+                span {
+                    width: 88px;
+                    height: 14px;
+                }
+            }
+            p:nth-child(3) {
+                .fa {
+                    width: 15px;
+                    height: 12px;
+                }
+                span {
+                    width: 103px;
+                    height: 14px;
+                }
+            }
+            p:nth-child(4) {
+                .fa {
+                    width: 11px;
+                    height: 16px;
+                }
+                span {
+                    width: 119px;
+                    height: 14px;
+                }
+            }
+        }
+    }
+    .split {
+        display: inline-block;
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+    ul {
+        list-style-type: none;
+        li {
+            display: inline-block;
+        }
+    }
+}
