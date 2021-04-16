@@ -1,0 +1,62 @@
+{% import 'macros/path.html' as f %}
+{% import 'macros/site.html' as s %}
+
+{% set job_saved = false %}
+{% set job_applied = false %}
+<div class="job-card col-lg-6 col-md-12 col-sm-12">
+    <div class="job-card-container">
+        <div class="job-card-wrapper">
+            <div class="row job-type">
+                <span>Full time</span>
+            </div>
+            <div class="row job-position">
+                <h4>Petroliam Nasional Berhad (PETRONAS)</h4>
+                <h3>Project Manager</h3>
+                <p>Manufacturing / Managing</p>
+            </div>
+            <div class="row job-require">
+                <div class="col-lg-4 col-sm-12 col-md-12">
+                    <span><i class="bi bi-geo-alt-fill"></i> Location</span>
+                </div>
+                <div class="col-lg-5 col-sm-12 col-md-12">
+                    <span><i class="bi bi-briefcase-fill"></i> 2 - 3 Year experience</span>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-12">
+                    <span>
+                        <i class="bi bi-cash"></i>
+                        {% if is_guest %}
+                            Salary <i class="bi bi-lock-fill"></i>
+                        {% else %}
+                            RM 6789.00
+                        {% endif %}
+                    </span>
+                </div>
+            </div>
+            <div class="row job-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies, lacus nec accumsan elementum, eros risus gravida massa, eget ultricies dui quam id dui. Nulla tincidunt imperdiet nulla ac ultricies. Cras vitae enim fringilla, vulputate arcu vitae,</p>
+            </div>
+        </div>
+    
+        
+    </div>
+    <div class="card-footer">
+        <div class="row">
+            <div class="col-lg-7 col-sm-12 col-md-12 posted-time-wrap">
+                <p>Posted 2 Days ago</p>
+            </div>
+            <div class="col-lg-5 col-sm-12 col-md-12 share-apply-wrapper">
+                <div class="row d-flex flex-sm-row-reverse ">
+                    <div class="col button-container">
+                      <button>Apply Now</button>
+                    </div>
+                    <div class="col share-container">
+                        <a href="#"><i class="bi bi-bookmark"></i></a>
+                        <a href="#"><i class="bi bi-share-fill"></i></a>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,21 +1,4 @@
-p.card-text {
-  font-size: smaller;
-}
 
-div.card-footer {
-  font-size: smaller;
-}
-
-img.card-logo {
-  margin: 10px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.margin-10 {
-  margin: 10px;
-}
 .announcement-alert-section{
 	background: #FFA2A2 0% 0% no-repeat padding-box;
 	border: 1px solid #FF0000;
@@ -92,7 +75,7 @@ img.card-logo {
 				}
 				font-weight: 300;
 				color: $navBgColor;
-				font-size: 30px
+				font-size: 30px;
 			}
 
 		}
@@ -102,7 +85,7 @@ img.card-logo {
 				margin-left: 20px;
 			}
 			p{
-				color: $navBgColor;
+				color: $textGrayColor;
 				font-size: 18px;
 				@media only screen and (max-width: 600px) {
 					font-size: 14px;
@@ -110,5 +93,140 @@ img.card-logo {
 				}
 			}
 		}
+	}
+}
+.job-card{
+	padding: 5px;
+	@media only screen and (max-width: 600px) {
+		padding: 5px 20px 5px 20px;
+	}
+	.job-card-container{
+		padding: 20px;
+		max-width: 603px;
+		@media only screen and (max-width: 600px) {
+			padding-bottom: 0px;
+		}
+		background: $bgColor 0% 0% no-repeat padding-box;
+	 	box-shadow: 0px 0px 12px #000000D9;
+		.job-card-wrapper{
+			.job-type {
+				width: 101px;
+				height: 29px;
+				
+				border: none;
+    			border-radius: 0;
+    			background-color: #6472E1;
+    			color: $bgColor;
+    			text-align: center;
+    			padding-top: 5px;
+    			margin-left: 1px;
+    			margin-bottom: 13px;
+    			@media only screen and (max-width: 600px) {
+					width: 94px;
+					height: 26px;
+					padding-top: 3px;
+				}
+				span{
+					font-size: 14px;
+					@media only screen and (max-width: 600px) {
+						font-size: 13px;
+					}
+					font-weight: bold;
+				}
+			}
+			.job-position{
+				h4{
+					font-size: 14px;
+					@media only screen and (max-width: 600px) {
+						font-size: 12px;
+					}
+				}
+				h3{
+					font-size: 18px;
+					font-weight: bold;
+					@media only screen and (max-width: 600px) {
+						font-size: 14px;
+					}
+
+				}
+				p{
+					color: $textGrayColor;	
+					font-size: 14px;
+					@media only screen and (max-width: 600px) {
+						font-size: 12px;
+					}
+				}
+			}
+			.job-require{
+				color: $textGrayColor;
+				font-size: 14px;
+				margin-bottom: 20px;
+				@media only screen and (max-width: 600px) {
+					font-size: 12px;
+				}
+			}
+			.job-description{
+
+				color: $textGrayColor;
+				font-size: 14px;
+				@media only screen and (max-width: 600px) {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	.card-footer{
+		background-color: $lightGray;
+		border: none;
+    	border-radius: 0;
+    	height: 52px;
+    	color:$textGrayColor;
+    	@media only screen and (max-width: 600px) {
+			background-color: $bgColor;
+			height: auto;
+			margin-top: -1px;
+		}
+    	.posted-time-wrap{
+    		p{
+    			margin-top: 3px;
+    			@media only screen and (max-width: 600px) {
+					font-size: 12px;
+					margin-left: 5px;
+				}
+    		}
+    	}
+    	.share-apply-wrapper{
+    		.share-container{
+	    		a{
+		    		color:#707070;
+		    		margin-right: 5px;
+		    	}
+	    	    margin-left: 39px;
+				padding-top: 3px;
+				@media only screen and (max-width: 600px) {
+					margin-left: 0px;
+					padding-top: 9px;
+				}
+		    }
+		    .button-container{
+		    	button{
+		    		font-size: 14px;
+		    		width: 113px;
+					height: 32px;
+					@media only screen and (max-width: 600px) {
+						width: 208px;
+						height: 42px;
+					}
+					border: none;
+					border-radius: 0;
+					background-color: $yellowButton;
+					color: $linkColor;
+					text-align: center;
+	    		}
+		    }
+	    	
+    	}
+    	
+
 	}
 }
