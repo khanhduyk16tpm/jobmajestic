@@ -6,7 +6,7 @@ header {
     
     background-color: $navBgColor;
     
-    @media only screen and (max-width: 600px) {
+    @include media-breakpoint-down(lg)  {
       .main-logo {
         margin-left: 10px;
         img {
@@ -15,7 +15,7 @@ header {
         }
       }
     }
-    @media only screen and (min-width: 600px) {
+    @include media-breakpoint-up(lg)  {
        height: 73px;
        .main-logo {
         img {
@@ -255,7 +255,7 @@ header {
         color: $bigBtnFontColor;
       }
 
-      @media only screen and (max-width: 600px) {
+      @include media-breakpoint-down(lg)  {
         .my-2 {
           float: left;
         }
@@ -277,7 +277,7 @@ header {
         }
       }
 
-      @media only screen and (min-width: 600px) {
+      @include media-breakpoint-up(lg)  {
         .my-2 {
           float: right;
           margin-right: 25px;

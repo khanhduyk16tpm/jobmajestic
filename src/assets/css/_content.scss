@@ -4,13 +4,13 @@
 	border: 1px solid #FF0000;
 	padding-top: 20px;
 	.container-warning {
-		@media only screen and (min-width: 600px) {
+		@include media-breakpoint-up(lg)  {
 			max-width: 1378px;
 		}
 		.warning-img-title {
 			img{
 				width: 84px;
-				@media only screen and (max-width: 600px) {
+				@include media-breakpoint-down(lg)  {
 					width: 44px;
 					margin-left: 20px;
 				}
@@ -18,7 +18,7 @@
 			}
 			h4{
 				margin: 0 0 50px 130px;
-				@media only screen and (max-width: 600px) {
+				@include media-breakpoint-down(lg)  {
 					margin: 0px 0 35px 105px;
 					font-size: 18px;
 					padding-top: 10px;
@@ -31,13 +31,13 @@
 		}
 		.warning-description{
 			margin-left: 130px;
-			@media only screen and (max-width: 600px) {
+			@include media-breakpoint-down(lg)  {
 				margin-left: 20px;
 			}
 			p{
 				color: #E91421;
 				font-size: 18px;
-				@media only screen and (max-width: 600px) {
+				@include media-breakpoint-down(lg)  {
 					font-size: 14px;
 
 				}
@@ -50,17 +50,17 @@
 	background: #FFFFFF 0% 0% no-repeat padding-box;
 	border: 3px solid #FFCC33;
 	padding-top: 20px;
-	@media only screen and (max-width: 600px) {
+	@include media-breakpoint-down(lg)  {
 		margin-left: 0;
 	}
 	.container-warning {
-		@media only screen and (min-width: 600px) {
+		@include media-breakpoint-up(lg)  {
 			max-width: 1378px;
 		}
 		.warning-img-title {
 			img{
 				width: 84px;
-				@media only screen and (max-width: 600px) {
+				@include media-breakpoint-down(lg)  {
 					width: 44px;
 					margin-left: 20px;
 				}
@@ -68,7 +68,7 @@
 			}
 			h4{
 				margin: 0 0 50px 130px;
-				@media only screen and (max-width: 600px) {
+				@include media-breakpoint-down(lg)  {
 					margin: 0px 0 35px 105px;
 					font-size: 18px;
 					padding-top: 10px;
@@ -81,13 +81,13 @@
 		}
 		.warning-description{
 			margin-left: 130px;
-			@media only screen and (max-width: 600px) {
+			@include media-breakpoint-down(lg)  {
 				margin-left: 20px;
 			}
 			p{
 				color: $textGrayColor;
 				font-size: 18px;
-				@media only screen and (max-width: 600px) {
+				@include media-breakpoint-down(lg)  {
 					font-size: 14px;
 
 				}
@@ -97,13 +97,13 @@
 }
 .job-card{
 	padding: 5px;
-	@media only screen and (max-width: 600px) {
+	@include media-breakpoint-down(lg)  {
 		padding: 5px 20px 5px 20px;
 	}
 	.job-card-container{
 		padding: 20px;
-		max-width: 603px;
-		@media only screen and (max-width: 600px) {
+		/*max-width: 603px;*/
+		@include media-breakpoint-down(lg)  {
 			padding-bottom: 0px;
 		}
 		background: $bgColor 0% 0% no-repeat padding-box;
@@ -121,14 +121,14 @@
     			padding-top: 5px;
     			margin-left: 1px;
     			margin-bottom: 13px;
-    			@media only screen and (max-width: 600px) {
+    			@include media-breakpoint-down(lg)  {
 					width: 94px;
 					height: 26px;
 					padding-top: 3px;
 				}
 				span{
 					font-size: 14px;
-					@media only screen and (max-width: 600px) {
+					@include media-breakpoint-down(lg)  {
 						font-size: 13px;
 					}
 					font-weight: bold;
@@ -137,14 +137,14 @@
 			.job-position{
 				h4{
 					font-size: 14px;
-					@media only screen and (max-width: 600px) {
+					@include media-breakpoint-down(lg)  {
 						font-size: 12px;
 					}
 				}
 				h3{
 					font-size: 18px;
 					font-weight: bold;
-					@media only screen and (max-width: 600px) {
+					@include media-breakpoint-down(lg)  {
 						font-size: 14px;
 					}
 
@@ -152,7 +152,7 @@
 				p{
 					color: $textGrayColor;	
 					font-size: 14px;
-					@media only screen and (max-width: 600px) {
+					@include media-breakpoint-down(lg)  {
 						font-size: 12px;
 					}
 				}
@@ -161,7 +161,7 @@
 				color: $textGrayColor;
 				font-size: 14px;
 				margin-bottom: 20px;
-				@media only screen and (max-width: 600px) {
+				@include media-breakpoint-down(lg)  {
 					font-size: 12px;
 				}
 			}
@@ -169,7 +169,7 @@
 
 				color: $textGrayColor;
 				font-size: 14px;
-				@media only screen and (max-width: 600px) {
+				@include media-breakpoint-down(lg)  {
 					font-size: 12px;
 				}
 			}
@@ -181,7 +181,7 @@
     	border-radius: 0;
     	height: 52px;
     	color:$textGrayColor;
-    	@media only screen and (max-width: 600px) {
+    	@include media-breakpoint-down(lg)  {
 			background-color: $bgColor;
 			height: auto;
 			margin-top: -1px;
@@ -189,21 +189,29 @@
     	.posted-time-wrap{
     		p{
     			margin-top: 3px;
-    			@media only screen and (max-width: 600px) {
+    			@include media-breakpoint-down(lg)  {
 					font-size: 12px;
 					margin-left: 5px;
 				}
     		}
     	}
     	.share-apply-wrapper{
+    		.flex-lg-row-reverse{
+    			@include media-breakpoint-down(lg)  {
+    				width: 310px;
+    			}
+    			@include media-breakpoint-up(lg)  {
+    				width: 209px;
+    			}
+    		}
     		.share-container{
 	    		a{
 		    		color:#707070;
 		    		margin-right: 5px;
 		    	}
-	    	    margin-left: 39px;
+	    	    /*margin-left: 39px;*/
 				padding-top: 3px;
-				@media only screen and (max-width: 600px) {
+				@include media-breakpoint-down(lg)  {
 					margin-left: 0px;
 					padding-top: 9px;
 				}
@@ -213,7 +221,7 @@
 		    		font-size: 14px;
 		    		width: 113px;
 					height: 32px;
-					@media only screen and (max-width: 600px) {
+					@include media-breakpoint-down(lg)  {
 						width: 208px;
 						height: 42px;
 					}

@@ -10,10 +10,7 @@ body {
   color: $fontColor;
   overflow-x: hidden;
 
-  .row {
-    margin-right: 0;
-    margin-left: 0;
-  }
+  
 
   .alert {
     background-color: $alertColor;
@@ -123,6 +120,10 @@ body {
   }
   footer {
     margin-top: auto;
+    .row {
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
   .social-buttons .circle {
     border-radius: 50%;
