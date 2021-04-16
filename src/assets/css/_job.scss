@@ -12,60 +12,60 @@
         left: 353px;
         @include media-breakpoint-only(xs) { 
             top: 122px;
-            left: 75px;
+            left: 64px;//75px;
         }
         @include media-breakpoint-only(sm) {  
             top: 154px;
-            left: 92px;
+            left: 81px;//92px;
         }
         @include media-breakpoint-only(md) { 
             top: 225px;
-            left: 94px;
+            left: 82px;//94px
         }
         @include media-breakpoint-only(lg) { 
             top: 225px;
-            left: 115px;
+            left: 104px;//115px
         }
         @include media-breakpoint-only(xl) {
             top: 225px;
-            left: 190px;
+            left: 180px;
         }
-        @include media-breakpoint-between(xl, xxl) {
-            top: 225px;
-            left: 190px;
-        }
+        // @include media-breakpoint-between(xl, xxl) {
+        //     top: 225px;
+        //     left: 190px;
+        // }
         @include media-breakpoint-only(xxl) {
             top: 225px;
-            left: 353px;
+            left: 342px;//353px;
         }
         img {
             @include media-breakpoint-only(xs) { 
-                width: 375px;
+                width: 398px;//375px
                 height: 115px;
             }
             @include media-breakpoint-only(sm) {  
-                width: 560px;
+                width: 583px;//560px;
                 height: 145px;
             }
             @include media-breakpoint-only(md) {  
-                width: 772px;
+                width: 796px;//772px
                 height: 200px;
             }
 
             @include media-breakpoint-only(lg) { 
-                width: 995px;
+                width: 1016px;//995px;
                 height: 260px;
             }
             @include media-breakpoint-only(xl) { 
-                width: 995px;
+                width: 1016px;
                 height: 260px;
             }
-            @include media-breakpoint-between(xl, xxl) { 
-                width: 995px;
-                height: 260px;
-            }
+            // @include media-breakpoint-between(xl, xxl) { 
+            //     width: 995px;
+            //     height: 260px;
+            // }
             @include media-breakpoint-only(xxl) { 
-                width: 1215px;
+                width: 1240px;//1215px;
                 height: 316px;
             }
         }
@@ -76,17 +76,48 @@
     .job-scope {
         position: absolute;
         opacity: 1;
-        @media only screen and (min-width:600px) {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+       @include media-breakpoint-only(xs) { 
+            top: 238px;
+            left: 75px;
+            width: 375px;
+            height: 221px;
+        }
+        @include media-breakpoint-only(sm) {  
+            top: 300px;
+            left: 92px;
+            width: 560px;
+            height: 221px;
+        }
+        @include media-breakpoint-only(md) { 
+            top: 424px;
+            left: 94px;
+            width: 772px;
+            height: 221px;
+        }
+        @include media-breakpoint-only(lg) { 
+            top: 485px;
+            left: 115px;
+            width: 995px;
+            height: 221px;
+        }
+        @include media-breakpoint-only(xl) {
+            top: 485px;
+            left: 190px;
+            width: 995px;
+            height: 221px;
+        }
+        // @include media-breakpoint-between(xl, xxl) {
+        //     top: 540px;
+        //     left: 353px;
+        //     width: 1215px;
+        //     height: 221px;
+        // }
+        @include media-breakpoint-only(xxl) {
             top: 540px;
             left: 353px;
             width: 1215px;
             height: 221px;
-            background: #FFFFFF 0% 0% no-repeat padding-box;
-            display: block;
-        }
-        @media only screen and (max-width:600px){
-            position: absolute;
-            // display: none;
         }
         /*job title*/
         .job-title {
