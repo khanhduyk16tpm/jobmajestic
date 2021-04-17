@@ -11,7 +11,7 @@
 {% block content %}
 <div class="main">
 	<div class="container-fluid sank-rectangle"></div>
-	<div class="container-fluid container-herobanner">
+	<div class="container-fluid container-herobanner container-section">
 		<div class="row herobanner">
 			<div class="herobanner-img-mobile container-fluid">
 				<img class="img-fluid" src="{{f.landing_page_img('mask-group-21-2x.png')}}">
@@ -21,19 +21,21 @@
 				<div class="search-box">
 					<div class="row">
 						<div class="input-container" id="search-by-title-skill">
-							<input type="text" class="form-control" placeholder="&#xF002;  Search by Job Title, Company or Skills" name="search-by-title-skill">
+							<input type="text" class="form-control"
+								placeholder="&#xF002;  Search by Job Title, Company or Skills"
+								name="search-by-title-skill">
 						</div>
-                       	<div class="input-container" id="search-by-location">
-							<input type="text" class="form-control" placeholder="&#xF041;  Location" name="search-by-localtion">
+						<div class="input-container" id="search-by-location">
+							<input type="text" class="form-control" placeholder="&#xF041;  Location"
+								name="search-by-localtion">
 						</div>
 						<div class="input-container" id="search-by-category">
-							<input type="text" class="form-control" placeholder="&#xF0B1;  Job Categories" name="search-by-categories">
+							<input type="text" class="form-control" placeholder="&#xF0B1;  Job Categories"
+								name="search-by-categories">
 						</div>
 						<div class="input-container" id="search-button">
 							<button class="btn btn-secondary">Search</button>
 						</div>
-						
-
 					</div>
 					<div class="row advanced-search">
 						<a href="{{ s.job_search_url() }}">Advanced Search</a>
@@ -65,12 +67,12 @@
 					<img id="maxis-logo" src="{{f.companies_main_img('maxis.jpeg')}}">
 					<img id="shell-logo" src="{{f.companies_main_img('shell.png')}}">
 					<img id="samsung-logo" src="{{f.companies_main_img('samsung.png')}}">
-				
+
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 	{% include 'partials/_announcement_alert_section.html' %}
 	{% include 'partials/_announcement_section.html' %}
 	<div class="looking-job-section">
@@ -89,12 +91,11 @@
 					<div id="array-dots-mobile-2">
 						<img src="{{f.landing_page_img('group-3848.png')}}">
 					</div>
-				</div>	
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="explore-jobs-section">
-
+	<div class="container-fluid explore-jobs-section container-section">
 		<div id="array-dots-desktop-1">
 			<img src="{{f.landing_page_img('group-3848.png')}}" class="float-start">
 		</div>
@@ -104,7 +105,7 @@
 					<h4>Explore jobs by</h4>
 					<p>category</p>
 				</div>
-			{% for i in range(1,7) %}
+				{% for i in range(1,7) %}
 				<div class="col-6 col-lg-3 category-item-container text-center">
 					<div class="item-container">
 						<a href="#">
@@ -113,12 +114,12 @@
 						</a>
 					</div>
 				</div>
-                 {% if i == 3 %} 
-                 </div>
-                 <div class="row">
-            	{% endif %}
-            {% endfor %}
-            	<div class="col-6 col-sm-3 category-item-container text-center">
+				{% if i == 3 %}
+			</div>
+			<div class="row">
+				{% endif %}
+				{% endfor %}
+				<div class="col-6 col-sm-3 category-item-container text-center">
 					<div class="item-container">
 						<a href="#">
 							<h3>100+ More</h3>
@@ -126,21 +127,22 @@
 						</a>
 					</div>
 				</div>
-        	</div>
+			</div>
 		</div>
 		<div id="array-dots-desktop-2">
 			<img src="{{f.landing_page_img('group-3848.png')}}" class="float-end">
 		</div>
 	</div>
-	<div class="available-jobs-section">
-		<div class="container-fluid available-jobs-container">
+	<div class="container-fluid available-jobs-section">
+		<div class="container-fluid available-jobs-container container-section">
 			<div class="row title-wrapper">
 				<h4>Explore more <span>available jobs</span></h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					et dolore</p>
 			</div>
 			<div class="row job-cards-container">
 				{% for i in range(1,6) %}
-					{% include 'partials/_job_card.html' %}
+				{% include 'partials/_job_card.html' %}
 				{% endfor %}
 				<div class="job-card job-card-show-more col-lg-6 col-md-12 col-sm-12">
 					<div class="job-card-container">

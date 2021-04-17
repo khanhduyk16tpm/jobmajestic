@@ -3,7 +3,7 @@
 footer {
     .sitemap {
         .container-fluid {
-            max-width: 1215px;
+            max-width: 1378px;
             margin-top: 40px;
             a {
                 text-decoration: none;
@@ -34,9 +34,9 @@ footer {
                     margin-bottom: 5px;
                     min-width: 150px;
                 }
-                /*.footleft-text {
-                    width: 400px;
-                }*/
+                // .footleft-text {
+                //     min-width: 400px;
+                // }
                 .row-cols-auto {
                     margin-left: -12px;
                     margin-top: 20px;
@@ -53,6 +53,7 @@ footer {
         }
     }
 }
+
 
 
 
