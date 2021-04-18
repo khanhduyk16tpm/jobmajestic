@@ -844,11 +844,22 @@
         @include media-breakpoint-up(lg) {
             display: none;
         }
-        .similar-overview {
+        .overview-1 {
             top: 1792px;
+        }
+        .overview-2 {
+            top: 2111px;
+        }
+        .overview-3 {
+            top: 2430px;
+        }
+        .overview-4 {
+            top: 2747px;
+        }
+        .similar-overview {       
             left: 27px;
             width: 322px;
-            height: 270px;
+            height: 290px;
             position: absolute;
             background: #fff 0 0 no-repeat padding-box;
             -webkit-box-shadow: 0 0 3px #00000059;
@@ -946,6 +957,23 @@
             span {
                 margin-top: 30px;
             }
+        }
+    }
+    .view-more {
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+        top: 3069px;
+        left: 28px;
+        position: absolute;
+        .btn-view-more {
+            width: 320px;
+            height: 42px;
+            background: #FFCC33 0% 0% no-repeat padding-box;
+            box-shadow: 0px 0px 3px #00000029;
+            opacity: 1;
+            border: 0;
+            border-radius: 0;
         }
     }
 }
