@@ -840,4 +840,112 @@
             display: none;
         }
     }
+    .mob-similar-jobs {
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+        .similar-overview {
+            top: 1792px;
+            left: 27px;
+            width: 322px;
+            height: 270px;
+            position: absolute;
+            background: #fff 0 0 no-repeat padding-box;
+            -webkit-box-shadow: 0 0 3px #00000059;
+            box-shadow: 0 0 3px #00000059;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+        .btn-job-view {
+            margin-top: 10px;
+            width: 268px;
+            button {
+                top: 1861px;
+                left: 48px;
+                width: 85px;
+                height: 27px;
+                border: none;
+                background: #5E72E4 0% 0% no-repeat padding-box;
+                opacity: 1;
+            }
+            span {
+                font-size: 12px;
+                text-align: center;
+                letter-spacing: 1.08px;
+                color: #FFFFFF;
+                opacity: 1;
+            }
+        }
+        .job-bookmark {
+            margin-top: 10px;
+            /* top: 853px; */
+            /* left: 313px; */
+            width: 14px;
+            height: 18px;
+            margin-left: 8px;
+        }
+        .job-info {
+            .row {
+                margin-left: 0px;
+                font-size: 12px;
+                color: #222E3C;
+                opacity: 1;
+                text-align: left;
+            }
+            .job-base-icon {
+                width: 34px;
+                height: 14px;
+            }
+            .experience-icon {
+                width: 35px;
+                height: 11px;
+            }
+            .base-text {
+                width: 47px;
+                height: 15px;
+            }
+            .experience-text {
+                width: 145px;
+                height: 15px;
+            }
+            .overview-base {
+                .job-base-icon {
+                    margin-left: -12px;
+                    margin-top: 7px;
+                }
+                span {
+                    margin-left: -18px;
+                    margin-top: 5px;
+                }
+            }
+            .overview-experience {
+                .experience-icon {
+                    margin-top: 10px;
+                    margin-left: -12px;
+                }
+                span {
+                    margin-left: -18px;
+                    margin-top: 6px;
+                }
+            }
+        }
+        .detail-job {
+            width: 280px;
+            height: 45px;
+            font-size: 12px;
+            /*margin-left: 0px;*/
+        }
+        .last-post {
+            width: 134px;
+            height: 15px;
+            font-size: 12px;
+            // margin-left: 0px;
+            letter-spacing: 0px;
+            color: #000000;
+            opacity: 0.5;
+            span {
+                margin-top: 30px;
+            }
+        }
+    }
 }
