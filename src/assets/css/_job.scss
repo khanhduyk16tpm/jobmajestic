@@ -812,6 +812,18 @@
         opacity: 1;
         font-size: 30px;
         text-align: left;
+        @include media-breakpoint-down(lg) {
+            width: 170px;
+            height: 37px;
+            position: absolute;
+            letter-spacing: 0;
+            color: #222e3c;
+            opacity: 1;
+            font-size: 18px;
+            text-align: left;
+            top: 1750px;
+            left: 38px;
+        }
     }
     .see-all {
         top: 1969px;
@@ -824,5 +836,8 @@
         opacity: 1;
         font-size: 18px;
         text-align: left;
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
     }
 }
