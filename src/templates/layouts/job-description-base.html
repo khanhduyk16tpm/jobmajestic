@@ -1,0 +1,58 @@
+{% extends "layouts/base.html" %}
+{% import 'macros/path.html' as f %}
+{# {% import 'macros/site.html' as s %} #}
+{# {% block js %}
+{{ f.module(['toggle', 'ajax_form']) }}
+<script src="{{ f.js('job.min.js') }}"></script>
+{% endblock %} #}
+
+{% block content %}
+<div class="container-fluid job-description">
+    <div class="container">
+        <div class="main-image">
+            <img src="{{ f.img('job/mask_group_2x.png') }}" class="card-img-top top-image" alt="Mask Group">
+        </div>
+        <div class="job-scope">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="job-title">UI UX Designer</div>
+                        <div class="job-company mt-1">Petroliam Nasional Berhad (PETRONAS)</div>
+                        <div class="job-field">Technology/ Industry</div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 company-logo">
+                        <img src="{{ f.img('job/petronas_ico_large.png') }}" class="card-img-top petronas-icon img-fluid" alt="Petronas">
+                    </div>
+                </div>
+                <div class="row base-align">
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <div class="job-base">
+                            <img src="{{ f.img('job/location.png') }}" class="card-img-top location-icon" alt="localtion">
+                            <span>Malaysia</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                        <div class="salary">
+                            <img src="{{ f.img('job/coins.png') }}" class="card-img-top coins-icon" alt="coins">
+                            <span>Salary</span>
+                            <img src="{{ f.img('job/lock.png') }}" class="card-img-top lock-icon" alt="lock">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-1 base-align">
+                    <div class="col-lg-5 col-md-5 col-sm-5 job-type">
+                        <img src="{{ f.img('job/clock.png') }}" class="card-img-top clock-icon" alt="clock">
+                        <button class="btn btn-job-type"><span>Full time</span></button>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 job-experience">
+                        <img src="{{ f.img('job/briefcase.png') }}" class="card-img-top briefcase-icon" alt="coins">
+                        <span>3-5 Years Experience</span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 job-post">
+                        <span>Posted 5 hours ago</span>
+                    </div>
+                </div>
+        </div>
+        <div>{% block page %}{% endblock %}</div>
+    </div>
+</div>
+{% endblock %}
