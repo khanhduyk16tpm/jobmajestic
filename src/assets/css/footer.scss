@@ -36,6 +36,7 @@ footer {
                         }
                         li:nth-child(even) {
                             display: inline;
+                            margin-left: 15px;
                         }
                     }
                 }
@@ -76,6 +77,11 @@ footer {
                     .font-item {
                         width: 50%;
                     }
+                    .font-item:nth-child(even) {
+                        div.content {
+                            margin-left: 15px;
+                        }
+                    }
                 }
                 .item {
                     font-size: $fontSize12;
@@ -84,6 +90,7 @@ footer {
 
                     i.fa.fa-map-marker {
                         font-size: 15px;
+                        margin-right: 3px;
                     }
                 }
                 .footleft-text {
@@ -124,6 +131,15 @@ footer {
                         }
                         .social-buttons i {
                             font-size: inherit;
+                            margin-right: 0;
+                        }
+                    }
+                    .socials-section {
+                        .title {
+                            margin-left: 15px;
+                        }
+                        .social-buttons {
+                            margin-left: 0;
                         }
                     }
                 }
@@ -144,6 +160,9 @@ footer {
                             width: 100%;
                             .privacy-policy {
                                 width: 49%;
+                                a.terms {
+                                    margin-left: 15px;
+                                }
                             }
                         }
                         a.privacy {
