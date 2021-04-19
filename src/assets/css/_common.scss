@@ -1,0 +1,16 @@
+/* style for common page : terms of use, privacy*/
+.row-term {
+    margin-bottom: 130px;
+}
+.first-term {
+    margin-top: 130px;
+    margin-bottom: 50px;
+}
+.first-term, .row-term {
+    .term-rule {
+        h5 {
+            font-size: 60px;
+            font-weight: bold;
+        }
+    }
+}
