@@ -22,9 +22,21 @@ footer {
                     padding-left: 0;
                     list-style-type: none;
 
-                    li.mr-3.align {
+                    li.align {
                         margin-bottom: 12px;
                         display: inline-block;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        width: 100%;
+                        span.split {
+                            display: none;
+                        }
+                        li {
+                            width: 50%;
+                        }
+                        li:nth-child(even) {
+                            display: inline;
+                        }
                     }
                 }
             }
@@ -52,13 +64,12 @@ footer {
             }
             .about-contact {
                 margin-top: 60px;
-                @include media-breakpoint-down(sm) {
-                    margin-top: 0;
-                }
+
                 .title {
                     font-weight: bold;
                 }
                 @include media-breakpoint-down(sm) {
+                    margin-top: 0;
                     .title {
                         margin-top: 25px;
                     }
@@ -66,10 +77,10 @@ footer {
                         width: 50%;
                     }
                 }
-                .font-item {
+                .item {
                     font-size: $fontSize12;
                     margin-bottom: 5px;
-                    min-width: 200px;
+                    width: 100%;
 
                     i.fa.fa-map-marker {
                         font-size: 15px;
@@ -98,6 +109,7 @@ footer {
                 .row-cols-auto {
                     margin-left: -12px;
                     margin-top: 20px;
+
                     span {
                         margin-left: 10px;
                     }
@@ -105,7 +117,7 @@ footer {
                 @include media-breakpoint-down(sm) {
                     .contact-section {
                         margin-top: 35px;
-                        width: 50%;
+                        width: 49%;
 
                         .row-cols-auto {
                             display: block;
@@ -116,7 +128,7 @@ footer {
                     }
                 }
             }
-            .privacy-section {                
+            .privacy-section {
                 @include media-breakpoint-down(sm) {
                     .bottom-text {
                         margin-top: 60px;
@@ -131,7 +143,7 @@ footer {
                         .row {
                             width: 100%;
                             .privacy-policy {
-                                width: 50%;
+                                width: 49%;
                             }
                         }
                         a.privacy {
@@ -144,12 +156,12 @@ footer {
                         margin-right: 10px;
                     }
                 }
-                
+
                 @include media-breakpoint-up(md) {
                     .desktop-section {
                         float: right;
                     }
-                }                
+                }
             }
             @include media-breakpoint-up(md) {
                 .privacy-section {
