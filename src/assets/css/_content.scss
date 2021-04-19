@@ -1,74 +1,71 @@
-
-.announcement-alert-section{
-	background: #FFA2A2 0% 0% no-repeat padding-box;
-	border: 1px solid #FF0000;
+.announcement-alert-section {
+	background: #ffa2a2 0% 0% no-repeat padding-box;
+	border: 1px solid #ff0000;
 	padding-top: 20px;
 	.container-warning {
-		@include media-breakpoint-up(lg)  {
+		@include media-breakpoint-up(lg) {
 			max-width: 1378px;
 		}
 		.warning-img-title {
-			img{
+			img {
 				width: 84px;
-				@include media-breakpoint-down(lg)  {
+				@include media-breakpoint-down(lg) {
 					width: 44px;
 					margin-left: 20px;
 				}
 				float: left;
 			}
-			h4{
+			h4 {
 				margin: 0 0 50px 130px;
-				@include media-breakpoint-down(lg)  {
+				@include media-breakpoint-down(lg) {
 					margin: 0px 0 35px 105px;
 					font-size: 18px;
 					padding-top: 10px;
 				}
 				font-weight: 300;
-				color: #E91421;
-				font-size: 30px
+				color: #e91421;
+				font-size: 30px;
 			}
-
 		}
-		.warning-description{
+		.warning-description {
 			margin-left: 130px;
-			@include media-breakpoint-down(lg)  {
+			@include media-breakpoint-down(lg) {
 				margin-left: 20px;
 			}
-			p{
-				color: #E91421;
+			p {
+				color: #e91421;
 				font-size: 18px;
-				@include media-breakpoint-down(lg)  {
+				@include media-breakpoint-down(lg) {
 					font-size: 14px;
-
 				}
 			}
 		}
 	}
 }
-.announcement-section{
+.announcement-section {
 	margin-top: 15px;
-	background: #FFFFFF 0% 0% no-repeat padding-box;
-	border: 3px solid #FFCC33;
+	background: #ffffff 0% 0% no-repeat padding-box;
+	border: 3px solid #ffcc33;
 	padding-top: 20px;
-	@include media-breakpoint-down(lg)  {
+	@include media-breakpoint-down(lg) {
 		margin-left: 0;
 	}
 	.container-warning {
-		@include media-breakpoint-up(lg)  {
+		@include media-breakpoint-up(lg) {
 			max-width: 1378px;
 		}
 		.warning-img-title {
-			img{
+			img {
 				width: 84px;
-				@include media-breakpoint-down(lg)  {
+				@include media-breakpoint-down(lg) {
 					width: 44px;
 					margin-left: 20px;
 				}
 				float: left;
 			}
-			h4{
+			h4 {
 				margin: 0 0 50px 130px;
-				@include media-breakpoint-down(lg)  {
+				@include media-breakpoint-down(lg) {
 					margin: 0px 0 35px 105px;
 					font-size: 18px;
 					padding-top: 10px;
@@ -77,151 +74,150 @@
 				color: $navBgColor;
 				font-size: 30px;
 			}
-
 		}
-		.warning-description{
+		.warning-description {
 			margin-left: 130px;
-			@include media-breakpoint-down(lg)  {
+			@include media-breakpoint-down(lg) {
 				margin-left: 20px;
 			}
-			p{
+			p {
 				color: $textGrayColor;
 				font-size: 18px;
-				@include media-breakpoint-down(lg)  {
+				@include media-breakpoint-down(lg) {
 					font-size: 14px;
-
 				}
 			}
 		}
 	}
 }
-.job-card{
+.job-card {
 	padding: 5px 10px;
-	@include media-breakpoint-down(lg)  {
+	@include media-breakpoint-between(md, lg) {
 		padding: 5px 20px 5px 20px;
 	}
-	.job-card-container{
+	@include media-breakpoint-up(md) {
+		padding: 5px 10px;
+	}
+	.job-card-container {
 		padding: 20px;
 		/*max-width: 603px;*/
-		@include media-breakpoint-down(lg)  {
+		@include media-breakpoint-down(lg) {
 			padding-bottom: 0px;
 		}
 		background: $bgColor 0% 0% no-repeat padding-box;
-	 	box-shadow: 0px 0px 12px #000000D9;
-		.job-card-wrapper{
+		box-shadow: 0px 0px 12px #000000d9;
+		.job-card-wrapper {
 			.job-type {
 				width: 101px;
 				height: 29px;
-				
+
 				border: none;
-    			border-radius: 0;
-    			background-color: #6472E1;
-    			color: $bgColor;
-    			text-align: center;
-    			padding-top: 5px;
-    			margin-left: 1px;
-    			margin-bottom: 13px;
-    			@include media-breakpoint-down(lg)  {
+				border-radius: 0;
+				background-color: #6472e1;
+				color: $bgColor;
+				text-align: center;
+				padding-top: 5px;
+				margin-left: 1px;
+				margin-bottom: 13px;
+				@include media-breakpoint-down(lg) {
 					width: 94px;
 					height: 26px;
 					padding-top: 3px;
 				}
-				span{
+				span {
 					font-size: 14px;
-					@include media-breakpoint-down(lg)  {
+					@include media-breakpoint-down(lg) {
 						font-size: 13px;
 					}
 					font-weight: bold;
 				}
 			}
-			.job-position{
-				h4{
+			.job-position {
+				h4 {
 					font-size: 14px;
-					@include media-breakpoint-down(lg)  {
+					@include media-breakpoint-down(lg) {
 						font-size: 12px;
 					}
 				}
-				h3{
+				h3 {
 					font-size: 18px;
 					font-weight: bold;
-					@include media-breakpoint-down(lg)  {
+					@include media-breakpoint-down(lg) {
 						font-size: 14px;
 					}
-
 				}
-				p{
-					color: $textGrayColor;	
+				p {
+					color: $textGrayColor;
 					font-size: 14px;
-					@include media-breakpoint-down(lg)  {
+					@include media-breakpoint-down(lg) {
 						font-size: 12px;
 					}
 				}
 			}
-			.job-require{
+			.job-require {
 				color: $textGrayColor;
 				font-size: 14px;
 				margin-bottom: 20px;
-				@include media-breakpoint-down(lg)  {
+				@include media-breakpoint-down(lg) {
 					font-size: 12px;
 				}
 			}
-			.job-description{
-
+			.job-description {
 				color: $textGrayColor;
 				font-size: 14px;
-				@include media-breakpoint-down(lg)  {
+				@include media-breakpoint-down(lg) {
 					font-size: 12px;
 				}
 			}
 		}
 	}
-	.card-footer{
+	.card-footer {
 		background-color: $lightGray;
 		border: none;
-    	border-radius: 0;
-    	height: 52px;
-    	color:$textGrayColor;
-    	@include media-breakpoint-down(lg)  {
+		border-radius: 0;
+		height: 52px;
+		color: $textGrayColor;
+		@include media-breakpoint-down(lg) {
 			background-color: $bgColor;
 			height: auto;
 			margin-top: -1px;
 		}
-    	.posted-time-wrap{
-    		p{
-    			margin-top: 3px;
-    			@include media-breakpoint-down(lg)  {
+		.posted-time-wrap {
+			p {
+				margin-top: 3px;
+				@include media-breakpoint-down(lg) {
 					font-size: 12px;
 					margin-left: 5px;
 				}
-    		}
-    	}
-    	.share-apply-wrapper{
-    		.flex-lg-row-reverse{
-    			@include media-breakpoint-down(lg)  {
-    				width: 310px;
-    			}
-    			@include media-breakpoint-up(lg)  {
-    				width: 209px;
-    			}
-    		}
-    		.share-container{
-	    		a{
-		    		color:#707070;
-		    		margin-right: 5px;
-		    	}
-	    	    /*margin-left: 39px;*/
+			}
+		}
+		.share-apply-wrapper {
+			.flex-lg-row-reverse {
+				@include media-breakpoint-down(lg) {
+					width: 310px;
+				}
+				@include media-breakpoint-up(lg) {
+					width: 209px;
+				}
+			}
+			.share-container {
+				a {
+					color: #707070;
+					margin-right: 5px;
+				}
+				/*margin-left: 39px;*/
 				padding-top: 3px;
-				@include media-breakpoint-down(lg)  {
+				@include media-breakpoint-down(lg) {
 					margin-left: 0px;
 					padding-top: 9px;
 				}
-		    }
-		    .button-container{
-		    	button{
-		    		font-size: 14px;
-		    		width: 113px;
+			}
+			.button-container {
+				button {
+					font-size: 14px;
+					width: 113px;
 					height: 32px;
-					@include media-breakpoint-down(lg)  {
+					@include media-breakpoint-down(lg) {
 						width: 208px;
 						height: 42px;
 					}
@@ -230,11 +226,8 @@
 					background-color: $yellowButton;
 					color: $linkColor;
 					text-align: center;
-	    		}
-		    }
-	    	
-    	}
-    	
-
+				}
+			}
+		}
 	}
 }
