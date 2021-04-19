@@ -53,7 +53,7 @@
         {% block sitemap %}
         {# include 'layouts/_newsletter-form.html' #}
         <div class="sitemap py-3 py-md-4">
-            <div class="container-fluid">
+            <div class="container-fluid px-md-5">
                 <div class="row jobs-by mb-3">
                     <div class="col-sm-6 col-md-2 col-lg-2 title mb-3">
                         <h6>Jobs by Location</h6>
@@ -93,16 +93,19 @@
                         </ul>
                     </div>
                 </div>
-                <div class="row horizontal-line space-line mt-3"></div>
-                <div class="row bottom-section">
+                <div class="row horizontal-line space-line mt-3">
+                    <div class="col-md-12"></div>
+                </div>
+                <div class="row about-contact">
                     <div class="col-md-5">
                         <div class="footleft-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et</div>
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <div class="row">About</div>
+                        <div class="row title">About</div>
                         <div class="row row-cols-auto">
                             <div class="col-sm-6 col-md-6 col-lg-9  font-item">
                                 Lorem Ipsum
@@ -119,7 +122,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <div class="row">Lorem</div>
+                        <div class="row title">Lorem</div>
                         <div class="row row-cols-auto">
                             <div class="col-sm-6 col-md-6 col-lg-9  font-item">
                                 Lorem Ipsum
@@ -135,30 +138,45 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2">
-                        <div class="row">Contact</div>
+                    <div class="col-md-2 contact-section">
+                        <div class="row title">Contact</div>
                         <div class="row row-cols-auto">
                             <div class="col-sm-6 col-md-6 col-lg-9  font-item">
-                                <i class="bi bi-telephone" aria-hidden="true"></i><span>+[61] 2654 8452</span>
+                                <i class="fa fa-phone" aria-hidden="true"></i><span>+[61] 2654 8452</span>
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-9  font-item">
-                                <i class="bi bi-telephone" aria-hidden="true"></i><span>Lorem ipsum</span>
+                                <i class="fa fa-envelope" aria-hidden="true"></i><span>Lorem ipsum</span>
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-9  font-item">
-                                <i class="bi bi-telephone" aria-hidden="true"></i><span>Lorem ipsum dolor</span>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i><span>Lorem ipsum dolor</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 hide-on-desktop">
-                        <p>Socials</p>
-                        <p><i class="fa fa-phone" aria-hidden="true"></i><span>+[61] 2654 8452</span></p>
-                        <p><i class="fa fa-envelope" aria-hidden="true"></i><span>Lorem Ipsum</span></p>
-                        <p><i class="fa fa-map-marker" aria-hidden="true"></i><span>Lorem Ipsum</span></p>
+                    <div class="col-md-2 contact-section d-md-none">
+                        <div class="row title">Socials</div>
+                        <div class="row row-cols-auto social-buttons">
+                            <div class="col-sm-6 col-md-6 col-lg-9  font-item">
+                                <i class="fa fa-facebook circle" aria-hidden="true"></i><span>Facebook</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-9  font-item">
+                                <i class="fa fa-instagram circle"></i><span>Instagram</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-9  font-item">
+                                <i class="fa fa-linkedin-square circle"></i><span>Linkedin</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-9  font-item">
+                                <i class="fa fa-twitter circle" aria-hidden="true"></i><span>Twitter</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row horizontal-line space-line mt-3"></div>
-                    <div class="col-md-4 d-flex">Lorem ipsum dolor sit amet,</div>
-                    <div class="col-md-2 d-flex">
-                        <p class="social-buttons">
+                </div>
+                <div class="row horizontal-line space-line custom-line mt-3">
+                    <div class="col-md-12"></div>
+                </div>
+                <div class="row privacy-section">
+                    <div class="col-md-5 d-flex bottom-text">Lorem ipsum dolor sit amet,</div>
+                    <div class="col-md-3 d-flex social-buttons">
+                        <p>
                             <a href="{{ s.facebook_url() }}" target="_blank"><i class="fa fa-facebook circle"></i></a>
                             <a href="{{ s.instagram_url() }}" target="_blank"><i class="fa fa-instagram circle"></i></a>
                             <a href="{{ s.linkedin_url() }}" target="_blank"><i
@@ -166,12 +184,25 @@
                             <a href="{{ s.tiktok_url() }}" target="_blank"><i class="fa fa-twitter circle"></i></a>
                         </p>
                     </div>
-                    <div class="col-md-4 d-flex justify-content-end term-policy">
-                        <a href="{{ s.privacy_url() }}" class="mr-3">Privacy Policy</a>&nbsp;&nbsp;
-                        <a href="{{ s.terms_url() }}" class="mr-3">Terms Of Service</a>
+                    <div class="col-md-4 d-flex justify-content-end policy-and-terms d-none d-sm-block">
+                        <div class="desktop-section">
+                            <a href="{{ s.privacy_url() }}" class="privacy mr-3">Privacy Policy</a>
+                            <a href="{{ s.terms_url() }}" class="terms mr-3">Terms Of Service</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-end policy-and-terms d-sm-none">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-9 privacy-policy"><a href="{{ s.privacy_url() }}"
+                                    class="privacy mr-3">Privacy
+                                    Policy</a>&nbsp;&nbsp;</div>
+                            <div class="col-sm-6 col-md-6 col-lg-9 privacy-policy"><a href="{{ s.terms_url() }}"
+                                    class="terms mr-3">Terms Of
+                                    Service</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         {% endblock %}
     </footer>
