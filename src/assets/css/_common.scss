@@ -1,16 +1,31 @@
 /* style for common page : terms of use, privacy*/
 .row-term {
     margin-bottom: 130px;
+     @include media-breakpoint-down(lg) { 
+        margin-bottom: 30px;
+     }
 }
 .first-term {
     margin-top: 130px;
     margin-bottom: 50px;
+    @include media-breakpoint-down(lg) { 
+         margin: 30px 0 30px 0;
+    }
 }
 .first-term, .row-term {
     .term-rule {
         h5 {
             font-size: 60px;
             font-weight: bold;
+             @include media-breakpoint-down(lg) { 
+                 font-size: 18px;
+             }
         }
+    }
+    p, ol, li {
+        font-size: 18px;
+         @include media-breakpoint-down(lg) {
+             font-size: 12px;
+          }
     }
 }
