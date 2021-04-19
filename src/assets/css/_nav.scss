@@ -7,7 +7,6 @@ header {
 
         @include media-breakpoint-down(lg) {
             .main-logo {
-                margin-left: 10px;
                 img {
                     width: 124px;
                     margin-top: 2px;
@@ -268,6 +267,19 @@ header {
                     .my-2 {
                         float: right;
                         margin-right: 25px;
+                    }
+                    .message-dropdown {
+                        .dropdown-menu {
+                            margin-top: 11px;
+                            width: 352px;
+                            left: -130px;
+                        }
+                    }
+                }
+                @include media-breakpoint-between(md, lg) {
+                    .my-2 {
+                        float: left;
+                        width: auto;
                     }
                     .message-dropdown {
                         .dropdown-menu {
