@@ -9,7 +9,7 @@
 {% block js %}{% endblock %}
 
 {% block content %}
-<div class="main">
+<div class="full-width">
 	<div class="container-fluid sank-rectangle"></div>
 	<div class="container-fluid container-herobanner container-section px-md-5">
 		<div class="row herobanner">
@@ -153,6 +153,60 @@
 			</div>
 		</div>
 	</div>
+	<div class="tallent-people-section px-md-5">
+		<div class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<h4 class="d-lg-none">Over 10,000+ Talented People Registered In Our Website</h4>
+					<div class="col-lg-6 col-sm-12 col-sm-12 child" id="img-box">
+						<img class="img-fluid" src="{{f.landing_page_img('tallent-people-img.png')}}">
+					</div>
+					<div class="col-lg-6 col-sm-12 col-md-12 child" id="text-box">					
+						<h4 class="d-none d-lg-block">Over 10,000+ Talented People Registered In Our Website</h4>
+						<button class="d-none d-lg-block btn btn-secondary rounded-0" >Register Now</button>
+					</div>	
+					<div class="col-sm-12 mobile-button-wrapper">
+						<button class="d-lg-none btn btn-secondarys rounded-0" >Register Now</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="carousel-sliders-section px-md-5">
+		{% include 'components/_carousel-sliders.html' %}
+	</div>
+	<div class="container feature-section px-md-5">
+		<div class="row">
+			<div class="col-lg-6 col-sm-12 col-sm-12 ">
+				<div class="text-center text-lg-start"><button class="btn btn-secondarys rounded-0" >Featured</button></div>
+				<img class="d-lg-none img-fluid" src="{{f.landing_page_img('feature-mobile-img.png')}}">
+				<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut placerat orci nulla. Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Tempor id eu nisl nunc mi ipsum faucibus. Fusce id velit ut tortor pretium. Massa ultricies mi quis hendrerit dolor magna eget.</p>
+				<a href="#">Read More</a>
+			</div>
+			<div class="d-none d-lg-block col-lg-6 col-sm-12 col-sm-12 ">
+				<img src="{{f.landing_page_img('feature-img.png')}}">
+			</div>
+		</div>
+	</div>
+	<div class="container subcribe-section px-md-5">
+		<div class="row">
+			<div class="col-lg-6 col-md-12 col-sm-12">
+				<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</h2>
+			</div>
+
+			<div class="col-lg-6 col-md-12 col-sm-12">
+				<div class="input-group">
+				  <input type="text" class="form-control" placeholder="Enter your email address"  aria-describedby="button-addon2">
+				  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Subscribe</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container adv-img d-none d-lg-block px-md-5">
+		<img src="{{f.landing_page_img('adv-banner.png')}}">
+	</div>
 </div>
-<!-- {% include 'components/_carousel-sliders.html' %} -->
+
+
 {% endblock %}

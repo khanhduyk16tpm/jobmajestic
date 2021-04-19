@@ -10,6 +10,10 @@ body {
     color: $fontColor;
     overflow-x: hidden;
 
+    .page {
+        background-color: $fullPageBgColor;
+    }
+
     .alert {
         background-color: $alertColor;
         top: 0px;
