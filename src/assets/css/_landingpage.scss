@@ -1,4 +1,4 @@
-.main {
+.full-width {
 	.sank-rectangle {
 		background: $yellowButton 0% 0% no-repeat padding-box;
 		right: 0;
@@ -503,4 +503,213 @@
 			}
 		}
 	}
+
+	.tallent-people-section{
+		@include media-breakpoint-up(lg)  {
+			margin-top: 100px;
+			margin-bottom: 100px;
+		}
+		@include media-breakpoint-down(lg)  {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		h4{
+			font-size: 30px;
+			font-weight: bold;
+			@include media-breakpoint-down(lg)  {
+				font-size: 18px;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+		}
+		button{
+			font-size: 14px;
+		    width: 127px;
+		    height: 32px;
+		    color: $navBgColor;
+		    background-color: $yellowButton;
+		    text-align: center;
+		    width: 186px;
+			border: none;
+			@include media-breakpoint-down(lg)  {
+				height: 37px;
+				width: 100%;
+			}
+		}
+		#text-box{
+			@include media-breakpoint-up(lg)  {
+				width: 395px;
+				margin-left: 50px;
+			}	
+			text-align: left;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			overflow: auto;
+		}
+		.mobile-button-wrapper{
+			text-align: center;
+			margin-top: 30px;
+		}
+	}
+	.carousel-sliders-section{
+		.carousel{
+			.carousel-indicators{
+				margin-bottom: 0px;
+				button{
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+
+				}
+			}
+			.carousel-inner{
+				.carousel-item{
+						background: url("../img/landingpage/slider.png") no-repeat center, linear-gradient(rgba(0,0,0,0.68),rgba(0,0,0,0.68));
+			    		background-blend-mode: overlay;
+						background-size:cover;
+						opacity: 0.9;
+						.carousel-caption{
+							margin-bottom: 40px;
+							@include media-breakpoint-down(lg)  {
+								margin-top: -50px;
+								margin-bottom: 0px;
+							}
+							.caption-box{
+								margin-top: 30px;
+								text-align: left;
+								@include media-breakpoint-down(lg)  {
+    								margin-top: 192px;
+    							}
+								h5{
+									font-size: 30px;
+									@include media-breakpoint-down(lg)  {
+										font-size: 14px;
+									}
+	
+								}
+								p{
+									font-size: 18px;
+									color: $whiteColor;
+									margin-bottom: 0px;
+									margin-top:30px;
+									@include media-breakpoint-down(lg)  {
+										font-size: 12px;
+										margin-top:10px;
+									}
+								}
+								a{
+									text-decoration: none;
+									color: $yellowButton;
+									font-size: 18px;
+									@include media-breakpoint-down(lg)  {
+										font-size: 12px;
+									}
+								}
+
+							}
+							.img-box{
+								height: 731px;
+								@include media-breakpoint-down(lg)  {
+									height: 100px;
+								}
+								img{
+						        	width: 250px;
+						        	@include media-breakpoint-down(lg)  {
+										width: 200px;
+									}	   						
+								}
+							}
+							
+						}
+					
+				}
+			}
+		}
+	}
+   .feature-section{
+   		@include media-breakpoint-up(lg)  {
+			margin-top: 100px;
+			margin-bottom: 100px;
+		}
+		@include media-breakpoint-down(lg)  {
+			margin-top: 50px;
+			margin-bottom: 50px;
+			padding-left: 30px;
+		}
+   	  	button{
+	   	  	background-color: $redButton;
+	   	  	width: 112px;
+	   	  	color: $whiteColor;
+	   	  	font-weight: bold;
+	   	  	height: 32px;
+	   	  	text-align: center;
+	   	  	padding-top: 1px;
+   	  	}
+   	  	h4{	
+   	  		margin-top: 20px;
+   	  		margin-bottom: 20px;
+   	  		font-size: 18px;	
+   	  	}
+   	  	p{
+   	  		font-size: 14px;
+   	  		color:$textGrayColor;
+   	  	}
+   	  	a{
+   	  		font-size: 14px;
+   	  		color:$textGrayColor;
+   	  		text-decoration: none;
+   	  	}
+   }
+ .subcribe-section{
+   	background-color: $yellowButton;
+   	@include media-breakpoint-up(lg)  {
+	   	height: 211px;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-orient: vertical;
+	    -webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	    flex-direction: column;
+	    -webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
+	    overflow: auto;
+	    padding-left: 80px;
+	    padding-right: 80px;
+	}
+	padding: 27px;
+   	 h2{
+   	 	font-size: 30px;
+   	 	font-weight: bold;
+		@include media-breakpoint-down(lg)  {
+			font-size: 18px;
+		}
+   	 }
+   	 input{
+   	 	@include media-breakpoint-up(lg)  {
+   	 		height: 75px;
+   	 		font-size: 18px;
+   	 	}
+   	 	border: none;
+   	 	border-radius: 0px;
+   	 	color:$bigBtnFontColor;
+   	 	
+   	 }
+   	 button{
+   	 	border:none;
+		border-radius: 0px;
+		background: $redButton 0% 0% no-repeat padding-box;
+		@include media-breakpoint-up(lg)  {
+			width: 180px;
+		}
+		color: $whiteColor;
+   	 }
+   }
+   .adv-img{
+	   	text-align: center;
+	   	margin-top: 100px;
+	   	margin-bottom: 100px;
+   }
 }
