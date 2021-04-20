@@ -232,7 +232,7 @@
 	}
 }
 /* style for common page : terms of use, privacy*/
-.term-of-use, .privacy {
+.term-of-use {
     margin-top: 30px;
     h5 {
         font-size: 32px;
@@ -248,6 +248,31 @@
         }
     }
 }
+.row-term {
+    margin: 0 auto 30px auto;
+    width: 50%;
+    h5 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+}
+.first-term {
+    margin: 50px auto 30px auto;
+    width: 50%;
+}
+.first-privacy {
+    margin: 50px auto 30px auto;
+    width: 50%;
+}
+.privacy {
+    margin: 0 auto 30px auto;
+    width: 50%;
+    h5 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+}
+
 .p-not-found {
     h4 {
         height: 37px;
