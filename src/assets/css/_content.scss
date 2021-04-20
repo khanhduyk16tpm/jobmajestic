@@ -290,6 +290,119 @@
         }
     }
 }
-.recovery-password {
-    background: #fc3 0 0 no-repeat padding-box;
-}
+ .box-lost-password {
+    //  margin: auto;
+    //  width: 50%;
+     margin-top: 100px;
+     margin-bottom: 60px;
+     @include media-breakpoint-down(lg) {
+        margin-bottom: 0;
+        margin-top: 50px;
+     }
+     .recovery-password {
+        background: #fc3 0 0 no-repeat padding-box;
+        width: 905px;
+        height: 270px;
+        @include media-breakpoint-down(lg) {
+            width: 320px;
+            height: 247px;
+        }        
+        h4 {
+            width: 754px;
+            height: 59px;
+            letter-spacing: 0px;
+            color: #222E3C;
+            opacity: 1;
+            font-size: 48px;
+            text-align: left;
+            margin-left: 60px;
+            margin-top: 15px;
+            @include media-breakpoint-down(lg) {
+                width: 251px;
+                height: 20px;
+                font-size: 16px;
+                margin-left: 0;          
+            }
+        }
+        .subtext {
+            width: 753px;
+            height: 25px;
+            margin-left: 60px;
+            letter-spacing: 0px;
+            color: #00000099;
+            opacity: 1;
+            font-size: 24px;
+            text-align: left;
+            @include media-breakpoint-down(lg) {
+                width: 289px;
+                height: 25px;
+                font-size: 12px;
+                margin-left: 0;         
+            }
+        }
+        .lbl-email {
+            width: 52px;
+            height: 18px;
+            margin-left: 60px;
+            margin-top: 15px;
+            letter-spacing: 0px;
+            color: #707070;
+            opacity: 1;
+            text-align: left;
+            font-size: 18px;
+            @include media-breakpoint-down(lg) {
+                width: 30px;
+                height: 15px;
+                font-size: 12px;
+                margin-left: 0;            
+            }
+        }
+    }
+     .reset-pwd {
+         width: 150px;
+         margin-left: -58px;
+        @include media-breakpoint-down(lg) {
+            margin-left: 0;   
+        }
+         button {
+            width: 148px;
+            height: 38px;
+            background: #1B1C1D 0% 0% no-repeat padding-box;
+            opacity: 1;
+            border-radius: 0;
+            border: none;
+            @include media-breakpoint-down(lg) {
+                width: 260px;
+                height: 39px;
+                margin-top: 15px;
+            }
+            span {
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                text-align: center;
+                font-size: 14px;
+                @include media-breakpoint-down(lg) {
+                    font-size: 14px;
+                }
+            }
+         }
+     }
+    .email-recover {
+        margin-left: 60px;
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 0;
+            margin-left: 0;
+        }
+        input {
+            width: 368px;
+            height: 38px;
+            @include media-breakpoint-down(lg) {
+                width: 260px;
+                height: 38px;
+            }
+        }
+    }
+ }
+
+

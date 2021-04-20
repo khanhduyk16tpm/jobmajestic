@@ -1,0 +1,37 @@
+@import "var";
+
+.container-fluid.px-md-5.page {
+    padding: 0 !important;
+
+    .wrapper-section {
+        max-width: 100%;
+        margin-top: -13px;
+
+        .about-page {
+            .background-about {
+                padding: 0;
+            }
+            @include media-breakpoint-down(lg) {
+                .background-about {
+                    margin-top: -10px;
+                }
+            }
+            @include media-breakpoint-down(md) {
+                .background-about {
+                    margin-top: 14px;
+                }
+            }
+            .content {
+                max-width: 1378px;
+                .title {
+                    font-size: 40px;
+                    line-height: 100px;
+                    font-weight: bold;
+                }
+                .margin {
+                    margin-top: 130px;
+                }
+            }
+        }
+    }
+}
