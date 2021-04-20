@@ -259,7 +259,7 @@
 .row-term {
     padding-bottom: 50px;
     h5 {
-        font-size: 40px;
+        font-size: 32px;
         font-weight: 700;
         @include media-breakpoint-down(lg) { 
             font-size: 18px;
@@ -283,7 +283,7 @@
 .privacy {
     padding-bottom: 50px;
     h5 {
-        font-size: 40px;
+        font-size: 32px;
         font-weight: 700;
         @include media-breakpoint-down(lg) { 
             font-size: 18px;
@@ -334,8 +334,6 @@
     }
 }
  .box-lost-password {
-    //  margin: auto;
-    //  width: 50%;
     padding: 150px 0 150px 0;
      @include media-breakpoint-down(lg) {
         margin-bottom: 0;
