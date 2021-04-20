@@ -248,32 +248,46 @@
         }
     }
 }
-.row-term {
+.row-term, .first-term {
     margin: auto;
-    padding-bottom: 50px;
     width: 50%;
+    @include media-breakpoint-down(lg) { 
+        margin: 0;
+        width: 100%;
+    }
+}
+.row-term {
+    padding-bottom: 50px;
     h5 {
         font-size: 40px;
         font-weight: 700;
+        @include media-breakpoint-down(lg) { 
+            font-size: 18px;
+        }
     }
 }
 .first-term {
-    margin: auto;
-    width: 50%;
     padding-top: 50px;
 }
-.first-privacy {
+.first-privacy, .privacy {
     margin: auto;
     width: 50%;
+    @include media-breakpoint-down(lg) { 
+        margin: 0;
+        width: 100%;
+    }
+}
+.first-privacy {
     padding-top: 50px;
 }
 .privacy {
-    margin: auto;
-    width: 50%;
     padding-bottom: 50px;
     h5 {
         font-size: 40px;
         font-weight: 700;
+        @include media-breakpoint-down(lg) { 
+            font-size: 18px;
+        }
     }
 }
 
