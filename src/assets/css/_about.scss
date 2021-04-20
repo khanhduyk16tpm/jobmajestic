@@ -4,13 +4,27 @@
     padding: 0 !important;
 
     .wrapper-section {
-        max-width: 100%;
-        margin-top: -13px;
-
-        .about-page {
-            .background-about {
-                padding: 0;
+        @include media-breakpoint-up(md) {
+            .background-about-desktop {
+                margin-top: -10px;
+                background: url("../img/about/background-about.png") no-repeat center,
+                    linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68));
+                background-size: cover;
+                height: 580px;
             }
+        }
+        @include media-breakpoint-down(md) {
+            .background-about-mobile {
+                margin-top: -10px;
+                background: url("../img/about/background-about-mobile.png") no-repeat center,
+                    linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68));
+                background-size: cover;
+                height: 580px;
+            }
+        }
+        .about-page {
+            max-width: 1378px;
+
             @include media-breakpoint-down(lg) {
                 .background-about {
                     margin-top: -10px;
