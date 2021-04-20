@@ -3,6 +3,7 @@
 @import "content";
 @import "carousel";
 @import "landingpage";
+@import "company.scss";
 @import "footer.scss";
 
 body {
@@ -30,6 +31,7 @@ body {
     a,
     a:hover {
         color: $linkColor;
+        text-decoration: none;
     }
 
     .main-logo img {
