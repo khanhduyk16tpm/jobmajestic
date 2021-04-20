@@ -12,12 +12,19 @@ header {
                     margin-top: 2px;
                 }
             }
-        }
+        }        
         @include media-breakpoint-up(lg) {
             height: 73px;
             .main-logo {
                 img {
                     width: 182px;
+                }
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            .main-logo {
+                img {
+                    margin-left: 12px;
                 }
             }
         }

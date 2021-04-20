@@ -4,6 +4,7 @@
 @import "carousel";
 @import "landingpage";
 @import "company.scss";
+@import "about";
 @import "footer.scss";
 
 body {
@@ -131,9 +132,6 @@ body {
     }
     .social-buttons .circle {
         border-radius: 50%;
-        //padding: 5px;
-        // margin: 0.15em;
-        // font-size: 3em;
     }
     .fa-facebook {
         background: $prime3;
@@ -160,5 +158,5 @@ body {
             padding-right: 3rem !important;
             padding-left: 3rem !important;
         }
-    }
+    }    
 }
