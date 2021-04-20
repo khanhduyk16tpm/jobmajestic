@@ -1,0 +1,142 @@
+.company-search-box{
+	
+	
+	@include media-breakpoint-up(lg)  {
+		height: 470px;
+		background: url("../img/companies/main/company-header-bg.png") no-repeat center,
+		linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68));
+		background-blend-mode: overlay;
+		background-size: cover;
+		opacity: 0.9;
+
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-orient: vertical;
+	    -webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	    flex-direction: column;
+	    -webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
+	    overflow: auto;
+
+	}
+	@include media-breakpoint-down(lg)  {
+		margin-top: 50px;
+		padding-left: 0px;
+		padding-right: 0px;
+		background-color: $lightYellowButton;
+	}
+
+	
+	.search-box{
+
+	   	@include media-breakpoint-up(lg)  {
+	   		background-color: $lightYellowButton;
+		    display: -webkit-box;
+		    display: -ms-flexbox;
+		    display: flex;
+		    -webkit-box-orient: vertical;
+		    -webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		    flex-direction: column;
+		    -webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		    justify-content: center;
+		    overflow: auto;
+		    padding: 40px;
+		}
+		@include media-breakpoint-down(lg)  {
+			padding: 25px;
+		}
+		input{
+			font-family:Arial, FontAwesome;
+			border-radius: 0px;
+			border: none;
+			@include media-breakpoint-down(lg)  {
+				margin-top: 10px;
+			}
+		}
+		select, button{
+			border-radius: 0px;
+			border: none;
+			@include media-breakpoint-down(lg)  {
+				margin-top: 10px;
+			}
+		}
+		button{
+			background-color: $blackButton;
+			color: $whiteColor;
+			@include media-breakpoint-down(lg)  {
+				margin-bottom: 10px;
+			}
+		}
+
+	}
+}
+.company-body{
+	margin-top: 50px;
+	.company-item-container{
+		padding: 10px;
+		@include media-breakpoint-down(lg)  {
+			padding: 30px;
+		}
+		.item-container{
+			background-color: $whiteColor;
+			border-radius: 0px;
+			padding: 20px;
+			box-shadow: 0px 0px 3px #00000059;
+			@include media-breakpoint-down(lg)  {
+				text-align: center;
+			}
+			.hiring-tag{
+				    margin-bottom: 21px;
+				    margin-top: -20px;
+				    width: 100%;
+				    height: 14px;
+				span{
+					background-color: #2DCE89;
+					padding: 5px 15px 5px 15px;
+					border-radius: 0px;
+					color:$whiteColor;
+					font-weight: bold;
+					float: right;
+				}
+			}
+			
+			img{
+				margin-bottom: 20px;
+			}
+			h3{
+				font-size: 18px;
+			}
+			p{
+				font-size: 14px;
+   	  			color:$textGrayColor;
+			}
+		}
+		
+	}
+	.btn-wrapper{
+		padding-left: 9px;
+		padding-right: 9px;
+		@include media-breakpoint-down(lg)  {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		#company-show-more{
+			border: none;
+			background-color: $yellowButton;
+			color: #303842;
+			margin-bottom: 50px;
+			margin-top: 20px;
+			height: 50px;
+			@include media-breakpoint-down(lg)  {
+				margin-top: 0px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+	
+}
