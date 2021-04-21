@@ -4,8 +4,8 @@
 
 
 {% block content %}
-    {% if company_search_box %}
 <div class="page">
+    {% if company_search_box %}
     <div class="container-fluid company-search-box">
         <img class="d-lg-none img-fluid" src="{{f.companies_main_img('company-header-mobile.png')}}">
         <div class="container-sm container-md">
@@ -15,19 +15,32 @@
     {% endif %}
     <div class="container company-body">
         {% if company_header %}
+        <div class="row company-header">
+            {% include 'partials/_company-header.html' %}
+        </div>
+        <div class="row company-nav-tab">
+            {% include 'partials/_company-nav-tab.html' %}
+        </div>
         <div class="row">
-            <div class="col-12">
-                {% include 'partials/_company-header.html' %}
+            <div class="col-lg-10 col-md-12 cold-sm-12 company-overview">
+                {% block overview %}
+
+                {% endblock %}
+            </div>
+            <div class="col-lg-2 d-none d-lg-block adv-imgs">
+                <img class="img-fluid" src="{{f.companies_overview_img('banner-adv-1-2x.png')}}">
+                <img class="img-fluid" src="{{f.companies_overview_img('banner-adv-2-2x.png')}}">
             </div>
         </div>
-        {% endif %}
+        {% else %}
         {% block page %}
 
         {% endblock %}
+        {% endif %}
     </div>
 
-    {% if similar_company_slide %}>
-    <div class="container">
+    {% if similar_company_slide %}
+    <div class="container mt-4">
         {% include 'components/_similar_company_slide.html' %}
     </div>
     {% endif %}

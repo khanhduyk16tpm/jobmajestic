@@ -1,0 +1,28 @@
+{% import 'macros/path.html' as f %}
+<div class="col-lg-2 col-md-12 col-sm-12">
+	<img class="img-fluid" src="{{f.companies_overview_img('header-icon.png')}}">
+</div>
+<div class="col-lg-10 col-md-12 col-sm-12">
+	<div class="row">
+		<h3>Petroleum Nasional Berhad (Petronas)</h3>
+	</div>
+	<div class="row company-rating-container">
+		<h1>5.0</h1>
+		<span>
+			<p>Average Rating</p>
+			{% for i in range(1,6) %}
+				<img class="star-rating-icon" src="{{f.companies_overview_img('star.png')}}">
+			{% endfor%}
+		</span>
+		<span>
+		{% for i in range(1,6) %}
+			<img class="badge-icon" src="{{f.companies_overview_img('badge-icon.png')}}">
+		{% endfor%}
+		</span>
+	</div>
+	<div class="row company-description">
+		<input type="checkbox" class="read-more-state" id="post-1" />
+		<p class="read-more-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium ante ante, at accumsan ipsum euismod vitae. Cras sollicitudin fermentum tellus, id pharetra elit ultrices eu. Cras non hendrerit risus. Sed <span class="read-more-target"> nec commodo massa. Duis mauris ante, pulvinar id hendrerit a, sodales vel nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla facilisi. Proin tincidunt venenatis ipsum, ut posuere sapien mattis sed. Duis laoreet eget arcu eget convallis.</span></p>
+		<label for="post-1" class="read-more-trigger"></label>
+	</div>
+</div>

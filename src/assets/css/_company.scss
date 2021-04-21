@@ -76,7 +76,12 @@
 	}
 }
 .company-body{
-	margin-top: 50px;
+	margin-top: 40px;
+	padding-top: 70px;
+	color: $navBgColor;
+	@include media-breakpoint-down(lg)  {
+		padding-top: 40px;
+	}
 	.company-item-container{
 		padding: 10px;
 		@include media-breakpoint-down(lg)  {
@@ -138,5 +143,144 @@
 			}
 		}
 	}
-	
+	.adv-imgs{
+		img{
+			margin-bottom: 10px;
+			width: 200px;
+		}
+	}
+	.company-header{
+		@include media-breakpoint-down(lg)  {
+			text-align: center;
+		}
+		background-color: $whiteColor;
+		padding: 15px;
+		img{
+			height: 155px;
+		}
+		h3{
+			margin-bottom: 15px;
+		}
+		.company-rating-container{
+			margin-bottom: 15px;
+			h1{
+				width: auto;
+
+			}
+			span{
+				width: auto;
+				float: left;
+				p{
+					margin-bottom: 0px;
+					color: $textGrayColor;
+				}
+				.star-rating-icon{
+					height: 20px;
+					@include media-breakpoint-down(lg)  {
+						height: 14px;
+					}
+				}
+			}
+			.badge-icon{
+				width: auto;
+				float: left;
+    			height: 54px;
+    			margin-left: 7px;
+    			@include media-breakpoint-down(lg)  {
+    				height: 28px;
+    				margin-left: 2px;
+				}
+			}
+		}
+		p{
+			text-align: left;
+		}
+		.company-description{
+			@include media-breakpoint-up(lg)  {
+				width: 80%;
+			}
+			.read-more-state {
+			  display: none;
+			}
+
+			.read-more-target {
+			  opacity: 0;
+			  max-height: 0;
+			  font-size: 0;
+			  transition: .25s ease;
+			}
+
+			.read-more-state:checked ~ .read-more-wrap .read-more-target {
+			  opacity: 1;
+			  font-size: inherit;
+			  max-height: 999em;
+			}
+
+			.read-more-state ~ .read-more-trigger:before {
+			  content: 'Show more';
+			}
+
+			.read-more-state:checked ~ .read-more-trigger:before {
+			  content: 'Show less';
+			}
+
+			.read-more-trigger {
+			    cursor: pointer;
+			    display: inline-block;
+			    line-height: 2;
+			   	padding-right: 50px;
+			    &::before{
+			    	float: right;
+			    	@include media-breakpoint-down(lg)  {
+			    		float: left;
+			    	}
+			    	width: auto;
+			    }
+			  
+			}
+		}
+		
+	}
+	.company-nav-tab{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		background-color: $whiteColor;
+		.nav-tabs{
+			border-bottom: none;
+			.nav-item{
+				border-radius: 0px;
+				.active{
+					border-color: $whiteColor;
+					border-bottom: 3px solid $yellowButton;;
+				}
+			}
+			
+		}
+	}
+	.company-overview{
+		background-color: $whiteColor;
+		padding: 0px;
+		#companyTabContent{
+			#overview{
+				.carousel-indicators{
+					@include media-breakpoint-down(lg)  {
+				    	margin-bottom: 0px;
+				    }
+					button{
+						width: 10px;
+						height: 10px;
+						border-radius: 50%;
+
+					}
+				}
+				.carousel-item {
+				    height: 324px;
+				    @include media-breakpoint-down(lg)  {
+				    	height: 120px;
+				    }
+				}
+			}
+		}
+		
+	}
 }

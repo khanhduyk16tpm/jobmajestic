@@ -1,0 +1,194 @@
+{% import 'macros/path.html' as f %}
+
+{% import 'macros/site.html' as s %}
+    <div class="row similar-company-slider-title mb-4 mt-1">
+        <div class="col-lg-11"><h2>Similar Companies</h2></div>
+        <div class="col-lg-1 float-end d-none d-lg-block"><a href="">See All</a></div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide similar-company-slider d-none d-lg-block" data-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-sm company-card">
+                        <a href="{{ s.company_overview_url() }}" target="_blank">
+                            <div class="item-container">
+                                <div class="text-center">
+                                  <img class="company-icon" src="{{f.companies_main_img('shell-icon.png')}}">
+                                </div>
+                                <h4>Company Name (Long Nam...</h4>
+                                <p>Company sector or industry double line</p>
+                                <span>
+                                
+                                    {% for i in range(1,6) %}
+                                        <img class="star-rating-icon" src="{{f.companies_overview_img('star.png')}}">
+                                    {% endfor%}
+                                    <p>2065 ratings</p>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm company-card">
+                        <a href="{{ s.company_overview_url() }}" target="_blank">
+                            <div class="item-container">
+                                <div class="text-center">
+                                  <img class="company-icon" src="{{f.companies_main_img('bp-icon.png')}}">
+                                </div>
+                                <h4>Company Name (Long Nam...</h4>
+                                <p>Company sector or industry double line</p>
+                                <span>
+                                
+                                    {% for i in range(1,6) %}
+                                        <img class="star-rating-icon" src="{{f.companies_overview_img('star.png')}}">
+                                    {% endfor%}
+                                    <p>2065 ratings</p>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm company-card">
+                        <a href="{{ s.company_overview_url() }}" target="_blank">
+                            <div class="item-container">
+                                <div class="text-center">
+                                  <img class="company-icon" src="{{f.companies_main_img('exon-icon.png')}}">
+                                </div>
+                                <h4>Company Name (Long Nam...</h4>
+                                <p>Company sector or industry double line</p>
+                                <span>
+                                
+                                    {% for i in range(1,6) %}
+                                        <img class="star-rating-icon" src="{{f.companies_overview_img('star.png')}}">
+                                    {% endfor%}
+                                    <p>2065 ratings</p>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-sm company-card">
+                        <a href="{{ s.company_overview_url() }}" target="_blank">
+                            <div class="item-container">
+                                <div class="text-center">
+                                  <img class="company-icon" src="{{f.companies_main_img('shell-icon.png')}}">
+                                </div>
+                                <h4>Company Name (Long Nam...</h4>
+                                <p>Company sector or industry double line</p>
+                                <span>
+                                
+                                    {% for i in range(1,6) %}
+                                        <img class="star-rating-icon" src="{{f.companies_overview_img('star.png')}}">
+                                    {% endfor%}
+                                    <p>2065 ratings</p>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm company-card">
+                        <a href="{{ s.company_overview_url() }}" target="_blank">
+                            <div class="item-container">
+                                <div class="text-center">
+                                  <img class="company-icon" src="{{f.companies_main_img('bp-icon.png')}}">
+                                </div>
+                                <h4>Company Name (Long Nam...</h4>
+                                <p>Company sector or industry double line</p>
+                                <span>
+                                
+                                    {% for i in range(1,6) %}
+                                        <img class="star-rating-icon" src="{{f.companies_overview_img('star.png')}}">
+                                    {% endfor%}
+                                    <p>2065 ratings</p>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm company-card">
+                        <a href="{{ s.company_overview_url() }}" target="_blank">
+                            <div class="item-container">
+                                <div class="text-center">
+                                  <img class="company-icon" src="{{f.companies_main_img('exon-icon.png')}}">
+                                </div>
+                                <h4>Company Name (Long Nam...</h4>
+                                <p>Company sector or industry double line</p>
+                                <span>
+                                
+                                    {% for i in range(1,6) %}
+                                        <img class="star-rating-icon" src="{{f.companies_overview_img('star.png')}}">
+                                    {% endfor%}
+                                    <p>2065 ratings</p>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </div>
+    <div class="container company-cards-mobile d-lg-none">
+        <div class="company-card">
+            <a href="{{ s.company_overview_url() }}" target="_blank">
+                <div class="item-container">
+                    <div class="text-center">
+                      <img class="company-icon" src="{{f.companies_main_img('shell-icon.png')}}">
+                    </div>
+                    <h4>Company Name (Long Nam...</h4>
+                    <p>Company sector or industry double lines</p>
+                    <span>
+                    
+                        {% for i in range(1,6) %}
+                            <img class="star-rating-icon" src="{{f.companies_overview_img('star.png')}}">
+                        {% endfor%}
+                        <p>2065 ratings</p>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="company-card">
+            <a href="{{ s.company_overview_url() }}" target="_blank">
+                <div class="item-container">
+                    <div class="text-center">
+                      <img class="company-icon" src="{{f.companies_main_img('bp-icon.png')}}">
+                    </div>
+                    <h4>Company Name (Long Nam...</h4>
+                    <p>Company sector or industry double lines</p>
+                    <span>
+                    
+                        {% for i in range(1,6) %}
+                            <img class="star-rating-icon" src="{{f.companies_overview_img('star.png')}}">
+                        {% endfor%}
+                        <p>2065 ratings</p>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="company-card">
+            <a href="{{ s.company_overview_url() }}" target="_blank">
+                <div class="item-container">
+                    <div class="text-center">
+                      <img class="company-icon" src="{{f.companies_main_img('exon-icon.png')}}">
+                    </div>
+                    <h4>Company Name (Long Nam...</h4>
+                    <p>Company sector or industry double lines</p>
+                    <span>
+                    
+                        {% for i in range(1,6) %}
+                            <img class="star-rating-icon" src="{{f.companies_overview_img('star.png')}}">
+                        {% endfor%}
+                        <p>2065 ratings</p>
+                    </span>
+                </div>
+            </a>
+        </div>
+
+        <button class="btn btn-secondary">Show More</button>
+    </div>
+    
