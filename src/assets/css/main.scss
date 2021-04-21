@@ -1,8 +1,12 @@
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
 @import "var";
 @import "nav";
 @import "content";
 @import "carousel";
 @import "landingpage";
+/*@import "_job.scss";*/
 @import "company.scss";
 @import "about";
 @import "footer.scss";
