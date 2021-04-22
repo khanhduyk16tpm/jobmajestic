@@ -4,3 +4,56 @@
 <div class="slide-img">
 	{% include 'components/_carousel-img-only.html' %}	
 </div>
+<div class="overview-content-body mt-3 mb-3">
+	<div class="row mb-5">
+		<div class="col-lg-4 col-md-12 col-sm-12">
+			<h3>About</h3>
+		</div>
+		<div class="col-lg-8 col-md-12 col-sm-12">
+			<p>JEV Management Sdn. Bhd. is established since 2012, inclusive of 3 key business divisions: Talent Management, Marketing & Branding Solutions, F&B Consultancy 
+			</p>
+			<p>
+			JEV Management, a fast expanding talent management agency established locally for the sole purpose of matching the right talents to the jobs based on their strengths, and finds the best talents that fit our clientele. Being as a niche player in four major industries to date: Hospitality, Retail, Finance, and Contact Centre/ Customer Service, we have in depth market knowledge in sourcing better quality talents as compared to other players.</p>
+		</div>
+	</div>
+	<div class="row  mb-5">
+		<div class="col-lg-4 col-md-12 col-sm-12">
+			<h3>Website</h3>
+		</div>
+		<div class="col-lg-8 col-md-12 col-sm-12">
+			<p>https://www.jevmanagement.com/</p>
+		</div>
+	</div>
+	<div class="row mb-5">
+		<div class="col-lg-4 col-md-12 col-sm-12">
+			<h3>Company Size</h3>
+		</div>
+		<div class="col-lg-8 col-md-12 col-sm-12">
+			<p>10 - 49 Employees</p>
+		</div>
+	</div>
+	<div class="row mb-5">
+		<div class="col-lg-4 col-md-12 col-sm-12">
+			<h3>Perks</h3>
+		</div>
+		<div class="col-lg-8 col-md-12 col-sm-12">
+			<ul>
+				{% for i in range(1,6) %}
+				<li>Lorem Ipsums</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4 col-md-12 col-sm-12">
+			<h3>Branches</h3>
+		</div>
+		<div class="col-lg-8 col-md-12 col-sm-12">
+			{% for i in range(1,4) %}
+			<h4>Ara Damansara</h4>
+			<p>Pacific Place,, Jalan PJU 1A/4A, Ara Damansara, Petaling Jaya, 47301, Selangor</p>
+			<p  class="mb-2" >Contact : 012-3456789</p>
+			{% endfor %}
+		</div>
+	</div>
+</div>

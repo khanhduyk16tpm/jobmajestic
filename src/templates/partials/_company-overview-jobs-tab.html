@@ -1,0 +1,16 @@
+{% import 'macros/path.html' as f %}
+{% import 'macros/site.html' as s %}
+
+<div class="overview-content-body mt-3 mb-3">
+	<div class="row d-none d-lg-block job-listed-text">
+		<p>65 jobs listed</p>
+	</div>
+	<div class="row job-cards-container">
+		{% for i in range(1,9) %}
+		{% include 'partials/_job_card.html' %}
+		{% endfor %}
+	</div>
+	<div class="row see-more mt-4">
+		<button class="btn-secondary">See all 33 jobs in Petroleum Nasional Berhad (PETRONAS)</button>
+	</div>
+</div>
