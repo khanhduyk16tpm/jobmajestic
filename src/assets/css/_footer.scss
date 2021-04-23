@@ -60,7 +60,7 @@ footer {
             }
             @include media-breakpoint-up(md) {
                 .custom-line {
-                    margin-right: 7%;
+                    margin-right: 7.5%;
                 }
             }
             .about-contact {
@@ -69,18 +69,40 @@ footer {
                 .title {
                     font-weight: bold;
                 }
+
+                @include media-breakpoint-between(md, lg) {
+                    .font-item {
+                        width: 100%;
+                    }
+                }
+
+                @include media-breakpoint-between(sm, md) {
+                    margin-top: 30px;
+
+                    .title {
+                        margin-top: 35px;
+                    }
+
+                    .contact-section {
+                        width: 50%;
+                        .social-buttons i {
+                            font-size: 15px;
+                        }
+                    }
+                }
+
                 @include media-breakpoint-down(sm) {
                     margin-top: 0;
                     .title {
                         margin-top: 25px;
                     }
-                    .font-item {
-                        width: 50%;
-                    }
                     .font-item:nth-child(even) {
                         div.content {
                             margin-left: 15px;
                         }
+                    }
+                    .font-item {
+                        width: 50%;
                     }
                 }
                 .item {
@@ -145,13 +167,38 @@ footer {
                 }
             }
             .privacy-section {
+                .policy-and-terms {
+                    .privacy {
+                        margin-right: 10px;
+                    }
+                }
+
+                @include media-breakpoint-between(sm, md) {
+                    .bottom-text,
+                    .policy-and-terms {
+                        width: 50%;
+                    }
+                }
+
+                @include media-breakpoint-up(md) {
+                    .desktop-section {
+                        float: right;
+                    }
+                }
+
+                @include media-breakpoint-down(md) {
+                    .social-buttons {
+                        display: none !important;
+                    }
+                    .privacy {
+                        padding-bottom: 0;
+                    }
+                }
+
                 @include media-breakpoint-down(sm) {
                     .bottom-text {
                         margin-top: 60px;
                         margin-bottom: 10px;
-                    }
-                    .social-buttons {
-                        display: none !important;
                     }
                     .policy-and-terms {
                         width: 100%;
@@ -168,17 +215,6 @@ footer {
                         a.privacy {
                             margin-left: -12px;
                         }
-                    }
-                }
-                .policy-and-terms {
-                    .privacy {
-                        margin-right: 10px;
-                    }
-                }
-
-                @include media-breakpoint-up(md) {
-                    .desktop-section {
-                        float: right;
                     }
                 }
             }

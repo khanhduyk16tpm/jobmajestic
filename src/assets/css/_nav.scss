@@ -21,7 +21,7 @@ header {
                 }
             }
         }
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             .main-logo {
                 img {
                     margin-left: 12px;

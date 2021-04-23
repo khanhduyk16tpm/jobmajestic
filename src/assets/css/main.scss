@@ -52,6 +52,10 @@ body {
         color: $prime6;
         font-size: 20px;
         margin-right: 5px;
+
+        @include media-breakpoint-between(md, xl) {
+            font-size: 17px;
+        }
     }
 
     .footer {
@@ -130,8 +134,8 @@ body {
     footer {
         margin-top: auto;
         .row {
-            margin-right: 0;
             margin-left: 0;
+            margin-right: 0;
         }
     }
     .social-buttons .circle {
