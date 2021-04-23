@@ -13,75 +13,97 @@
 {% set quote = 'Last updated on 24th Aug 2020' %}
 
 {% block page %}
-<div class="wrapper-section py-5">
+<div class="wrapper-section">
     <div class="background-about-desktop"></div>
     <div class="background-about-mobile"></div>
-    <div class="container about-page ">
-        <div class="row">
-            <div class="container content">
-                <div class="row margin">
-                    <div class="col-md-4 title">About<span>Job Majestic</span></div>
-                    <div class="col-md-8">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book.
-                        It has survived not only five centuries, but also the leap into electronic typesetting,
-                        remaining
-                        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                        containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem
-                        Ipsum.</div>
-                </div>
-                <div class="row margin">
-                    <div class="col-md-4 title">Mission</div>
-                    <div class="col-md-8">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book.
-                        It has survived not only five centuries, but also the leap into electronic typesetting,
-                        remaining
-                        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                        containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem
-                        Ipsum.</div>
-                </div>
-                <div class="row margin">
-                    <div class="col-md-4 title">Vision</div>
-                    <div class="col-md-8">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book.
-                        It has survived not only five centuries, but also the leap into electronic typesetting,
-                        remaining
-                        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                        containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem
-                        Ipsum.</div>
-                </div>
-                <div class="row margin wrapper-job-section">
-                    <div class="col-md-6">
-                        <div class="looking-for-section">
-                            <div class="job-img">
-                                <div class="img-rounded">
-                                    <img src="{{f.img('about/icon-awesome-briefcase.png')}}" alt="Looking for a job?">
-                                </div>
+    <div class="container about-page px-md-5">
+        <div class="container content">
+            <div class="row margin">
+                <div class="col-md-4 title">About<span>Job Majestic</span></div>
+                <div class="col-md-8">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining
+                    essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                    containing Lorem Ipsum passages,
+                    and more recently with desktop publishing software like Aldus PageMaker including versions of
+                    Lorem
+                    Ipsum.</div>
+            </div>
+            <div class="row margin">
+                <div class="col-md-4 title">Mission</div>
+                <div class="col-md-8">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining
+                    essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                    containing Lorem Ipsum passages,
+                    and more recently with desktop publishing software like Aldus PageMaker including versions of
+                    Lorem
+                    Ipsum.</div>
+            </div>
+            <div class="row margin">
+                <div class="col-md-4 title">Vision</div>
+                <div class="col-md-8">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining
+                    essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                    containing Lorem Ipsum passages,
+                    and more recently with desktop publishing software like Aldus PageMaker including versions of
+                    Lorem
+                    Ipsum.</div>
+            </div>
+            <div class="row margin wrapper-job-section desktop">
+                <div class="col-md-6">
+                    <div class="looking-for-section">
+                        <div class="job-img">
+                            <div class="img-rounded">
+                                <img src="{{f.img('about/icon-awesome-briefcase.png')}}" alt="Looking for a job?">
                             </div>
-                            <div class="looking-for-job size">Looking for a job?</div>
-                            <div class="register-with-us size">Register with us.</div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="post-job-section">
-                            <div class="job-img">
-                                <div class="img-rounded">
-                                    <img src="{{f.img('about/icon-ionic-md-person.png')}}" alt="Want to post a job?">
-                                </div>
-                            </div>
-                            <div class="post-a-job size">Want to post a job?</div>
-                            <div class="register-as-employer size">Register as employer.</div>
-                        </div>
+                        <div class="looking-for-job size">Looking for a job?</div>
+                        <div class="register-with-us size">Register with us.</div>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="post-job-section">
+                        <div class="job-img">
+                            <div class="img-rounded">
+                                <img src="{{f.img('about/icon-ionic-md-person.png')}}" alt="Want to post a job?">
+                            </div>
+                        </div>
+                        <div class="post-a-job size">Want to post a job?</div>
+                        <div class="register-as-employer size">Register as employer.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper-job-section mobile">
+        <div class="col-md-6">
+            <div class="looking-for-section">
+                <div class="job-img">
+                    <div class="img-rounded">
+                        <img src="{{f.img('about/icon-awesome-briefcase.png')}}" alt="Looking for a job?">
+                    </div>
+                </div>
+                <div class="looking-for-job size">Looking for a job?</div>
+                <div class="register-with-us size">Register with us.</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="post-job-section">
+                <div class="job-img">
+                    <div class="img-rounded">
+                        <img src="{{f.img('about/icon-ionic-md-person.png')}}" alt="Want to post a job?">
+                    </div>
+                </div>
+                <div class="post-a-job size">Want to post a job?</div>
+                <div class="register-as-employer size">Register as employer.</div>
             </div>
         </div>
     </div>

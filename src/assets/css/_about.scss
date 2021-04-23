@@ -4,7 +4,13 @@
     padding: 0 !important;
 
     .wrapper-section {
+        @include media-breakpoint-between(md, xl) {
+            .background-about-desktop {
+                margin-top: -23px;
+            }
+        }
         @include media-breakpoint-up(md) {
+            padding-bottom: 1px;           
             .background-about-desktop {
                 margin-top: -10px;
                 background: url("../img/about/background-about.png") no-repeat center,
@@ -14,6 +20,8 @@
             }
         }
         @include media-breakpoint-down(md) {
+            padding-top: 3rem !important;
+
             .background-about-mobile {
                 margin-top: -10px;
                 background: url("../img/about/background-about-mobile.png") no-repeat center,
@@ -31,19 +39,34 @@
                 }
             }
             @include media-breakpoint-down(md) {
-                padding: 0px 35px 30px 35px;
-                
+                padding: 60px 25px;
+
                 .background-about {
                     margin-top: 14px;
                 }
             }
             .content {
                 max-width: 1378px;
+
+                @include media-breakpoint-down(md) {
+                    background-color: $prime3;
+                    padding-bottom: 60px;
+                }
+
                 .title {
                     font-size: 45px;
                     font-weight: bold;
                     span {
                         display: block;
+                    }
+                    @include media-breakpoint-down(md) {
+                        font-size: 30px;
+                        margin-top: 60px;
+                        margin-bottom: 10px;
+                        span {
+                            display: initial;
+                            margin-left: 12px;
+                        }
                     }
                 }
                 .margin {
@@ -52,51 +75,71 @@
                     @include media-breakpoint-down(md) {
                         margin-left: 0;
                         margin-right: 0;
+                        margin-top: 0;
                     }
                 }
-                .wrapper-job-section {
-                    margin-top: 150px;
-                    margin-bottom: 150px;
+            }
+        }
+        .wrapper-job-section {
+            margin-top: 150px;
+            margin-bottom: 150px;
 
-                    .job-img {
-                        padding-top: 100px;
-                        padding-bottom: 40px;
+            @include media-breakpoint-down(md) {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
 
-                        .img-rounded {
-                            background-color: $prime3;
-                            border-radius: 50%;
-                            padding: 18px;
-                            height: 70px;
-                            width: 70px;
-                            display: inline-block;
-                        }
-                    }
-                    .size {
-                        font-size: 35px;
-                        font-weight: 100;
-                    }
+            .job-img {
+                padding-top: 100px;
+                padding-bottom: 40px;
 
-                    .looking-for-job,
-                    .post-a-job {
-                        font-weight: bold;
-                    }
-
-                    .register-with-us,
-                    .register-as-employer {
-                        padding-bottom: 100px;
-                    }
-
-                    .looking-for-section {
-                        text-align: center;
-                        background-color: $prime2;
-                        color: $yellowButton;
-                    }
-                    .post-job-section {
-                        text-align: center;
-                        background-color: $yellowButton;
-                        color: $prime2;
-                    }
+                .img-rounded {
+                    background-color: $prime3;
+                    border-radius: 50%;
+                    padding: 18px;
+                    height: 70px;
+                    width: 70px;
+                    display: inline-block;
                 }
+            }
+            .size {
+                font-size: 35px;
+                font-weight: 100;
+
+                @include media-breakpoint-between(md, xl) {
+                    font-size: 30px;
+                }
+            }
+
+            .looking-for-job,
+            .post-a-job {
+                font-weight: bold;
+            }
+
+            .register-with-us,
+            .register-as-employer {
+                padding-bottom: 100px;
+            }
+
+            .looking-for-section {
+                text-align: center;
+                background-color: $prime2;
+                color: $yellowButton;
+            }
+            .post-job-section {
+                text-align: center;
+                background-color: $yellowButton;
+                color: $prime2;
+            }
+        }
+        .desktop {
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+        .mobile {
+            @include media-breakpoint-up(md) {
+                display: none;
             }
         }
     }
