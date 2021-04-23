@@ -53,6 +53,8 @@
 
 {% macro scroll() %}{{ plugin_js('zang/scroll-1.0.0.min.js') }}{% endmacro %}
 
+{% macro rangeSlider() %}{{ plugin_js('zang/range-slider-1.0.0.min.js') }}{% endmacro %}
+
 {% macro datepicker() %}{{ plugin_js('datepicker/datepicker.js') }}{% endmacro %}
 
 {% macro module(modules = {}) %}
@@ -67,6 +69,8 @@
 {{ scroll() }}
 {% elseif m == 'copy' %}
 {{ copy() }}
+{% elseif m == 'rangeSlider' %}
+{{ rangeSlider() }}
 {% elseif m == 'datepicker' %}
 {{ datepicker() }}
 {% endif %}

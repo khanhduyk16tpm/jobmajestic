@@ -1,0 +1,72 @@
+{% import 'macros/path.html' as f %}
+
+{% import 'macros/site.html' as s %}
+
+<div class="search-box">
+	<div class="row">
+		<div class="col-lg-6 col-md-12 col-sm-12">
+			<div class="row">
+				<div class="col-12">
+					<input type="text" class="form-control py-2 px-3"
+					placeholder="&#xF002;  Search by Job Title, Company & Skills"
+					name="search-by-job-title">
+				</div>
+			</div>
+			<div class="row mt-3">
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<input type="text" class="form-control py-2 px-3"
+					placeholder="Job Type"
+					name="search-by-job-type">
+				</div>
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<input type="text" class="form-control py-2 px-3"
+					placeholder="Job Category"
+					name="search-by-job-type">
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-12 col-sm-12">
+			<div class="row">
+				<div class="col-lg-9 col-md-12 col-sm-12">
+					<div class="row">
+						<div class="col-12">
+							<input type="text" class="form-control py-2 px-3"
+							placeholder="&#xF041;  Location"
+							name="search-by-location">
+						</div>
+					</div>
+					<div class="row mt-3">
+						<div class="range-slider">
+						   <div class="row slider-labels">
+						    <div class="col-6 caption mb-2">
+						      Min Salary: <span id="slider-range-value1"></span>
+						    </div>
+						    <div class="col-6 max-salary caption">
+						      Max Salary: <span id="slider-range-value2"></span>
+						    </div>
+						  </div>
+						  <div class="row">
+						    <div class="col-sm-12">
+						      <div id="slider-range"></div>
+						    </div>
+						  </div>
+						 
+						  <div class="row">
+						    <div class="col-sm-12">
+						      <form>
+						        <input type="hidden" name="min-value" value="">
+						        <input type="hidden" name="max-value" value="">
+						      </form>
+						    </div>
+						  </div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-12 col-sm-12">
+					<button class="form-control btn btn-secondary p-4">Search Now</button>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</div>
+</div>
