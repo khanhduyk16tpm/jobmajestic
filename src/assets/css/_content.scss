@@ -107,6 +107,7 @@
 		background: $bgColor 0% 0% no-repeat padding-box;
 		box-shadow: 0px 0px 12px #000000d9;
 		.job-card-wrapper {
+
 			.job-type {
 				width: 101px;
 				height: 29px;
@@ -133,6 +134,19 @@
 				}
 			}
 			.job-position {
+				.company-icon{
+					margin-top: -30px;
+					@include media-breakpoint-down(lg) {
+						margin-top: -20px;
+					}
+					img{
+						height: 97px;
+						@include media-breakpoint-down(lg) {
+							height: 80px;
+						}
+					}
+					
+				}
 				h4 {
 					font-size: 14px;
 					@include media-breakpoint-down(lg) {

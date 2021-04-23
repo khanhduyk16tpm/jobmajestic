@@ -1,0 +1,32 @@
+{% import 'macros/path.html' as f %}
+{% import 'macros/site.html' as s %}
+
+<div class="overview-content-body mt-3 mb-3">
+	{% for i in range(1,4) %}
+		<div class="row mt-4 mb-1">
+			<h4>Category</h4>
+		</div>
+		<div class="row gallery-images mb-3">
+			<div class="col-4">
+				<img src="{{f.companies_gallery_img('gallery-img-1.png')}}" class="img-fluid">
+			</div>
+			<div class="col-4">
+				<img src="{{f.companies_gallery_img('gallery-img-2.png')}}" class="img-fluid">
+			</div>
+			<div class="col-4">
+				<img src="{{f.companies_gallery_img('gallery-img-3.png')}}" class="img-fluid">
+			</div>
+		</div>
+		<div class="row gallery-images mb-3">
+			<div class="col-4">
+				<img src="{{f.companies_gallery_img('gallery-img-4.png')}}" class="img-fluid">
+			</div>
+			<div class="col-4">
+				<img src="{{f.companies_gallery_img('gallery-img-5.png')}}" class="img-fluid">
+			</div>
+			<div class="col-4">
+				<img src="{{f.companies_gallery_img('gallery-img-6.png')}}" class="img-fluid">
+			</div>
+		</div>
+	{% endfor %}
+</div>

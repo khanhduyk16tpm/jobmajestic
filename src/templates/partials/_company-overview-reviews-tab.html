@@ -1,0 +1,69 @@
+{% import 'macros/path.html' as f %}
+{% import 'macros/site.html' as s %}
+
+<div class="overview-content-body mt-3 mb-3">
+	<h3>Employee Reviews</h3>
+	<div class="row write-review-wrapper mt-4">
+		<button class="btn-secondary">+ Write a Review</button>
+	</div>
+	{% for i in range(1,4) %}
+	<div class="review-content-container mt-3">
+		<div class="row review-avatar-rate mt-4">
+			<div class="col-4">
+				<img src="{{f.companies_review_img('review-img-1.png')}}" class="img-fluid"> <span> Username</span>
+			</div>
+			<div class="col-8">
+				
+					<div class="dropdown review-dropdown">
+	                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+	                  	<div class="company-rating-container">
+		                  	<h1>5.0</h1>
+							<span>
+								<p>Average Rating</p>
+								{% for i in range(1,6) %}
+									<img class="star-rating-icon" src="{{f.companies_overview_img('star.png')}}">
+								{% endfor%}
+							</span>
+						</div>
+	                  </button>
+	                  <ul class="dropdown-menu review-dropdown-menu" aria-labelledby="dropdownMenuButton2">
+	                    {% for i in range(1,6) %}
+	                        <li class="mb-2">
+	                        	<div class="row">
+	                        		<div class="col-3">
+	                        			<h1>5.0</h1>
+	                        		</div>
+	                        		<div class="col-9">
+	                        			<span>
+											<p>Category</p>
+											{% for i in range(1,6) %}
+												<img class="star-rating-icon" src="{{f.companies_overview_img('star.png')}}">
+											{% endfor%}
+										</span>
+	                        		</div>
+								</div>
+	                        </li>
+	                    {% endfor %}
+	                
+	                  </ul>
+	                
+				</div>
+			</div>
+		</div>
+		<div class="row review-body">
+			<div class="col-lg-4 col-md-12 col-sm-12">
+				<div class="row">
+					<div class="col-lg-12 col-4"><p>User Information</p></div>
+					<div class="col-lg-12 col-4"><p>User Information</p></div>
+					<div class="col-lg-12 col-4"><p>User Information</p></div>
+				</div>
+			</div>
+			<div class="col-lg-8 col-md-12 col-sm-12 mt-3">
+				<h4>Review Title</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula venenatis sem, vel cursus mi condimentum ac. Donec in bibendum sem. Sed nec feugiat neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce et aliquet leo. In placerat venenatis leo condimentum pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut augue purus. Donec id erat urna. Quisque suscipit scelerisque nibh eget porta. Proin eu ante mollis, dapibus nisl eu, porttitor mi. Ut vitae lorem ut nisl tincidunt consectetur.</p>
+				<p class="date-poted">Posted on 12 Aug 2017</p>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>

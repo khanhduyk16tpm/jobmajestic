@@ -9,8 +9,14 @@
   <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
   	{% include 'partials/_company-overview-tab.html' %}
   </div>
-  <div class="tab-pane fade" id="jobs" role="tabpanel" aria-labelledby="jobs-tab">2</div>
-  <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">3</div>
-  <div class="tab-pane fade" id="gallery" role="tabpanel" aria-labelledby="gallery-tab">4</div>
+  <div class="tab-pane fade" id="jobs" role="tabpanel" aria-labelledby="jobs-tab">
+  	{% include 'partials/_company-overview-jobs-tab.html' %}
+  </div>
+  <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+  	{% include 'partials/_company-overview-reviews-tab.html' %}
+  </div>
+  <div class="tab-pane fade" id="gallery" role="tabpanel" aria-labelledby="gallery-tab">
+  	{% include 'partials/_company-overview-gallery-tab.html' %}
+  </div>
 </div>
 {% endblock %}

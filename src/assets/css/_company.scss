@@ -260,6 +260,12 @@
 	.company-overview{
 		background-color: $whiteColor;
 		padding: 0px;
+		.overview-content-body{
+			padding: 20px 40px 20px 40px;
+			@include media-breakpoint-down(lg)  {
+				padding: 20px;
+			}
+		}
 		#companyTabContent{
 			#overview{
 				.carousel-indicators{
@@ -278,6 +284,123 @@
 				    @include media-breakpoint-down(lg)  {
 				    	height: 120px;
 				    }
+				}
+				.overview-content-body{
+					.row{
+						h3{
+							font-size: 30px;
+					    	@include media-breakpoint-down(lg)  {
+					    		font-size: 18px;
+					    	}
+						}
+						p{
+							font-size: 14px;
+					    	@include media-breakpoint-down(lg)  {
+					    		font-size: 12px;
+					    	}
+						}
+						h4{
+							font-size: 18px;
+					    	@include media-breakpoint-down(lg)  {
+					    		font-size: 14px;
+					    	}
+						}
+					}
+				}
+			}
+			#jobs{
+				margin-top: 0px;
+				.job-card{
+					.job-card-container{
+						box-shadow: none;
+						border: 1px solid #707070;
+						border-bottom: none;
+					}
+					.card-footer{
+						border: 1px solid #707070;
+						border-top: none;
+					}
+				}
+				.see-more{
+					padding-left: 10px;
+					padding-right: 10px;
+					button{
+						background-color: $yellowButton;
+						color: $navBgColor;
+						border: none;
+						padding: 15px;
+						font-weight: bold;
+						font-size: 14px;
+				    	
+					}
+					
+				}
+				.job-listed-text{
+					font-size: 14px;
+					color: $textGrayColor;
+				}
+			}
+			#reviews{
+				.write-review-wrapper{
+					padding-left: 10px;
+					padding-right: 10px;
+					button{
+						background-color: $yellowButton;
+						color: $navBgColor;
+						border: none;
+						padding: 15px;
+						font-weight: bold;
+						font-size: 18px;
+				    	
+					}
+				}
+				.review-avatar-rate{
+					.company-rating-container{
+						h1{
+							width: auto;
+							float: left;
+
+						}
+						span{
+							width: auto;
+							float: left;
+							margin-left: 10px;
+							p{
+								margin-bottom: 0;
+    							color: $textGrayColor;
+							}
+						}		
+					}
+					.review-dropdown{
+						.dropdown-toggle{
+							margin-left: -16px;
+							&::after{
+								margin-left: 20px;
+								margin-top: 20px;
+							}
+						}
+						.review-dropdown-menu{
+							box-shadow: 0px 3px 6px #00000029;
+							margin-left: 26px !important;
+							padding: 10px;
+							h1{
+								font-size: 30px;
+							}
+							span{
+								p{
+									margin-bottom: 0;
+	    							color: $textGrayColor;
+								}
+
+							}
+						}
+					}
+				}
+				.review-body{
+					.date-poted{
+						font-size: 12px;
+						color: $textGrayColor;
+					}
 				}
 			}
 		}
