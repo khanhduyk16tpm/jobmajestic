@@ -1,0 +1,60 @@
+{% extends "layouts/profile-base.html" %}
+{% block page %}
+<div class="row mt-3">
+    <div class="col-lg-10 col-sm-12 col-md-12">
+        <div class="row">
+            <div class="col-lg-5 col-sm-12 col-md-12 profile-item-container">
+                <div class="profile-box-list profile-view">
+                    <div class="s-number">
+                        <h3>5</h3>
+                    </div>
+                    <div class="s-text">Profile View</div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-12 col-md-12 profile-item-container">
+                <div class="profile-box-list shortlist">
+                    <div class="s-number">
+                        <h3>5</h3>
+                    </div>
+                    <div class="s-text">Shortlisted by Potential Employer</div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="row mt-2">
+            {% include 'partials/_announcement_section.html' %}
+        </div>
+        <div class="row mt-2">
+            {% include 'partials/_announcement_alert_section.html' %}
+        </div>
+    </div>
+   <div class="col-lg-2 d-none d-lg-block adv-imgs mt-2">
+        <img class="img-fluid" src="{{f.companies_overview_img('banner-adv-1-2x.png')}}">
+        <img class="img-fluid" src="{{f.companies_overview_img('banner-adv-2-2x.png')}}">
+   </div>
+</div>
+<div class="row mb-5">
+    <div class="col-lg-10 col-md-12 col-sm-12">
+        <div class="row package-text mb-3">Packages</div>
+        <div class="row">
+            {% for i in range(1,4)%}
+            <div class="col-lg-3 package-margin-{{ i }}">
+                <div class="benefit-package">
+                    <div class="row title">Package 1</div>
+                    <div class="row benefit-sal">
+                        <p><span class="superscript">RM</span><span class="normal">10</span><span class="month"> Month</span></p>
+                    </div>
+                    <div class="benefit-description">
+                        <p><i class="fa fa-check-circle" aria-hidden="true"></i><span>Benefits Description</span></p>
+                        <p><i class="fa fa-check-circle" aria-hidden="true"></i><span>Benefits Description</span></p>
+                        <p><i class="fa fa-check-circle" aria-hidden="true"></i><span>Benefits Description</span></p>
+                    </div>
+                    <div class="apply">
+                        <button class="btn-apply-job"><span>Apply now</span></button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
