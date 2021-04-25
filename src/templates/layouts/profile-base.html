@@ -1,0 +1,32 @@
+{% extends "layouts/base.html" %}
+
+{% block js %}{% endblock %}
+
+
+{% block content %}
+<div class="page">
+    <div class="container-fluid profile-box">
+        <img class="d-lg-none img-fluid" src="{{f.companies_main_img('company-header-mobile.png')}}">
+        <div class="container-sm container-md">
+            {% include 'partials/_profile-search-box.html' %}
+        </div>
+    </div>
+    <div class="container profile-body">
+        <div class="row profile-header">
+            {% include 'partials/_profile-state-section.html' %}
+        </div>
+        <div class="row r-avatar">
+            {% include 'partials/_profile-basic.html' %}
+        </div>
+        <!-- <div class="row">
+            <div class="col-lg-2 d-none d-lg-block adv-imgs">
+                <img class="img-fluid" src="{{f.companies_overview_img('banner-adv-1-2x.png')}}">
+                <img class="img-fluid" src="{{f.companies_overview_img('banner-adv-2-2x.png')}}">
+            </div>
+        </div> -->
+        {% block page %}
+
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}
