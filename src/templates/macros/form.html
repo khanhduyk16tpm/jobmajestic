@@ -1,6 +1,6 @@
 {% macro csrf() %}
-<input type="hidden" name="{{ csrf.keys.name }}" value="{{ csrf.name }}"/>
-<input type="hidden" name="{{ csrf.keys.value }}" value="{{ csrf.value }}"/>
+    <input type="hidden" name="{{ csrf.keys.name }}" value="{{ csrf.name }}" />
+    <input type="hidden" name="{{ csrf.keys.value }}" value="{{ csrf.value }}" />
 {% endmacro %}
 
 {% macro _extras(attributes) %}
@@ -13,14 +13,14 @@
 
 {% macro _select_options(options, value = null, attributes = {}) %}
 {% if attributes.placeholder is defined %}
-<option value="">{{ attributes.placeholder }}</option>
+    <option value="">{{ attributes.placeholder }}</option>
 {% endif %}
 
 {% for key, data in options %}
 {% if key == value %}
-<option value="{{ key }}" selected="selected">{{ data }}</option>
+    <option value="{{ key }}" selected="selected">{{ data }}</option>
 {% else %}
-<option value="{{ key }}">{{ data }}</option>
+    <option value="{{ key }}">{{ data }}</option>
 {% endif %}
 {% endfor %}
 {% endmacro %}
@@ -46,12 +46,11 @@
 {% macro select_picker(name, options, value = null, attributes = {}) %}
 <select class="form-control selectpicker" name="{{ name }}" {{ _self._extras(attributes) }}>
     {% if attributes.placeholder is defined %}
-    <option value="">{{ attributes.placeholder }}</option>
+        <option value="">{{ attributes.placeholder }}</option>
     {% endif %}
 
     {% for key, data in options %}
-
-    <option value="{{ key }}" selected="selected">{{ data }}</option>
+        <option value="{{ key }}" selected="selected">{{ data }}</option>
     {% endfor %}
 </select>
 {% endmacro %}
@@ -68,7 +67,7 @@
 {% macro checkboxes(name, options, value = '', id = 'inlineCheckbox') %}
 {% for key, label in options %}
 <label class="checkbox-inline icheckbox">
-    <input type="checkbox" id="{{ id }}" name="{{ name }}" value="{{ key }}" {{ 'checked' if key in value else '' }} >
+    <input type="checkbox" id="{{ id }}" name="{{ name }}" value="{{ key }}" {{ 'checked' if key in value else '' }}>
     {{ label }}
 </label>
 {% endfor %}
@@ -77,7 +76,7 @@
 {% macro checkbox(name, options, value = '', id = 'checkbox') %}
 {% for key, label in options %}
 <label class="checkbox icheckbox">
-    <input type="checkbox" id="{{ id }}" name="{{ name }}" value="{{ key }}" {{ 'checked' if key == value else '' }} >
+    <input type="checkbox" id="{{ id }}" name="{{ name }}" value="{{ key }}" {{ 'checked' if key==value else '' }}>
     {{ label }}
 </label>
 {% endfor %}

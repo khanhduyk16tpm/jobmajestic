@@ -9,6 +9,7 @@
 /*@import "_job.scss";*/
 @import "company.scss";
 @import "about";
+@import "auth/login";
 @import "footer.scss";
 
 body {
@@ -128,6 +129,10 @@ body {
         background-color: #3b5998;
     }
 
+    .btn-linkedin {
+        background-color: #0e76a8;
+    }
+
     .card-text {
         color: $cardTextColor;
     }
@@ -154,6 +159,28 @@ body {
         padding: 0.15em 0.2em !important;
     }
 
+    // CUSTOM FORM CONTROL
+    label {
+        margin-bottom: 0.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .text-left {
+        text-align: left;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+
+
     // MEDIA SCREENS
     @include media-breakpoint-up(xxl) {
         .px-md-5 {
@@ -166,5 +193,5 @@ body {
             padding-right: 3rem !important;
             padding-left: 3rem !important;
         }
-    }    
+    }
 }
