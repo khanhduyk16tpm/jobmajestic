@@ -1,0 +1,45 @@
+{% extends "layouts/base.html" %}
+
+{% block js %}{% endblock %}
+
+
+{% block content %}
+<div class="page">
+    {% if job_search_box %}
+    <div class="container-fluid job-search-box">
+        <div class="container-sm container-md">
+            {% include 'partials/_job-search-box.html' %}
+        </div>
+    </div>
+    {% endif %}
+    <div class="container job-body mt-5">
+        {% if job_search_box %}
+        <div class="row">
+            <div class="col-lg-3">
+                {% include 'partials/_job-filter.html' %}
+            </div>
+            <div class="col-lg-6">
+                {% block jobSearchPage %}
+
+                {% endblock %}
+            </div>
+            <div class="col-lg-3">
+                {% include 'partials/_job-side-bar.html' %}
+            </div>
+        </div>
+        {% else %}
+            {% block jobDescriptionPage %}
+
+            {% endblock %}
+        {% endif %}
+
+        
+    </div>
+
+    {% if similar_company_slide %}
+    <div class="container mt-4">
+        {% include 'components/_similar_company_slide.html' %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
