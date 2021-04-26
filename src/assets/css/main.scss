@@ -6,9 +6,10 @@
 @import "content";
 @import "carousel";
 @import "landingpage";
-/*@import "_job.scss";*/
+@import "_job.scss";
 @import "company.scss";
 @import "about";
+@import "profile";
 @import "auth/login";
 @import "footer.scss";
 
@@ -20,7 +21,12 @@ body {
     .page {
         background-color: $fullPageBgColor;
     }
-
+    .yellow-button{
+        border-radius: 0px;
+        border: none;
+        background-color: $yellowButton;
+        color: $bigBtnFontColor;
+    }
     .alert {
         background-color: $alertColor;
         top: 0px;
