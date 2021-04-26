@@ -255,9 +255,11 @@
         text-align: left;
         font-size: 30px;
         margin-left: -2px;
+        margin-bottom: 1.5rem;
         @include media-breakpoint-down(lg)  {
             margin-top: 25px;
             font-size: 22px;
+            margin-bottom: 0;
         }
     }
     .package-margin-r {
@@ -279,6 +281,7 @@
         @include media-breakpoint-down(lg)  {
             width: 320px;
             height: 446px;
+            margin-left: 15px;
         }
         .title {
             width: 156px;
