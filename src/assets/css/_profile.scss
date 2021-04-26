@@ -394,6 +394,14 @@
                 border: solid 8px #000;
             }
         }
+        /*progress bar*/
+        .progress {
+            background-color: #000;
+            border-radius: 0;
+        }
+        .progress-bar {
+            background-color: #fff;
+        }
         .profile-note {
             letter-spacing: 0px;
             color: #222E3C;
