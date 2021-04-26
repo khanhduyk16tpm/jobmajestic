@@ -19,7 +19,12 @@ body {
     .page {
         background-color: $fullPageBgColor;
     }
-
+    .yellow-button{
+        border-radius: 0px;
+        border: none;
+        background-color: $yellowButton;
+        color: $bigBtnFontColor;
+    }
     .alert {
         background-color: $alertColor;
         top: 0px;

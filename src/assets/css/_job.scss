@@ -23,7 +23,7 @@
         margin-top: 50px;
         padding-left: 0px;
         padding-right: 0px;
-        background-color: $lightYellowButton;
+        background: url("../img/searchjobs/main/woman-attending-online-class-2x.png") no-repeat center,
     }
 
     
@@ -41,7 +41,7 @@
             -ms-flex-pack: center;
             justify-content: center;
             overflow: auto;
-            padding: 40px;
+            /*padding: 40px;*/
         }
         @include media-breakpoint-down(lg)  {
             padding: 25px;
@@ -55,19 +55,11 @@
             }
         }
         button{
-            
-            @include media-breakpoint-down(lg)  {
-                margin-top: 10px;
-            }
-        }
-        button{
-            border-radius: 0px;
-            border: none;
-            background-color: $yellowButton;
-            color: $bigBtnFontColor;
             height: 100px;
             @include media-breakpoint-down(lg)  {
                 margin-bottom: 10px;
+                margin-top: 10px;
+                height: auto;
             }
         }
         .range-slider{
@@ -212,6 +204,76 @@
     }
 }
 .job-body{
+    .job-filter-side-bar{
+        span{
+            cursor: pointer;
+            &.clear-all{
+                font-size: 12px;
+                color: $textGrayColor;
+            }
+        }
+        ul{
+            list-style-type:none;
+            color: $textGrayColor;
+            margin-bottom: 0px;
+            font-size: 14px;
+            margin-left: -12px;
+            li{
+               line-height: 2; 
+               a{
+                  color: $textGrayColor;
+               }
+            }
+        }
+        .more {display: none;}
+        .list-check-box{
+            padding-left: 24px;
+            color: $textGrayColor;
+            font-size: 14px;
+            .form-check-input{
+                border-radius: 0px;
+            }
+            .show-more{
+                color: $redButton;
+                font-size: 14px;
+                margin-left: -12px;
+            }
+        }
+        .lasted-story{
+            background: url("../img/searchjobs/main/lastest-story-bg.png") no-repeat center,
+            linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68));
+            background-blend-mode: overlay;
+            background-size: cover;
+            opacity: 0.9;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            overflow: auto;
+            width: 80%;
+            padding: 15px;
+            margin-left: 5px;
+            h5{
+                color: $yellowButton;
+            }
+            p{
+                color: $whiteColor;
+                font-size: 14px;
+            }
+            .yellow-text{
+                color: $yellowButton; 
+                font-size: 14px;
+            }
+
+        }
+        
+    }
     .job-item-container{
         .job-card{
             box-shadow: 0px 0px 12px #000000d9;

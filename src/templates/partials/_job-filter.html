@@ -1,0 +1,161 @@
+{% import 'macros/path.html' as f %}
+
+<div class="job-filter-side-bar">
+	<div class="row mb-3">
+		<h5>Related Categories</h5>
+		<div class="row list-check-box">
+			<ul class="read-more-wrap">
+				<li><span>Remote</span></li>
+				<li><span>Full time</span></li>
+				<li><span>Part time</span></li>
+				<li><span>Freelance</span></li>
+				<span id="more-1" class="more"> 
+					<li><span>Remote</span></li>
+					<li><span>Freelance</span></li>
+				</span>
+			</ul>
+			<span onclick="toggleMoreLess('more-1', 'show-more-1')" id="show-more-1" class="show-more"><i class="fa fa-chevron-down" aria-hidden="true"></i> More</span>
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<div class="row">
+			<div class="col-9">
+				<h5>Company</h5>
+			</div>
+			<div class="col-3">
+				<span class="clear-all">Clear</span>
+			</div>	
+		</div>
+		<div class="row list-check-box">
+			{% for i in range(1,4) %}
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
+			  <label class="form-check-label" for="defaultCheck{i}}">
+			    Sub Category
+			  </label>
+			</div>
+			{% endfor %}
+			<div class="row more" id="more-2">
+				{% for i in range(5,8) %}
+				<div class="form-check">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
+				  <label class="form-check-label" for="defaultCheck{i}}">
+				    Sub Category
+				  </label>
+				</div>
+				{% endfor %}	
+			</div>
+			<span onclick="toggleMoreLess('more-2', 'show-more-2')" id="show-more-2" class="show-more"><i class="fa fa-chevron-down" aria-hidden="true"></i> More</span>
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<div class="row">
+			<div class="col-9">
+				<h5>Categories</h5>
+			</div>
+			<div class="col-3">
+				<span class="clear-all">Clear</span>
+			</div>	
+		</div>
+		<div class="row list-check-box">
+			{% for i in range(1,4) %}
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
+			  <label class="form-check-label" for="defaultCheck{i}}">
+			    Sub Category
+			  </label>
+			</div>
+			{% endfor %}
+			<div class="row more" id="more-3">
+				{% for i in range(5,8) %}
+				<div class="form-check">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
+				  <label class="form-check-label" for="defaultCheck{i}}">
+				    Sub Category
+				  </label>
+				</div>
+				{% endfor %}	
+			</div>
+			<span onclick="toggleMoreLess('more-3', 'show-more-3')" id="show-more-3" class="show-more"><i class="fa fa-chevron-down" aria-hidden="true"></i> More</span>
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<div class="row">
+			<div class="col-9">
+				<h5>Related Categories</h5>
+			</div>
+			<div class="col-3">
+				<span class="clear-all">Clear</span>
+			</div>	
+		</div>
+		<div class="row list-check-box">
+			{% for i in range(1,4) %}
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
+			  <label class="form-check-label" for="defaultCheck{i}}">
+			    Sub Category
+			  </label>
+			</div>
+			{% endfor %}
+			<div class="row more" id="more-4">
+				{% for i in range(5,8) %}
+				<div class="form-check">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
+				  <label class="form-check-label" for="defaultCheck{i}}">
+				    Sub Category
+				  </label>
+				</div>
+				{% endfor %}	
+			</div>
+			<span onclick="toggleMoreLess('more-4', 'show-more-4')" id="show-more-4" class="show-more"><i class="fa fa-chevron-down" aria-hidden="true"></i> More</span>
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<div class="row">
+			<div class="col-9">
+				<h5>Distance</h5>
+			</div>
+			<div class="col-3">
+				<span class="clear-all">Clear</span>
+			</div>	
+		</div>
+		<div class="row list-check-box">
+			{% for i in range(1,4) %}
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
+			  <label class="form-check-label" for="defaultCheck{i}}">
+			    Sub Category
+			  </label>
+			</div>
+			{% endfor %}
+			<div class="row more" id="more-5">
+				{% for i in range(5,8) %}
+				<div class="form-check">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
+				  <label class="form-check-label" for="defaultCheck{i}}">
+				    Sub Category
+				  </label>
+				</div>
+				{% endfor %}	
+			</div>
+			<span onclick="toggleMoreLess('more-5', 'show-more-5')" id="show-more-5" class="show-more"><i class="fa fa-chevron-down" aria-hidden="true"></i> More</span>
+		</div>
+	</div>
+
+	<div class="row mb-3 lasted-story py-3 d-none d-lg-block">
+		<div class="col-12">
+			<h5>Latest story</h5>
+			{% for i in range(1,5) %}
+				<img class="img-fluid mb-3" src="{{f.jobs_search_img('blog-img.png')}}">
+				<p class="yellow-text">Company A</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+			{% endfor%}
+			<p class="yellow-text">Discover more post</p>
+		</div>
+	</div>
+</div>
+<script src="{{ f.js('job.min.js') }}"></script>
