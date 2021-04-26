@@ -89,12 +89,13 @@
     }
 	.profile-item-container{
 		padding: 10px;
-        width: 528px;
+/*        width: 528px;*/
         height: 187px;
         background: #FFFFFF 0% 0% no-repeat padding-box;
         box-shadow: 0px 0px 6px #00000029;
         opacity: 1;
-        margin-right: 20px;
+         width: 49%;
+        /*margin-right: 20px;*/
         .s-number {
             h3 {
                 font-size: 60px;
@@ -105,22 +106,15 @@
                 }
             }
         }
-        // .s-text {
-        //     padding-left: 22px;
-        //     font-size: 18px;
-        //      @include media-breakpoint-down(lg)  {
-        //         padding-left: 38px;
-        //         font-size: 14px;
-        //      }
-        // }
 		@include media-breakpoint-down(lg)  {
-			//padding: 30px;
-            width: 187px;
             height: 115px;
             margin-right: 0;
 		}
 		
 	}
+    .profile-item-2-container{
+        margin-left: 2%;
+    }
 	.adv-imgs{
         @include media-breakpoint-down(lg)  {
             display: none;
@@ -136,7 +130,6 @@
         margin-top: 1.5rem;
         @include media-breakpoint-down(lg)  {
             margin-top: 0;
-            width: 374px;
             height: 376px;
         }
     }
