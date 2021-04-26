@@ -1,0 +1,35 @@
+{% extends "layouts/profile-base.html" %}
+{% set is_profile = false %}
+{% set is_resume = true %}
+{% block page %}
+   <div class="col-lg-10 col-md-12 col-sm-12">
+       <div class="row">
+           <div class="col-lg-2 col-md-12 col-sm-12" id ='experience'>
+                Experience
+           </div>
+           <div class="col-lg-10 col-md-12 col-sm-12">
+                Test experience
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-lg-2 col-md-12 col-sm-12" id ='education'>
+                Education
+           </div>
+           <div class="col-lg-10 col-md-12 col-sm-12">
+                Test education
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-lg-2 col-md-12 col-sm-12" id ='skills'>
+                Skills
+           </div>
+           <div class="col-lg-10 col-md-12 col-sm-12">
+                Test skills
+           </div>
+       </div>
+   </div>
+   <div class="col-lg-2 d-none d-lg-block adv-imgs mt-2">
+        <img class="img-fluid" src="{{f.companies_overview_img('banner-adv-1-2x.png')}}">
+        <img class="img-fluid" src="{{f.companies_overview_img('banner-adv-2-2x.png')}}">
+   </div>
+{% endblock %}
