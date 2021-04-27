@@ -1,5 +1,5 @@
 {% import 'macros/path.html' as f %}
-<div class="col-lg-2 col-md-12 col-sm-12">
+<div class="col-lg-2 col-md-12 col-sm-12 my-resume">
     <div class="resume-personal-avatar">
         <img class="img-fluid" src="{{ f.img('profile/avatar_2x.png') }}">
         <div class="edit-personal-avatar"><span>Remove / Edit</span></div>
@@ -19,6 +19,8 @@
         </div>
     </div>
      <div class="row">
-         <button class="btn btn-upload-resume"><i class="fa fa-download"></i><span>Upload My Resume</span></button>
+         <div class="col-lg-12 upload-resume">
+            <button class="btn btn-upload-resume"><i class="fa fa-download"></i><span>Upload My Resume</span></button>
+         </div>
     </div>
 </div>

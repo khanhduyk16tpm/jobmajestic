@@ -1,0 +1,154 @@
+.resume-nav-tab{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: $whiteColor;
+    .nav-tabs{
+        border-bottom: none;
+        .nav-item{
+            border-radius: 0px;
+            .active{
+                border-color: $whiteColor;
+                border-bottom: 3px solid $yellowButton;;
+            }
+        }
+        
+    }
+}
+.resume-personal-avatar {
+    width: 150px;
+    height: 150px;
+    opacity: 1;
+    margin: 18px 5px 10px 10px;
+    position: relative;
+    display: inline-block;
+    @include media-breakpoint-down(lg)  {
+        //margin: 18px 5px 10px 100px;
+        width: 152px;
+        height: 152px;
+    }
+    .edit-personal-avatar {
+        position: absolute;
+        // z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 79%;
+        background: #676767 0% 0% no-repeat padding-box;
+        opacity: 0.69;
+        font-family: Arial,sans-serif;
+        color: #fff;
+        width: 150px;
+        height: 32px;
+        padding: 4px;
+        span {
+            width: 93px;
+            height: 18px;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+}
+.my-resume {
+    @include media-breakpoint-down(lg)  {
+        text-align: center;
+    }
+}
+.resume-info {
+    margin-left: -30px;
+    margin-top: 25px;
+    width: 320px;
+    .username {
+        font-size: 30px;
+        @include media-breakpoint-down(lg)  {
+            font-size: 18px;
+            margin-top: -80px;
+            //margin-left: 125px;
+            width: 95%;
+            position: absolute;
+        }
+    }
+    .user-info {
+        font-size: 14px;
+    }
+    @include media-breakpoint-down(lg)  {
+        margin-left: 0;
+        text-align: center;
+        .info-1 {
+            position: absolute;
+            margin-top: 10px;
+            width: 94%;
+        }
+        .info-2 {
+            position: absolute;
+            width: 94%;
+            margin-top: 30px;
+        }
+        .info-3 {
+            position: absolute;
+            width: 94%;
+            margin-top: 50px;
+        }
+    }
+}
+.upload-resume {
+    @include media-breakpoint-down(lg)  {
+        width: 95%;
+        text-align: center;
+        padding-right: 170px;
+    }
+    .btn-upload-resume {
+        margin-top: -56px;
+        width: 184px;
+        height: 42px;
+        opacity: 1;
+        background: #fc3 0 0 no-repeat padding-box;
+        opacity: 1;
+        border: none;
+        border-radius: 0;
+        margin-left: 1087px;
+        @include media-breakpoint-down(lg)  {
+            position: absolute;
+            margin: -100px auto auto;
+        }
+        span {
+            width: 110px;
+            height: 18px;
+            letter-spacing: 0px;
+            color: #222E3C;
+            opacity: 1;
+            text-align: center;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+    }
+}
+/*main content*/
+.row-experience {
+    .experience-title {
+        letter-spacing: 0px;
+        color: #222E3C;
+        opacity: 1;
+        text-align: left;
+        .exp {
+            font-size: 30px;
+        }
+        .time-duration {
+            font-size: 22px;
+        }
+        .duration {
+            font-size: 14px;
+        }
+    }
+    .experience-content {
+        margin-top: 3rem;
+    }
+}
+.row-education {
+    .education-top {
+        margin-top: 2.5rem;
+    }
+}
