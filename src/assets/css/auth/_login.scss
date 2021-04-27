@@ -1,0 +1,112 @@
+@import "var";
+
+.container-fluid.px-md-5.page {
+    padding: 0 !important;
+
+    .wrapper-section {
+        // @include media-breakpoint-between(md, xl) {
+        //     .background-about-desktop {
+        //         margin-top: -23px;
+        //     }
+        // }
+
+        // @include media-breakpoint-down(md) {
+        //     padding-top: 3rem !important;
+
+        //     .background-about-mobile {
+        //         margin-top: -10px;
+        //         background: url("../img/about/background-about-mobile.png") no-repeat center,
+        //             linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68));
+        //         background-size: cover;
+        //         height: 580px;
+        //     }
+        // }
+        .login-page {
+            margin-top: 39px;
+            max-width: 100%;
+
+            @include media-breakpoint-down(lg) {
+                margin-top: 25px;
+            }
+
+            .content {
+                max-width: 100%;
+                padding-right: 0;
+                padding-left: 0;
+
+                @include media-breakpoint-up(md) {
+                    padding-bottom: 1px;
+                    .background-auth {
+                        margin-top: -10px;
+                        background: url("../img/landingpage/mask-group-21-2x.png") no-repeat center,
+                            linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68));
+                        background-size: cover;
+                        height: 650px;
+                    }
+                }
+
+                .login-section {
+                    margin-left: 10%;
+                    width: 50%;
+
+                    .social-login {
+                        margin-left: 20%;
+                        margin-right: 20%;
+
+                        a {
+                            text-align: left;
+                        }
+
+                        span.split {
+                            border-left: 1px solid darkolivegreen;
+                            padding: 8px 0;
+                            margin-left: 5px;
+                            margin-right: 10px;
+                        }
+                    }
+
+                    .login-with {
+                        text-align: center;
+                    }
+
+                    .login-with-majestic {
+                        margin-top: 10px;
+                        margin-bottom: 20px;
+                    }
+
+                    form {
+                        .custom-form-control,
+                        .custom-btn {
+                            border-radius: initial;
+                        }
+
+                        .btn-login {
+                            background-color: $yellowButton;
+                            width: 100px;
+                        }
+
+                        .btn-signup {
+                            background-color: $prime8;
+                            color: $prime3;
+                            width: 100px;
+                        }
+                    }
+
+                    .desktop {
+                        margin: 25px 0;
+
+                        @include media-breakpoint-down(md) {
+                            display: none;
+                        }
+                    }
+
+                    .login-mobile {
+                        @include media-breakpoint-up(md) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

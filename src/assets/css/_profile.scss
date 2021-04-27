@@ -89,12 +89,13 @@
     }
 	.profile-item-container{
 		padding: 10px;
-        width: 528px;
+/*        width: 528px;*/
         height: 187px;
         background: #FFFFFF 0% 0% no-repeat padding-box;
         box-shadow: 0px 0px 6px #00000029;
         opacity: 1;
-        margin-right: 20px;
+         width: 49%;
+        /*margin-right: 20px;*/
         .s-number {
             h3 {
                 font-size: 60px;
@@ -106,13 +107,14 @@
             }
         }
 		@include media-breakpoint-down(lg)  {
-			//padding: 30px;
-            width: 187px;
             height: 115px;
             margin-right: 0;
 		}
 		
 	}
+    .profile-item-2-container{
+        margin-left: 2%;
+    }
 	.adv-imgs{
         @include media-breakpoint-down(lg)  {
             display: none;
@@ -128,7 +130,6 @@
         margin-top: 1.5rem;
         @include media-breakpoint-down(lg)  {
             margin-top: 0;
-            width: 374px;
             height: 376px;
         }
     }
@@ -138,6 +139,8 @@
         margin: 36px 5px 10px 20px;
         @include media-breakpoint-down(lg)  {
             margin: 25px auto;
+            width: 100%;
+            text-align: center;
         }
     }
     .resume-personal-avatar {
@@ -186,7 +189,12 @@
             @include media-breakpoint-down(lg)  {
                 font-size: 18px;
                 margin-top: -115px;
-                margin-left: 197px;
+                //margin-left: 197px;
+                margin-left: 0;
+                padding-right: 20px;
+                text-align: center;
+                width: 97%;
+                padding-left: 2px;
                 position: absolute;
             }
         }
@@ -194,20 +202,26 @@
             font-size: 14px;
         }
         @include media-breakpoint-down(lg)  {
+            margin-left: 0;
+            margin-top: 30px;
             .info-1 {
                 position: absolute;
-                margin-top: 10px;
-                margin-left: 180px;
+                text-align: center;
+                width: 94%;
             }
             .info-2 {
                 position: absolute;
-                margin-left: 180px;
-                margin-top: 30px;
+                //margin-left: 180px;
+                margin-top: 25px;
+                text-align: center;
+                width: 94%;
             }
             .info-3 {
                 position: absolute;
-                margin-left: 180px;
+                //margin-left: 180px;
                 margin-top: 50px;
+                text-align: center;
+                width: 94%;
             }
         }
     }
@@ -245,6 +259,12 @@
             }
         }
     }
+    .edit-profile {
+        @include media-breakpoint-down(lg)  {
+            width: 100%;
+            text-align: center;
+        }
+    }
     .btn-edit-profile {
         margin-top: 109px;
         width: 137px;
@@ -257,8 +277,11 @@
         float: right;
         margin-right: -55px;
         @include media-breakpoint-down(lg)  {
-            margin-top: -134px;
-            margin-right: 112px;
+            margin-top: -252px;
+            float: none;
+            margin-right: 0;
+            text-align: center;
+            //margin-right: 112px;
         }
         span {
             width: 110px;
@@ -370,9 +393,9 @@
         box-shadow: 0px 0px 10px #00000029;
         opacity: 1;
         @include media-breakpoint-down(lg)  {
-            width: 320px;
+            width: 100%;
             height: 446px;
-            margin-left: 15px;
+            margin-left: 0;
         }
         .title {
             width: 156px;
@@ -456,7 +479,7 @@
                 opacity: 1;
                 border: none;
                 @include media-breakpoint-down(lg)  {
-                    width: 320px;
+                    width: 100%;
                 }              
             }
             span {
@@ -484,6 +507,14 @@
             @include media-breakpoint-down(lg)  {
                 border: solid 8px #000;
             }
+        }
+        /*progress bar*/
+        .progress {
+            background-color: #000;
+            border-radius: 0;
+        }
+        .progress-bar {
+            background-color: #fff;
         }
         .profile-note {
             letter-spacing: 0px;

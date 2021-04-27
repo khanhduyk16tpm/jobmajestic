@@ -3,7 +3,11 @@
 
 {% set job_saved = false %}
 {% set job_applied = false %}
+{% if job_search_card %}
+<div class="job-card">
+{% else %}
 <div class="job-card col-lg-6 col-md-12 col-sm-12">
+{% endif %}
     <div class="job-card-container">
         <div class="job-card-wrapper">
 

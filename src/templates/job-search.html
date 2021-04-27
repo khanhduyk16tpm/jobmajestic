@@ -1,0 +1,19 @@
+{% extends "layouts/job-base.html" %}
+
+{% set job_search_box = true %}
+{% set job_search_card = true %}
+{% block js %} {{ f.module(['rangeSlider']) }} {% endblock %}
+{% block jobSearchPage %}
+<div class="row">
+    {% for i in range(1,6) %}
+        <div class="job-item-container mb-3">
+            {% include 'partials/_job_card.html' %}
+        </div>
+   {% endfor %}
+</div>
+<div class="row">
+    <div class="col btn-wrapper">
+        <button class="form-control btn btn-secondary yellow-button" id="company-show-more">Show More</button>
+    </div>
+</div>
+{% endblock %}
