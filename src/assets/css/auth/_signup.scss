@@ -4,7 +4,7 @@
     padding: 0 !important;
 
     .wrapper-section {
-        .login-page {
+        .signup-page {
             margin-top: 39px;
             max-width: 100%;
             padding-left: 0;
@@ -30,13 +30,14 @@
                         background: url("../img/landingpage/mask-group-21-2x.png") no-repeat center,
                             linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68));
                         background-size: cover;
-                        height: 600px;
+                        height: 745px;
                     }
                 }
 
-                .login-section {
+                .signup-section {
                     padding-left: 10%;
                     padding-right: 10%;
+                    margin-bottom: 40px;
 
                     @include media-breakpoint-up(xxl) {
                         width: 66%;
@@ -62,7 +63,7 @@
                     @include media-breakpoint-down(sm) {
                     }
 
-                    .social-login {
+                    .social-signup {
                         @include media-breakpoint-up(xl) {
                             margin-left: 15%;
                             margin-right: 15%;
@@ -100,11 +101,11 @@
                         }
                     }
 
-                    .login-with {
+                    .signup-with {
                         text-align: center;
                     }
 
-                    .login-with-majestic {
+                    .signup-with-majestic {
                         margin-top: 5px;
                         margin-bottom: 25px;
                     }
@@ -117,6 +118,22 @@
                             border-radius: initial;
                         }
 
+                        .custom-select {
+                            border-left: 1px solid #ced4da;
+                            border-top: 1px solid #ced4da;
+                            border-bottom: 1px solid #ced4da;
+                            border-right: none;
+                            width: 20%;
+                        }
+
+                        .w-20 {
+                            width: 20%;
+                        }
+
+                        .w-80 {
+                            width: 80%;
+                        }
+
                         .custom-action {
                             @include media-breakpoint-between(sm, md) {
                                 margin-top: 0 !important;
@@ -126,29 +143,11 @@
                                 width: 50%;
                                 margin-top: 0 !important;
                             }
-                        }
-
-                        .text-right {
-                            text-decoration: underline;
-                        }
-
-                        .btn-login {
-                            background-color: $yellowButton;
-                            width: 100px;
-
-                            @include media-breakpoint-down(sm) {
-                                width: 100%;
-                            }
-                        }
+                        }                        
 
                         .btn-signup {
-                            background-color: $prime8;
-                            color: $prime3;
-                            width: 100px;
-
-                            @include media-breakpoint-down(sm) {
-                                width: 100%;
-                            }
+                            background-color: $yellowButton;
+                            width: 100%;
                         }
 
                         @include media-breakpoint-between(sm, md) {
@@ -166,7 +165,7 @@
                         }
                     }
 
-                    .login-mobile {
+                    .signup-mobile {
                         @include media-breakpoint-up(md) {
                             display: none;
                         }

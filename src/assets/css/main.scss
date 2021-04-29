@@ -12,6 +12,7 @@
 @import "profile/profile";
 @import "profile/resume";
 @import "auth/login";
+@import "auth/signup";
 @import "footer.scss";
 
 body {
@@ -187,6 +188,9 @@ body {
         text-align: right;
     }
 
+    .text-underline {
+        text-decoration: underline;
+    }
 
     // MEDIA SCREENS
     @include media-breakpoint-up(xxl) {
