@@ -14,18 +14,18 @@
 
 {% block page %}
 <div class="wrapper-section">
-    <div class="container login-page">
+    <div class="container signup-page">
         <div class="container content">
             <div class="row">
                 <div class="col-md-6">
                     <div class="background-auth"></div>
                 </div>
                 <div class="col-md-6">
-                    <div class="login-section">
-                        <p class="login-with desktop">Log in with</p>
-                        <p class="login-with mobile">Log in with Job Majestic</p>
-                        <div class="row py-2 social-login">
-                            <a href="/en/auth/social-signup/1" rlogin-desktopel="nofollow"
+                    <div class="signup-section">
+                        <p class="signup-with desktop">Sign up with</p>
+                        <p class="signup-with mobile">Sign up with Job Majestic</p>
+                        <div class="row py-2 social-signup">
+                            <a href="/en/auth/social-signup/1" rsignup-desktopel="nofollow"
                                 class="btn btn-secondary btn-facebook col-12 mb-2">
                                 <i class="fa fa-facebook"></i>
                                 Continue with Facebook
@@ -45,12 +45,45 @@
                                 <hr>
                             </div>
                         </div>
-                        <p class="login-with login-with-majestic">Log in with Job Majestic</p>
-                        <form action="/en/auth/login" class="login-form" method="post" autocomplete="off">
+                        <p class="signup-with signup-with-majestic">Sign up with Job Majestic</p>
+                        <form action="/en/auth/signup" class="signup-form" method="post" autocomplete="off">
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-md-0">
+                                    <label for="firstname">First Name</label>
+                                    <input type="text" id="firstname" class="form-control custom-form-control"
+                                        maxlength="50" autocomplete="given-name" autofocus="" required=""
+                                        name="profile[first_name]" value="">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="lastname">Last Name</label>
+                                    <input type="text" id="lastname" class="form-control custom-form-control"
+                                        maxlength="50" autocomplete="family-name" required="" name="profile[last_name]"
+                                        value="">
+                                </div>
+                            </div>
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    <label for="email-login">Email</label>
-                                    <input type="email" id="email-login" class="form-control custom-form-control"
+                                    <label for="mobileNumber">Mobile Number</label>
+                                    <div class="input-group">
+                                        <select name="profile[mobile_region_code]"
+                                            class="custom-select custom-form-control w-20">
+                                            <option value="SG">+65</option>
+                                            <option value="ID">+62</option>
+                                            <option value="TH">+66</option>
+                                            <option value="MY" selected="selected">+60</option>
+                                        </select>
+                                        <div class="input-group-append w-80"> <input type="text"
+                                                class="form-control custom-form-control" maxlength="10"
+                                                id="mobileNumber" required="" name="profile[mobileNationalNumber_]"
+                                                value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <label for="email-signup">Email</label>
+                                    <input type="email" id="email-signup" class="form-control custom-form-control"
                                         maxlength="50" autocomplete="email" autofocus="" required="" name="email"
                                         placeholder="yourname@youremail.com">
                                 </div>
@@ -77,18 +110,22 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right mt-2 mt-md-0 custom-action">
-                                    <a class="text-underline" href="/en/auth/password-recovery" rel="nofollow">Forgot password?</a>
+                                    <a class="text-underline" href="/en/auth/password-recovery" rel="nofollow">Forgot
+                                        password?</a>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-sm-6">
-                                    <button type="submit" class="btn custom-btn btn-login col-12">Login</button>
-                                </div>
-                                <div class="col-sm-6 text-right mt-2 mt-md-0 no-margin">
+                                <div class="col-sm-12">
                                     <button type="submit" class="btn custom-btn btn-signup col-12">Sign Up</button>
                                 </div>
                             </div>
                         </form>
+                        <p class="text-center my-3">
+                            <small> Already have an account? <a class="text-underline" href="/en/auth/signup"
+                                    rel="nofollow" data-dismiss="modal" data-toggle="modal" data-target="#signupModal">
+                                    Log in</a>
+                            </small>
+                        </p>
                     </div>
                 </div>
             </div>
