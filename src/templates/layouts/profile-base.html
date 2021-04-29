@@ -15,9 +15,19 @@
         <div class="row profile-header">
             {% include 'partials/_profile-state-section.html' %}
         </div>
+        {% if is_profile %}
         <div class="row r-avatar">
             {% include 'partials/_profile-basic.html' %}
         </div>
+        {% endif %}
+        {% if is_resume %}
+        <div class="row r-avatar">
+            {% include 'partials/_resume-basic.html' %}
+        </div>
+        <div class="row resume-nav-tab">
+            {% include 'partials/_resume-nav-tab.html' %}
+        </div>
+        {% endif %}
         {% block page %}
 
         {% endblock %}

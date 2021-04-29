@@ -12,7 +12,7 @@ header {
                     margin-top: 2px;
                 }
             }
-        }        
+        }
         @include media-breakpoint-up(lg) {
             height: 73px;
             .main-logo {
@@ -47,30 +47,45 @@ header {
             #navbarSupportedContent {
                 margin-left: 20px;
                 max-width: 966px;
+
                 .navbar-nav {
-                    width: 483px;
+                    width: 500px;
                     li {
                         margin-right: 7px;
                     }
+                    @include media-breakpoint-between(lg, xl) {
+                        width: 420px;
+                    }
                 }
                 .language-navbar {
-                    width: 483px;
                     .navbar-info {
-                        @media (min-width: 40em) {
-                            width: 400px;
-                            float: right;
-                        }
                         .navbar-text a {
-                            margin-left: 30px;
+                            margin-left: 20px;
                             color: $bigBtnBgColor;
                             text-decoration: none;
+
+                            @include media-breakpoint-between(lg, xl) {
+                                margin-left: 15px;
+                            }
                         }
+
                         .btn-post-job {
                             background-color: $navBgColor;
                             border-color: $bigBtnBgColor;
                             border: 2px solid $bigBtnBgColor;
                             border-radius: 0;
+
+                            @include media-breakpoint-between(lg, xl) {
+                                padding-left: 15px !important;
+                                padding-right: 15px !important;
+                            }
+
+                            @include media-breakpoint-down(sm) {
+                                padding-left: 15px !important;
+                                padding-right: 15px !important;
+                            }
                         }
+
                         .btn-post-job:hover {
                             color: $navBgColor;
                             background-color: $bigBtnBgColor;
@@ -161,7 +176,7 @@ header {
                                         left: -130px;
                                         li {
                                             border-bottom: solid 0.5px;
-                                            border-color: $textColor;                                       
+                                            border-color: $textColor;
                                             margin: auto;
                                             img {
                                                 height: 15px;
@@ -199,12 +214,8 @@ header {
 
                     .language-picker {
                         float: left;
-                        @media (min-width: 40em) {
-                            width: 50px;
-                        }
-                        @media (min-width: 30em) {
-                            margin-top: 7px;
-                        }
+                        margin-top: 7px;
+                        
                         button {
                             background: url("../img/about/icon-material-language@2x.png") right center no-repeat;
                             background-size: 20px 20px;

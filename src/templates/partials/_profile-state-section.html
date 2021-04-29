@@ -2,11 +2,12 @@
 
 <div class="col-lg-10 col-md-12 col-sm-12">
     <div class="row">
-        <h4>Profile Completion: 62%</h4>
+        <h4>Profile Completion: {{ complete_percent }}%</h4>
     </div>
 </div>
 <div class="col lg-12 col-md-12 col-sm-12">
-    <div class="row profile-progress">
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: {{ complete_percent }}%" aria-valuenow="{{ complete_percent }}" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
     <div class="profile-note mt-2">Complete your profile. Your future employer is waiting! <a href='#'>Click here.</a></div>
 </div>

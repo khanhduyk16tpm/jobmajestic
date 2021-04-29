@@ -1,0 +1,99 @@
+{% import 'macros/path.html' as f %}
+{% extends "layouts/full-page.html" %}
+
+{% block js %}{% endblock %}
+
+{% set meta_title = '' %}
+{% set meta_description = '' %}
+{% set meta_keywords = '' %}
+{% set meta_robots = 'noindex,nofollow' %}
+
+{% set page_title = 'Log in with Job Majestic' %}
+{% set page_sub_title = '' %}
+{% set quote = 'Last updated on 23th Apr 2021' %}
+
+{% block page %}
+<div class="wrapper-section">
+    <div class="container login-page">
+        <div class="container content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="background-auth"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="login-section">
+                        <p class="login-with desktop">Log in with</p>
+                        <p class="login-with mobile">Log in with Job Majestic</p>
+                        <div class="row py-2 social-login">
+                            <a href="/en/auth/social-signup/1" rlogin-desktopel="nofollow"
+                                class="btn btn-secondary btn-facebook col-12 mb-2">
+                                <i class="fa fa-facebook"></i>
+                                Continue with Facebook
+                            </a>
+                            <a href="/en/auth/social-signup/2" rel="nofollow"
+                                class="btn btn-secondary btn-linkedin col-12 mb-2">
+                                <i class="fa fa-linkedin"></i>
+                                <span class="split"></span>Sign in with LinkedIn
+                            </a>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-sm-5 d-md-block custom-hr">
+                                <hr>
+                            </div>
+                            <div class="col-sm-2 text-muted text-center py-1">Or</div>
+                            <div class="col-sm-5 d-md-block custom-hr">
+                                <hr>
+                            </div>
+                        </div>
+                        <p class="login-with login-with-majestic">Log in with Job Majestic</p>
+                        <form action="/en/auth/login" class="login-form" method="post" autocomplete="off">
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <label for="email-login">Email</label>
+                                    <input type="email" id="email-login" class="form-control custom-form-control"
+                                        maxlength="50" autocomplete="email" autofocus="" required="" name="email"
+                                        placeholder="yourname@youremail.com">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <label for="current-password">Password</label>
+                                    <div class="input-group">
+                                        <input type="password" id="current-password"
+                                            class="form-control custom-form-control current-password" maxlength="20"
+                                            required="" name="password" style="padding-right: 40px;">
+                                        <span class="hide-pw btn" style="position: absolute; z-index: 5; right: 0px;"><i
+                                                class="fa fa-eye"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 custom-action">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck" checked="">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Remember me </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 text-right mt-2 mt-md-0 custom-action">
+                                    <a class="text-underline" href="/en/auth/password-recovery" rel="nofollow">Forgot password?</a>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <button type="submit" class="btn custom-btn btn-login col-12">Login</button>
+                                </div>
+                                <div class="col-sm-6 text-right mt-2 mt-md-0 no-margin">
+                                    <button type="submit" class="btn custom-btn btn-signup col-12">Sign Up</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
