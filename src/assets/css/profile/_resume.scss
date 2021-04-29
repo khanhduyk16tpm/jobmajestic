@@ -1,6 +1,6 @@
 .resume-nav-tab{
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     background-color: $whiteColor;
     .nav-tabs{
         border-bottom: none;
@@ -127,6 +127,14 @@
     }
 }
 /*main content*/
+.resume-block {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    margin-bottom: 5rem;
+    .font-w-bold {
+        font-weight: 500;
+    }
+}
 .row-experience {
     .experience-title {
         letter-spacing: 0px;
@@ -135,20 +143,104 @@
         text-align: left;
         .exp {
             font-size: 30px;
+            margin: 1.5rem 1.5rem 0 1.5rem;
         }
         .time-duration {
             font-size: 22px;
+            margin: 0 1.5rem;
         }
         .duration {
             font-size: 14px;
+            margin: 0 1.5rem;
         }
     }
     .experience-content {
-        margin-top: 3rem;
+        margin-top: 4.5rem;
+        color: #222E3C;
+        .job-title, .job-location {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .job-field, .specialization, .role, .position-level, .salary, .description {
+            font-size: 15px;
+        }
     }
 }
 .row-education {
     .education-top {
         margin-top: 2.5rem;
+    }
+    .edu-title {
+        letter-spacing: 0px;
+        color: #222E3C;
+        opacity: 1;
+        text-align: left;
+        font-size: 30px;
+        margin: 0 1.5rem 0 1.5rem;
+    }
+    .time-duration, .duration {
+        margin: 0 1.5rem;
+    }
+    .time-duration {
+        font-size: 22px;
+    }
+    .duration {
+        font-size: 14px;
+    }
+    .course, .college {
+        font-size: 18px;
+    }
+    .item, .description {
+        font-size: 15px;
+    }
+}
+.row-skills {
+    .skill-title {
+        margin: 0 1.5rem;
+        font-size: 30px;
+    }
+    .skill-level {
+        margin: 0 1.5rem;
+        font-size: 18px;
+    }
+    .skill-list {
+        font-size: 15px;
+    }
+}
+.row-languages {
+    @include media-breakpoint-down(lg)  {
+        display: none;
+    }
+    .proficiency {
+        margin: 0 1.5rem;
+        font-size: 15px;
+    }
+    .lang-name {
+        margin: 0 1.5rem;
+        font-size: 18px;
+        width: 100%;
+    }
+    .language {
+        margin: 0 1.5rem;
+        font-size: 30px;
+    }
+}
+.row-languages-mobile {
+    display: none;
+    @include media-breakpoint-down(lg)  {
+        display: block;
+    }
+}
+.row-extra-info, .row-about {
+    .title {
+        margin: 0 1.5rem;
+        font-size: 30px;
+    }
+    .item {
+        margin: 0 1.5rem;
+        font-size: 18px;
+    }
+    .info {
+        font-size: 18px;
     }
 }
