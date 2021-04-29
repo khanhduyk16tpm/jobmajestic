@@ -1,0 +1,36 @@
+{% import 'macros/path.html' as f %}
+
+<div class="job-righr-side-bar d-none d-lg-block ps-5">
+<h5>Get your dream job news first hand</h5>
+{% if is_guest %}
+	<input type="email" class="form-control shadow-sm mt-4" id="inputEmail1" aria-describedby="emailHelp">
+{% else %}
+	<input type="email" class="form-control shadow-sm mt-4" id="inputEmail1" aria-describedby="emailHelp" value="john.doe@gmail.com">
+{% endif %}
+<button class="form-control yellow-button mt-2 mb-3">Subscribe Now</button>
+<h5 class="mt-2 mb-3">Popular Company</h5>
+	{% for i in range(1,9) %}
+	<div class="row mt-2 mb-2 popular-company-container">
+		<div class="col-3">
+			<img class="img-fluid" src="{{f.jobs_search_img('company-logo.png')}}">
+		</div>
+		<div class="col-9">
+			<strong>Company A</strong>
+			<p>200 Jobs</p>
+		</div>
+	</div>
+{% endfor %}
+<h5 class="mt-2 mb-3">People also viewed</h5>
+	{% for i in range(1,5) %}
+	<div class="row mt-2 mb-2 popular-company-container">
+		<div class="col-3">
+			<img class="img-fluid" src="{{f.jobs_search_img('company-logo.png')}}">
+		</div>
+		<div class="col-9">
+			<strong>Experience Manager</strong>
+			<p>Shell Corporation</p>
+		</div>
+	</div>
+{% endfor %}
+<img class="img-fluid" src="{{f.jobs_search_img('adv-banner.png')}}">
+</div>

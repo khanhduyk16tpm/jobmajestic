@@ -1,162 +1,75 @@
  {% extends "layouts/job-description-base.html" %} 
-{% block page %}
-    <div class="row buttons-range">
-        <button class="btn btn-dark btn-save">
-            <i class="fa fa-bookmark-o"></i>
-            <span>Save</span>
-        </button>
-        <button class="btn btn-dark btn-share">
-            <i class="fa fa-share"></i>
-            <span>Share</span>
-        </button>
-        <button class="btn btn-dark btn-view-location">
-            <i class="fal fa-location"></i>
-            <span>View Location</span>
-        </button>
-        <button type="button" class="btn btn-warning btn-apply" data-toggle="modal" data-target="#applyJobModal">Apply now</button>
-    </div>
-    <div class="row gg-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15337.08681258572!2d108.20975378056639!3d16.05138443047798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1618480825311!5m2!1svi!2s"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    <ul class="nav justify-content-center tab-view-details">
-        <li class="nav-item">
-            <a class="nav-link active" href="#view-requirement">Requirement</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#view-scopes">Job Scopes</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#view-company">Company Info</a>
-        </li>
-    </ul>
-    <div class="row details-job-requirement">
-        <div class="col">
-            <div class="row row-cols-2 row-requirement">
-                <div class="col-lg-3 col-md-3 title" id="view-requirement">
-                    Requirements
-                </div>
-                <div class="col details">
-                    <div>Candidate must possess at least a Advanced/Higher/Graduate Diploma, Bachelor's Degree in Computer
-                    Science/Information Technology or equivalent.</div>
-                    <div>Required skill(s): ASP.NET, VB.NET, VB.</div>
-                    <div>Other skill(s): Microsoft SQL Server, Crystal Report.</div>
-                    <div>Applicants must be willing to work in Shah Alam, Cyberjaya.</div>
-                    <div>Self-Motivated.</div>
-                </div>
-            </div>
-            <div class="row row-scope">
-                <div class="col-lg-3 col-md-3 title" id="view-scopes">
-                    Reponsibilities/ Scopes
-                </div>
-                <div class="col details">
-                    <div>To enhance & maintain Windows/ Web based total logistics software application and customization.</div>
-                    <div>To perform business requirement studies, analysis, design, coding and testing.</div>
-                    <div>To participate in new application development projects.</div>
-                </div>
-            </div>
-            <div class="row row-info">
-                <div class="col-lg-5 col-md-5 title" id="view-company">
-                    Company Info
-                </div>
-                <div class="col details">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed convallis mauris. Ut eget mollis quam. Etiam efficitur ultrices dolor sed blandit. Suspendisse sed magna arcu. Pellentesque et diam mi. Aenean ut turpis gravida, auctor mauris sit amet, venenatis ante. Etiam ac mauris id justo mollis euismod a nec nisl. Sed aliquet dolor nisl, fringilla vehicula turpis pulvinar eu. Donec rhoncus lorem suscipit aliquam sollicitudin. Vestibulum sit amet massa ut metus faucibus pretium ut at elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id elit nisl. Maecenas ut luctus orci. Proin bibendum ante quis turpis tincidunt maximus. Etiam ut convallis felis. Phasellus mauris enim, rutrum non lorem sed, imperdiet gravida ex.
-                </div>
-            </div>
-            <div class="row row-website">
-                <div class="col-lg-5 col-md-5 title">
-                    Website
-                </div>
-                <div class="col details">
-                    https://www.jevmanagement.com/
-                </div>                        
-            </div>
-            <div class="row company-size">
-                <div class="col-lg-5 col-md-5 title">
-                    Company Size
-                </div>
-                <div class="col size">
-                    10 - 49
-                </div>                          
-            </div>
-            <div class="row row-benefit">
-                <div class="col-lg-5 col-md-5 title">
-                    Employee Benefits
-                </div>
-                <div class="col details">
-                    <div>Point 1</div>
-                    <div>Point 2</div>
-                    <div>Point 3</div>
-                </div>                          
-            </div>
+ {% set similar_job_slide= true %}
+{% block description %}
+
+    <div class="row mt-5 mb-5" id="job-scope">
+        <div class="col-lg-3">
+            <h4 id="requirements">Requirements</h4>
         </div>
-    </div>
-    <div class="row btn-container-mobile">
-        <button class="btn btn-apply-mobile">Apply Now</button>
-    </div>
-    <div class="advertisement-1">
-    </div>
-    <div class="advertisement-2">
-    </div>
-    <div class="row row-similar-job">
-        Similar Jobs
-    </div>
-    <div class="row see-all">See All</div>
-    <div class="row mob-similar-jobs">
-        {% for i in range(1,5)%}
-        <div class="similar-overview overview-{{ i }}">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-3 btn-job-view">
-                    <button><span>Full time</span></button>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 job-bookmark"> <i class="fa fa-bookmark-o"></i></div>
-            </div>
-            <div class="row mt-2 job-info">
-                <div class="col">
-                    <div class="row">Company Name</div>
-                    <div class="row">Job Title</div>
-                    <div class="row">Technology / Industry</div>
-                    <div class="row mt-2 overview-base">
-                        <img src="{{ f.img('job/location.png') }}" class="card-img-top job-base-icon" alt="localtion">
-                        <span class="base-text">Location</span>
-                    </div>
-                    <div class="row overview-experience">
-                        <img src="{{ f.img('job/briefcase.png') }}" class="card-img-top experience-icon" alt="coins">
-                        <span class="experience-text">2-3 Years Experience</span>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-3 detail-job">
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies, lacus nec accumsan elementum, eros risus gravida massa, eget ultricies dui quam id dui.</span>
-            </div>
-            <div class="row last-post">
-                <span>Posted 5 hours ago</span>
-            </div>
-        </div>
-        {% endfor %}
-        <div class="view-more">
-            <button class="btn btn-view-more">See More</button>
+        <div class="col-lg-9">
+            <p>Candidate must possess at least a Advanced/Higher/Graduate Diploma, Bachelor's Degree in Computer Science/Information Technology or equivalent. 
+            </p>
+            <p>Required skill(s): ASP.NET, VB.NET, VB. 
+            </p>
+            <p>Other skill(s): Microsoft SQL Server, Crystal Report. Applicants must be willing to work in Shah Alam, Cyberjaya.</p>   
+            <p>Self-Motivated.
+            </p>
         </div>
     </div>
 
-    <!-- Modal -->
-<div class="modal fade" id="applyJobModal" tabindex="-1" role="dialog" aria-labelledby="applyJobModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="applyJobModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+    <div class="row mt-5 mb-5" id="company-info">
+        <div class="col-lg-3">
+            <h4>Responsibilites / Scopes</h4>
+        </div>
+        <div class="col-lg-9">
+            <p>To enhance & maintain Windows/ Web based total logistics software application and customization.
+            </p>
+            <p>To perform business requirement studies, analysis, design, coding and testing.
+            </p>  
+            <p>  To participate in new application development projects.
+            </p>
+        </div>
     </div>
-  </div>
-</div>
-<!--end Modal-->
+
+    <div class="row mt-5 mb-5" >
+        <div class="col-lg-3">
+            <h4>Company Info</h4>
+        </div>
+        <div class="col-lg-9">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed convallis mauris. Ut eget mollis quam. Etiam efficitur ultrices dolor sed blandit.  
+            </p>
+            <p>Suspendisse sed magna arcu. Pellentesque et diam mi. Aenean ut turpis gravida, auctor mauris sit amet, venenatis ante. Etiam ac mauris id justo mollis euismod a nec nisl. Sed aliquet dolor nisl, fringilla vehicula turpis pulvinar eu. Donec rhoncus lorem suscipit aliquam sollicitudin. Vestibulum sit amet massa ut metus faucibus pretium ut at elit.
+            </p>  
+            <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id elit nisl. Maecenas ut luctus orci. Proin bibendum ante quis turpis tincidunt maximus. Etiam ut convallis felis. Phasellus mauris enim, rutrum non lorem sed, imperdiet gravida ex.
+            </p>
+        </div>
+    </div>
+    <div class="row mt-5 mb-5">
+        <div class="col-lg-3">
+            <h4>Website</h4>
+        </div>
+        <div class="col-lg-9">
+            <a href="https://www.jevmanagement.com/">https://www.jevmanagement.com/</a>
+        </div>
+    </div>
+    <div class="row mt-5 mb-5">
+        <div class="col-lg-3">
+            <h4>Company Size</h4>
+        </div>
+        <div class="col-lg-9">
+            <p>10 - 49 Employees</p>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-lg-3">
+            <h4>Employee Benefits</h4>
+        </div>
+        <div class="col-lg-9">
+            <ul class="list-unstyled">
+                <li>Point 1</li>
+                <li>Point 2</li>
+                <li>Point 3</li>
+            </ul>
+        </div>
+    </div>
 {% endblock %}

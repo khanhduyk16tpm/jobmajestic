@@ -10,3 +10,14 @@ function toggleMoreLess(moreId, toggleBtn) {
     moreText.style.display = "inline";
   }
 }
+
+
+
+function filterToggle() {
+  const el = document.querySelector('.job-filter-side-bar');
+  if (el.classList.contains("d-none")) {
+    el.classList.remove("d-none");
+  }else{
+  	el.classList.add("d-none");
+  }
+}

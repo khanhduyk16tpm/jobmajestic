@@ -44,7 +44,7 @@
             /*padding: 40px;*/
         }
         @include media-breakpoint-down(lg)  {
-            padding: 25px;
+            padding: 10px;
         }
         input{
             font-family:Arial, FontAwesome;
@@ -204,7 +204,21 @@
     }
 }
 .job-body{
+  @include media-breakpoint-down(lg)  {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+  }
+  .btn-wrapper{
+    @include media-breakpoint-down(lg)  {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
     .job-filter-side-bar{
+        @include media-breakpoint-down(lg)  {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
         span{
             cursor: pointer;
             &.clear-all{
@@ -239,7 +253,7 @@
                 margin-left: -12px;
             }
         }
-        .lasted-story{
+        .latest-story{
             background: url("../img/searchjobs/main/lastest-story-bg.png") no-repeat center,
             linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68));
             background-blend-mode: overlay;
@@ -257,7 +271,6 @@
             justify-content: center;
             overflow: auto;
             width: 80%;
-            padding: 15px;
             margin-left: 5px;
             h5{
                 color: $yellowButton;
@@ -275,6 +288,10 @@
         
     }
     .job-item-container{
+      @include media-breakpoint-down(lg)  {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
         .job-card{
             box-shadow: 0px 0px 12px #000000d9;
             padding: unset;
@@ -282,5 +299,61 @@
                box-shadow: unset; 
             }
         }
+    }
+    .job-righr-side-bar{
+      .popular-company-container{
+        img{
+          height: 46px;
+        }
+        strong{
+          font-size: 14px;
+        }
+        p{
+          font-size: 12px;
+          color: $textGrayColor;
+        }
+      }
+    }
+    .sort-by-container{
+      font-size: 14px;
+      padding-left: 10px;
+      p{
+        color: $textGrayColor;
+        @include media-breakpoint-down(lg)  {
+          font-size: 10px;
+          margin-top: 2px;
+          margin-left: 10px;
+        }
+      }
+      select{
+        margin-top: -6px;
+        font-size: 14px;
+        border-radius: 0;
+        border: none;
+        background-color: $fullPageBgColor;
+      }
+      h5{
+        font-size: 14px;
+      }
+    }
+    .sort-filter-mobile-container{
+      background-color: $whiteColor;
+      .sort-by, .filter-by{
+        box-shadow: 0px 0px 12px #00000029;
+      }
+
+      select{
+        border-radius: 0;
+        border: none;
+        color: $bigBtnFontColor;
+        font-size: 12px;
+        
+      }
+      button{
+        border-radius: 0;
+        border: none;
+        color: $bigBtnFontColor;
+        font-size: 12px;
+      }
     }
 }

@@ -6,11 +6,13 @@
 @import "content";
 @import "carousel";
 @import "landingpage";
-@import "_job.scss";
+@import "jobs/_job.scss";
+@import "jobs/_job_description.scss";
 @import "company.scss";
 @import "about";
 @import "profile";
 @import "footer.scss";
+@import "modal.scss";
 
 body {
     background-color: $bgColor;
@@ -25,6 +27,9 @@ body {
         border: none;
         background-color: $yellowButton;
         color: $bigBtnFontColor;
+    }
+    .grey-text{
+        color: $textGrayColor;
     }
     .alert {
         background-color: $alertColor;

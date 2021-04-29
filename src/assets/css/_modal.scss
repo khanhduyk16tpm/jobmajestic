@@ -1,0 +1,55 @@
+.modal-content{
+	border: none;
+	border-radius: 0px;
+}
+#apply-modal{
+	h1{
+		font-size: 59px;
+		@include media-breakpoint-down(lg) {
+			font-size: 40px;
+		}
+	}
+	h2{
+		font-size: 27px;
+		@include media-breakpoint-down(lg) {
+			font-size: 18px;
+		}
+	}
+	h3{
+		font-size: 23px;
+		@include media-breakpoint-down(lg) {
+			font-size: 18px;
+		}
+	}
+	h4{
+		font-size: 20px;
+		@include media-breakpoint-down(lg) {
+			font-size: 12px;
+		}
+	}
+	p{
+		font-size: 18px;
+		@include media-breakpoint-down(lg) {
+			font-size: 12px;
+		}
+	}
+	.btn-wrapper{
+		padding-left: 0px;
+		padding-right: 0px;
+		button{
+			border: none;
+			border-radius: 0px;
+			width: 100%;
+			@include media-breakpoint-down(lg) {
+				margin-top: 5px;
+			}
+		}
+	}
+	img{
+		@include media-breakpoint-down(lg) {
+			width: 33px;
+		}
+	}
+	
+
+}

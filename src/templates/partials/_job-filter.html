@@ -1,6 +1,18 @@
 {% import 'macros/path.html' as f %}
-
-<div class="job-filter-side-bar">
+<div class="row sort-filter-mobile-container d-lg-none mb-3">
+	<div class="col-8 sort-by border-end">
+		<select class="form-select form-control" aria-label="Default select example">
+		  <option selected>Sort</option>
+		  <option value="0">Oldest - Newest</option>
+		  <option value="1">Option 2</option>
+		  <option value="2">Option 3</option>
+		</select>
+	</div>
+	<div class="col-4 filter-by">
+		<button class="form-control" id="filter-by-btn" onclick="filterToggle()">Filter <i class="bi bi-funnel"></i></button>
+	</div>
+</div>
+<div class="job-filter-side-bar d-none d-lg-block">
 	<div class="row mb-3">
 		<h5>Related Categories</h5>
 		<div class="row list-check-box">
@@ -146,7 +158,7 @@
 		</div>
 	</div>
 
-	<div class="row mb-3 lasted-story py-3 d-none d-lg-block">
+	<div class="row mb-3 latest-story p-2 py-4 d-none d-lg-block">
 		<div class="col-12">
 			<h5>Latest story</h5>
 			{% for i in range(1,5) %}
@@ -154,7 +166,7 @@
 				<p class="yellow-text">Company A</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
 			{% endfor%}
-			<p class="yellow-text">Discover more post</p>
+			<a href="#" class="yellow-text">Discover more post</a>
 		</div>
 	</div>
 </div>

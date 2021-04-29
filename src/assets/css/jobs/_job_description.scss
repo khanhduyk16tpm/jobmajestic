@@ -1,0 +1,107 @@
+.job-description-body {
+    @include media-breakpoint-down(lg)  {
+        padding: 0px;
+    }
+    padding-top: 100px;
+        @include media-breakpoint-down(lg)  {
+            padding-top: 50px;
+        }
+   .job-header{
+        background-color: $whiteColor;
+        .job-type{
+            background: #6472E1 0% 0% no-repeat padding-box;
+            color: $whiteColor;
+        }
+        .job-summary-container {  
+            img{
+                width: 104px;
+                @include media-breakpoint-down(lg)  {
+                    width: 80px;
+                }
+            }
+            h4{
+                font-size: 30px;
+                @include media-breakpoint-down(lg)  {
+                    font-size: 14px;
+                }
+            }
+            p{
+                font-size: 18px;
+                @include media-breakpoint-down(lg)  {
+                    font-size: 12px;
+                }
+            }
+        }
+        .job-require{
+            font-size: 18px;
+            @include media-breakpoint-down(lg)  {
+                font-size: 12px;
+            }
+            .grey-text{
+                font-size: 14px;
+            }
+        }
+   }
+   .job-nav-bar{
+    .nav-item{
+        padding-left: 0px;
+        padding-right: 0px;
+        @include media-breakpoint-up(lg)  {
+            width: 24.9%;
+            margin-left: 1px;
+        }
+        button:not(.yellow-button){
+           height: 50px;
+           border-radius: 0px;
+           background-color: $navBgColor; 
+           border:none;
+           font-size: 14px;
+            @include media-breakpoint-down(lg)  {
+                font-size: 12px;
+            }
+        }
+        .yellow-button{
+           height: 50px;
+        }
+        
+    }
+   }
+   .google-map-iframe{
+        padding-left: 0px;
+        padding-right: 0px;
+   }
+   .job-description-container{
+        @include media-breakpoint-down(lg)  {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .job-description{
+            background-color: $whiteColor;
+            h4{
+                font-size: 30px;
+                @include media-breakpoint-down(lg)  {
+                    font-size: 14px;
+                }
+            }
+            p, a, li{
+                font-size: 15px;
+                @include media-breakpoint-down(lg)  {
+                    font-size: 12px;
+                } 
+            }
+       }
+   }
+   
+   .sub-nav-job-description{
+        background-color: $whiteColor;
+        font-size: 14px;
+        font-weight: bold;
+        
+        a {
+            color: $textGrayColor;
+            &:active{
+                color: $bigBtnFontColor;
+            }
+        }
+   }
+}
