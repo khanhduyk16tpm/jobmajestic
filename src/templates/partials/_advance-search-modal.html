@@ -1,0 +1,64 @@
+{% import 'macros/path.html' as f %}
+<div class="modal fade" id="advance-search-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog container">
+    <div class="modal-content">
+      <div class="modal-body">
+          <h1>Advance Search</h1>
+          <div class="row mt-4">
+            <div class="col-lg-6 col-12">
+              <label for="job-search-input" class="form-label">Key Skills</label>
+              <input type="text" class="form-control" id="job-search-input" placeholder="&#xF002;  Job Keywords">
+            </div>
+            <div class="col-lg-6 col-12">
+              <label for="job-search-input" class="form-label">Location</label>
+              <input type="text" class="form-control" id="job-location-input" placeholder="&#xF041;  Location">
+            </div>
+          </div>
+          <div class="row">
+            <label class="form-label">Experience</label>
+            <div class="col-lg-6 col-12">
+              <select class="form-select" aria-label="Years">
+                <option selected>Years</option>
+                {% for i in range(1,11) %}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-lg-6 col-12 month-select-wrapper">
+              <select class="form-select" aria-label="Months">
+                <option selected>Months</option>
+                {% for i in range(1,11) %}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+           <div class="row">
+            <div class="col-lg-6 col-12">
+              <label for="job-search-input" class="form-label">Industry</label>
+              <select class="form-select" aria-label="Industry">
+                <option selected>Industry</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+            </div>
+            <div class="col-lg-6 col-12">
+              <label for="job-search-input" class="form-label">Function</label>
+              <select class="form-select" aria-label="Function">
+                <option selected>Function</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="btn-wrapper">
+              <button type="button" class="btn-secondary form-control yellow-button">Search Jobs</button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
