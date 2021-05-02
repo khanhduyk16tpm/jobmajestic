@@ -37,7 +37,8 @@
 						</div>
 					</div>
 					<div class="row advanced-search">
-						<a href="{{ s.job_search_url() }}">Advanced Search</a>
+						<a href="{{ s.job_search_url() }}" data-bs-toggle="modal" data-bs-target="#advance-search-modal">Advanced Search</a>
+						
 					</div>
 				</div>
 				<p>Or discover categories</p>
@@ -207,5 +208,5 @@
 	</div>
 </div>
 
-
+{% include 'partials/_advance-search-modal.html' %}
 {% endblock %}

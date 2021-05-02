@@ -14,7 +14,7 @@
 
 	@include media-breakpoint-up(lg) {
 		.container-section {
-			max-width: 1378px;
+			max-width: 1320px;
 		}
 	}
 
@@ -120,7 +120,7 @@
 							}
 						}
 						#search-button {
-							width: 186px;
+							width: 198px;
 							@include media-breakpoint-down(lg) {
 								min-width: 320px;
 							}
