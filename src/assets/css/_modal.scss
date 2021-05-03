@@ -112,3 +112,21 @@
 	
 
 }
+.modal-upload-resume {
+    width: 600px;
+    #upload-resume {
+        margin-left: 3.5rem;
+        .title {
+            margin-left: 0.5rem;
+        }
+        .upload-file {
+            margin-left: 1rem;
+        }
+        .file, .uploaded {
+            margin-left: 0.1rem;
+        }
+        .resume-note {
+            margin-left: 1rem;
+        }
+    }
+}
