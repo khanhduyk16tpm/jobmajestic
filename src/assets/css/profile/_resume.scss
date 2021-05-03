@@ -135,6 +135,9 @@
         font-weight: 500;
     }
     .edit {
+        @include media-breakpoint-down(lg)  {
+            display: none;
+        }
         .btn-edit {
             float: right;
             border: none;
@@ -151,28 +154,51 @@
         color: #222E3C;
         opacity: 1;
         text-align: left;
+        @include media-breakpoint-down(lg)  {
+            margin: 1.5rem 1.5rem 0 1.5rem;
+        }
         .exp {
             font-size: 30px;
             margin: 1.5rem 1.5rem 0 1.5rem;
+            @include media-breakpoint-down(lg)  {
+                margin: 0;
+                font-size: 18px;
+            }
         }
         .time-duration {
             font-size: 22px;
             margin: 0 1.5rem;
+            @include media-breakpoint-down(lg)  {
+                margin: 0;
+                font-size: 15px;
+            }
         }
         .duration {
             font-size: 14px;
             margin: 0 1.5rem;
+            @include media-breakpoint-down(lg)  {
+                display: none;
+            }
         }
     }
     .experience-content {
         margin-top: 4.5rem;
         color: #222E3C;
+        @include media-breakpoint-down(lg)  {
+            margin-top: 2.5rem;
+            margin-left: 1.5rem;
+        }
         .job-title, .job-location {
             font-size: 18px;
             font-weight: 500;
         }
         .job-field, .specialization, .role, .position-level, .salary, .description {
             font-size: 15px;
+        }
+        .specialization, .role, .position-level, .salary {
+            @include media-breakpoint-down(lg)  {
+                margin-top: 1rem;
+            }
         }
     }
 }
@@ -187,12 +213,18 @@
         text-align: left;
         font-size: 30px;
         margin: 0 1.5rem 0 1.5rem;
+        @include media-breakpoint-down(lg)  {
+            font-size: 18px;
+        }
     }
     .time-duration, .duration {
         margin: 0 1.5rem;
     }
     .time-duration {
         font-size: 22px;
+        @include media-breakpoint-down(lg)  {
+            font-size: 18px;
+        }
     }
     .duration {
         font-size: 14px;
@@ -203,18 +235,56 @@
     .item, .description {
         font-size: 15px;
     }
+    .course {
+        div {
+            @include media-breakpoint-down(lg)  {
+                margin: 1.5rem 1.5rem 0 1.5rem;
+            }
+        }
+    }
+    .college, .item {
+        div {
+            @include media-breakpoint-down(lg)  {
+                margin: 0 1.5rem;
+            }
+        }
+    }
+    .description {
+        @include media-breakpoint-down(lg)  {
+            margin: 0 1.5rem;
+        }        
+    }
+    .first {
+        margin-top: 1.5rem;
+    }
 }
 .row-skills {
     .skill-title {
         margin: 0 1.5rem;
         font-size: 30px;
+        @include media-breakpoint-down(lg)  {
+            font-size: 18px;
+        }
     }
     .skill-level {
         margin: 0 1.5rem;
         font-size: 18px;
+        @include media-breakpoint-down(lg)  {
+            font-size: 15px;
+        }
     }
     .skill-list {
         font-size: 15px;
+        @include media-breakpoint-down(lg)  {
+            display: none;
+        }
+    }
+    .skill-list-mobile {
+        display:none;
+        @include media-breakpoint-down(lg)  {
+            display: block;
+            margin-left: 1.5rem;
+        }
     }
 }
 .row-languages {
@@ -239,18 +309,36 @@
     display: none;
     @include media-breakpoint-down(lg)  {
         display: block;
+        .title, .name, .score {
+            margin: 0 1.5rem; 
+        }
+        .title{
+            font-size: 22px;
+            p {
+                font-size : 15px;
+            }
+        }
     }
 }
 .row-extra-info, .row-about {
     .title {
         margin: 0 1.5rem;
         font-size: 30px;
+        @include media-breakpoint-down(lg)  {
+            font-size: 22px;
+        }
     }
     .item {
         margin: 0 1.5rem;
         font-size: 18px;
+        @include media-breakpoint-down(lg)  {
+            margin: 1.5rem 1.5rem 0 1.5rem;
+        }
     }
     .info {
         font-size: 18px;
+        @include media-breakpoint-down(lg)  {
+            margin: 0 1.5rem;
+        }
     }
 }
