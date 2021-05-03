@@ -51,14 +51,19 @@ header {
                 .navbar-nav {
                     width: 500px;
                     li {
-                        margin-right: 7px;
+                        /*margin-right: 7px;*/
                     }
                     @include media-breakpoint-between(lg, xl) {
                         width: 420px;
                     }
                 }
                 .language-navbar {
+                    width: 100%;
                     .navbar-info {
+                        @include media-breakpoint-up(lg) {
+                            float: right;
+                            margin-right: 12px;
+                        }
                         .navbar-text a {
                             margin-left: 20px;
                             color: $bigBtnBgColor;
@@ -173,7 +178,7 @@ header {
                                         margin-top: 11px;
                                         border: none;
                                         border-radius: 0;
-                                        left: -130px;
+                                        left: -82px;
                                         li {
                                             border-bottom: solid 0.5px;
                                             border-color: $textColor;
@@ -284,7 +289,7 @@ header {
                 @include media-breakpoint-up(lg) {
                     .my-2 {
                         float: right;
-                        margin-right: 25px;
+                    
                     }
                     .message-dropdown {
                         .dropdown-menu {

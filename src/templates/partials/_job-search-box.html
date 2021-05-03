@@ -37,28 +37,16 @@
 					</div>
 					<div class="row mt-3">
 						<div class="range-slider">
-						   <div class="row slider-labels">
-						    <div class="col-6 caption mb-2">
-						      Min Salary: <span id="slider-range-value1"></span>
-						    </div>
-						    <div class="col-6 max-salary caption">
-						      Max Salary: <span id="slider-range-value2"></span>
-						    </div>
-						  </div>
-						  <div class="row">
-						    <div class="col-sm-12">
-						      <div id="slider-range"></div>
-						    </div>
-						  </div>
-						 
-						  <div class="row">
-						    <div class="col-sm-12">
-						      <form>
-						        <input type="hidden" name="min-value" value="">
-						        <input type="hidden" name="max-value" value="">
-						      </form>
-						    </div>
-						  </div>
+						   	<div class="row slider-labels">
+							    <div class="col-12 col-lg-6 caption mb-2">
+							     Min Salary: MYR <output id="minSalaryO">3500</output>
+							     <input type="range" class="custom-range slider" min="1500" max="10000" step="500" id="minSalary" oninput="minSalaryO.value=minSalary.value" value="1500">
+							    </div>
+							    <div class="col-12 col-lg-6 max-salary caption">
+							      Max Salary: MYR <output id="maxSalaryO">50000</output>
+							      <input type="range" class="custom-range slider" min="10000" max="30000" step="500" id="maxSalary" oninput="maxSalaryO.value=maxSalary.value" value="30000">
+							    </div>
+						  	</div>
 						</div>
 					</div>
 				</div>
@@ -67,6 +55,5 @@
 				</div>
 			</div>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</div>
 </div>
