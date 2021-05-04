@@ -1,19 +1,20 @@
-.resume-nav-tab{
+.resume-nav-tab {
     margin-top: 10px;
     margin-bottom: 2px;
     background-color: $whiteColor;
-    .nav-tabs{
+    .nav-tabs {
         border-bottom: none;
-        .nav-item{
+        .nav-item {
             border-radius: 0px;
-            .active{
+            .active {
                 border-color: $whiteColor;
-                border-bottom: 3px solid $yellowButton;;
+                border-bottom: 3px solid $yellowButton;
+                ;
             }
         }
-        
     }
 }
+
 .resume-personal-avatar {
     width: 150px;
     height: 150px;
@@ -21,7 +22,7 @@
     margin: 18px 5px 10px 10px;
     position: relative;
     display: inline-block;
-    @include media-breakpoint-down(lg)  {
+    @include media-breakpoint-down(lg) {
         //margin: 18px 5px 10px 100px;
         width: 152px;
         height: 152px;
@@ -36,7 +37,7 @@
         top: 79%;
         background: #676767 0% 0% no-repeat padding-box;
         opacity: 0.69;
-        font-family: Arial,sans-serif;
+        font-family: Arial, sans-serif;
         color: #fff;
         width: 150px;
         height: 32px;
@@ -52,18 +53,20 @@
         }
     }
 }
+
 .my-resume {
-    @include media-breakpoint-down(lg)  {
+    @include media-breakpoint-down(lg) {
         text-align: center;
     }
 }
+
 .resume-info {
     margin-left: -30px;
     margin-top: 25px;
     width: 320px;
     .username {
         font-size: 30px;
-        @include media-breakpoint-down(lg)  {
+        @include media-breakpoint-down(lg) {
             font-size: 18px;
             margin-top: -80px;
             //margin-left: 125px;
@@ -74,7 +77,7 @@
     .user-info {
         font-size: 14px;
     }
-    @include media-breakpoint-down(lg)  {
+    @include media-breakpoint-down(lg) {
         margin-left: 0;
         text-align: center;
         .info-1 {
@@ -94,8 +97,9 @@
         }
     }
 }
+
 .upload-resume {
-    @include media-breakpoint-down(lg)  {
+    @include media-breakpoint-down(lg) {
         width: 95%;
         text-align: center;
         padding-right: 170px;
@@ -110,7 +114,7 @@
         border: none;
         border-radius: 0;
         margin-left: 1087px;
-        @include media-breakpoint-down(lg)  {
+        @include media-breakpoint-down(lg) {
             position: absolute;
             margin: -100px auto auto;
         }
@@ -126,7 +130,10 @@
         }
     }
 }
+
+
 /*main content*/
+
 .resume-block {
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
@@ -135,7 +142,7 @@
         font-weight: 500;
     }
     .edit {
-        @include media-breakpoint-down(lg)  {
+        @include media-breakpoint-down(lg) {
             display: none;
         }
         .btn-edit {
@@ -148,19 +155,20 @@
         }
     }
 }
+
 .row-experience {
     .experience-title {
         letter-spacing: 0px;
         color: #222E3C;
         opacity: 1;
         text-align: left;
-        @include media-breakpoint-down(lg)  {
-            margin: 1.5rem 1.5rem 0 1.5rem;
+        @include media-breakpoint-down(lg) {
+            padding: 1.5rem 1.5rem 0 1.5rem;
         }
         .exp {
             font-size: 30px;
             margin: 1.5rem 1.5rem 0 1.5rem;
-            @include media-breakpoint-down(lg)  {
+            @include media-breakpoint-down(lg) {
                 margin: 0;
                 font-size: 18px;
             }
@@ -168,7 +176,7 @@
         .time-duration {
             font-size: 22px;
             margin: 0 1.5rem;
-            @include media-breakpoint-down(lg)  {
+            @include media-breakpoint-down(lg) {
                 margin: 0;
                 font-size: 15px;
             }
@@ -176,7 +184,7 @@
         .duration {
             font-size: 14px;
             margin: 0 1.5rem;
-            @include media-breakpoint-down(lg)  {
+            @include media-breakpoint-down(lg) {
                 display: none;
             }
         }
@@ -184,24 +192,34 @@
     .experience-content {
         margin-top: 4.5rem;
         color: #222E3C;
-        @include media-breakpoint-down(lg)  {
+        @include media-breakpoint-down(lg) {
             margin-top: 2.5rem;
-            margin-left: 1.5rem;
+            padding-left: 1.5rem;
         }
-        .job-title, .job-location {
+        .job-title,
+        .job-location {
             font-size: 18px;
             font-weight: 500;
         }
-        .job-field, .specialization, .role, .position-level, .salary, .description {
+        .job-field,
+        .specialization,
+        .role,
+        .position-level,
+        .salary,
+        .description {
             font-size: 15px;
         }
-        .specialization, .role, .position-level, .salary {
-            @include media-breakpoint-down(lg)  {
+        .specialization,
+        .role,
+        .position-level,
+        .salary {
+            @include media-breakpoint-down(lg) {
                 margin-top: 1rem;
             }
         }
     }
 }
+
 .row-education {
     .education-top {
         margin-top: 2.5rem;
@@ -213,82 +231,98 @@
         text-align: left;
         font-size: 30px;
         margin: 0 1.5rem 0 1.5rem;
-        @include media-breakpoint-down(lg)  {
+        @include media-breakpoint-down(lg) {
             font-size: 18px;
+            margin: 0;
+            padding: 0 0.8rem 0 0.8rem;
         }
     }
-    .time-duration, .duration {
+    .time-duration,
+    .duration {
         margin: 0 1.5rem;
+        @include media-breakpoint-down(lg) {
+            padding: 0 0.8rem;
+            margin: 0;
+        }
     }
     .time-duration {
         font-size: 22px;
-        @include media-breakpoint-down(lg)  {
+        @include media-breakpoint-down(lg) {
             font-size: 18px;
         }
     }
     .duration {
         font-size: 14px;
     }
-    .course, .college {
+    .course,
+    .college {
         font-size: 18px;
     }
-    .item, .description {
+    .item,
+    .description {
         font-size: 15px;
     }
     .course {
         div {
-            @include media-breakpoint-down(lg)  {
-                margin: 1.5rem 1.5rem 0 1.5rem;
+            @include media-breakpoint-down(lg) {
+                padding: 1.5rem 1.5rem 0 1.5rem;
             }
         }
     }
-    .college, .item {
+    .college,
+    .item {
         div {
-            @include media-breakpoint-down(lg)  {
-                margin: 0 1.5rem;
+            @include media-breakpoint-down(lg) {
+                padding: 0 1.5rem;
             }
         }
     }
     .description {
-        @include media-breakpoint-down(lg)  {
-            margin: 0 1.5rem;
-        }        
+        @include media-breakpoint-down(lg) {
+            padding: 0 1.5rem;
+        }
     }
     .first {
         margin-top: 1.5rem;
     }
 }
+
 .row-skills {
     .skill-title {
         margin: 0 1.5rem;
         font-size: 30px;
-        @include media-breakpoint-down(lg)  {
+        @include media-breakpoint-down(lg) {
             font-size: 18px;
+            margin: 0;
+            padding: 0 0.8rem;
         }
     }
     .skill-level {
         margin: 0 1.5rem;
         font-size: 18px;
-        @include media-breakpoint-down(lg)  {
+        @include media-breakpoint-down(lg) {
             font-size: 15px;
+            padding: 0 0.8rem;
+            margin: 0;
         }
     }
     .skill-list {
         font-size: 15px;
-        @include media-breakpoint-down(lg)  {
+        @include media-breakpoint-down(lg) {
             display: none;
         }
     }
     .skill-list-mobile {
-        display:none;
-        @include media-breakpoint-down(lg)  {
+        display: none;
+        @include media-breakpoint-down(lg) {
             display: block;
-            margin-left: 1.5rem;
+            padding-left: 1.5rem;
         }
     }
 }
+
 .row-languages {
-    @include media-breakpoint-down(lg)  {
+    @include media-breakpoint-down(lg) {
         display: none;
     }
     .proficiency {
@@ -305,40 +339,48 @@
         font-size: 30px;
     }
 }
+
 .row-languages-mobile {
     display: none;
-    @include media-breakpoint-down(lg)  {
+    @include media-breakpoint-down(lg) {
         display: block;
-        .title, .name, .score {
-            margin: 0 1.5rem; 
+        .title,
+        .name,
+        .score {
+            padding: 0 1.5rem;
         }
-        .title{
+        .title {
             font-size: 22px;
             p {
-                font-size : 15px;
+                font-size: 15px;
             }
         }
     }
 }
-.row-extra-info, .row-about {
+
+.row-extra-info,
+.row-about {
     .title {
         margin: 0 1.5rem;
         font-size: 30px;
-        @include media-breakpoint-down(lg)  {
+        @include media-breakpoint-down(lg) {
             font-size: 22px;
+            margin: 0;
+            padding: 0 0.8rem;
         }
     }
     .item {
         margin: 0 1.5rem;
         font-size: 18px;
-        @include media-breakpoint-down(lg)  {
-            margin: 1.5rem 1.5rem 0 1.5rem;
+        @include media-breakpoint-down(lg) {
+            padding: 0.8rem 0.8rem 0 0.8rem;
+            margin: 0;
         }
     }
     .info {
         font-size: 18px;
-        @include media-breakpoint-down(lg)  {
-            margin: 0 1.5rem;
+        @include media-breakpoint-down(lg) {
+            padding: 0 0.8rem;
         }
     }
 }
