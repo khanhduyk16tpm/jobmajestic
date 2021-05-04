@@ -1,144 +1,154 @@
-.modal-content{
-	border: none;
-	border-radius: 0px;
-	input, select {
-		font-family: Arial,FontAwesome;
-		border: 1px solid #707070;
-		border-radius: 0px;
-		color: $textGrayColor;
-		font-size: 18px;
-		@include media-breakpoint-down(lg) {
-			font-size: 14px;
+.modal-content {
+    border: none;
+    border-radius: 0px;
+    input,
+    select {
+        font-family: Arial, FontAwesome;
+        border: 1px solid #707070;
+        border-radius: 0px;
+        color: $textGrayColor;
+        font-size: 18px;
+        @include media-breakpoint-down(lg) {
+            font-size: 14px;
+        }
+    }
+}
 
-		}
-	}
+#advance-search-modal {
+    .modal-dialog {
+        @include media-breakpoint-up(lg) {
+            max-width: 1320px;
+        }
+        .modal-content {
+            @include media-breakpoint-up(lg) {
+                padding: 40px;
+            }
+            @include media-breakpoint-down(lg) {
+                padding-top: 15px;
+            }
+            h1 {
+                font-size: 37px;
+                @include media-breakpoint-down(lg) {
+                    font-size: 18px;
+                }
+            }
+            .month-select-wrapper {
+                @include media-breakpoint-down(lg) {
+                    margin-top: 10px;
+                }
+            }
+            label {
+                font-size: 18px;
+                @include media-breakpoint-down(lg) {
+                    margin-top: 5px;
+                    font-size: 14px;
+                }
+            }
+            .row {
+                margin-bottom: 25px;
+                @include media-breakpoint-down(lg) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        button {
+            font-size: 12px;
+            padding: 10px;
+            @include media-breakpoint-up(lg) {
+                padding: 12px;
+                margin-top: 18px;
+                font-size: 18px;
+            }
+        }
+    }
 }
-#advance-search-modal{
-	.modal-dialog{
-		@include media-breakpoint-up(lg) {
-			max-width: 1320px;
-		}
-		.modal-content{
-			@include media-breakpoint-up(lg) {
-				padding: 40px;
-			}
-			@include media-breakpoint-down(lg) {
-				padding-top: 15px;
-			}
-			h1{
-				font-size: 37px;
-				@include media-breakpoint-down(lg) {
-					font-size: 18px;
-				}
-			}
-			.month-select-wrapper{
-				@include media-breakpoint-down(lg) {
-					margin-top: 10px;
-				}
-			}
-			label{
-				font-size: 18px;
-				@include media-breakpoint-down(lg) {
-					margin-top: 5px;
-					font-size: 14px;
-				}
-			}
-			.row{
-				margin-bottom: 25px;
-				@include media-breakpoint-down(lg) {
-					margin-bottom: 15px;
-				}
-			}
-		}
-		button{
-			font-size: 12px;
-			padding: 10px;
-			@include media-breakpoint-up(lg) {
-				padding: 12px;
-				margin-top: 18px;
-				font-size: 18px;
-			}
-		}
-	}
-}
-#apply-modal{
-	h1{
-		font-size: 59px;
-		@include media-breakpoint-down(lg) {
-			font-size: 40px;
-		}
-	}
-	h2{
-		font-size: 27px;
-		@include media-breakpoint-down(lg) {
-			font-size: 18px;
-		}
-	}
-	h3{
-		font-size: 23px;
-		@include media-breakpoint-down(lg) {
-			font-size: 18px;
-		}
-	}
-	h4{
-		font-size: 20px;
-		@include media-breakpoint-down(lg) {
-			font-size: 12px;
-		}
-	}
-	p{
-		font-size: 18px;
-		@include media-breakpoint-down(lg) {
-			font-size: 12px;
-		}
-	}
-	.btn-wrapper{
-		padding-left: 0px;
-		padding-right: 0px;
-		button{
-			border: none;
-			border-radius: 0px;
-			width: 100%;
-			@include media-breakpoint-down(lg) {
-				margin-top: 5px;
-			}
-		}
-	}
-	img{
-		@include media-breakpoint-down(lg) {
-			width: 33px;
-		}
-	}
-	
 
+#apply-modal {
+    h1 {
+        font-size: 59px;
+        @include media-breakpoint-down(lg) {
+            font-size: 40px;
+        }
+    }
+    h2 {
+        font-size: 27px;
+        @include media-breakpoint-down(lg) {
+            font-size: 18px;
+        }
+    }
+    h3 {
+        font-size: 23px;
+        @include media-breakpoint-down(lg) {
+            font-size: 18px;
+        }
+    }
+    h4 {
+        font-size: 20px;
+        @include media-breakpoint-down(lg) {
+            font-size: 12px;
+        }
+    }
+    p {
+        font-size: 18px;
+        @include media-breakpoint-down(lg) {
+            font-size: 12px;
+        }
+    }
+    .btn-wrapper {
+        padding-left: 0px;
+        padding-right: 0px;
+        button {
+            border: none;
+            border-radius: 0px;
+            width: 100%;
+            @include media-breakpoint-down(lg) {
+                margin-top: 5px;
+            }
+        }
+    }
+    img {
+        @include media-breakpoint-down(lg) {
+            width: 33px;
+        }
+    }
 }
+
 .modal-upload-resume {
     width: 600px;
+    @include media-breakpoint-down(lg) {
+        width: 280px;
+    }
     #upload-resume {
         margin-left: 3.5rem;
+        @include media-breakpoint-down(lg) {
+            padding-left: 1rem;
+            margin: 0;
+        }
         .title {
-            margin-left: 0.5rem;
+            padding-left: 0.5rem;
         }
         .upload-file {
-            margin-left: 1rem;
+            padding-left: 1rem;
         }
-        .file, .uploaded {
-            margin-left: 0.1rem;
+        .file,
+        .uploaded {
+            padding-left: 0.1rem;
         }
         .resume-note {
-            margin-left: 1rem;
+            padding-left: 1rem;
         }
         button {
             border-radius: 0;
             border: none;
         }
     }
-
     .file-upload-wrapper {
         position: relative;
         width: 480px;
         height: 50px;
-    
+        @include media-breakpoint-down(lg) {
+            width: 220px;
+        }
         &:after {
             content: attr(data-text);
             font-size: 18px;
@@ -156,8 +166,11 @@
             color: #999;
             font-weight: 300;
             border: 1px solid #707070;
+            @include media-breakpoint-down(lg) {
+                padding: 4px 15px;
+                height: 40px;
+            }
         }
-        
         &:before {
             content: 'Browse';
             position: absolute;
@@ -175,6 +188,12 @@
             padding: 0 32px;
             pointer-events: none;
             width: 120px;
+            @include media-breakpoint-down(lg) {
+                padding: 0 14px;
+                width: 80px;
+                height: 40px;
+                line-height: 40px;
+            }
         }
         input {
             opacity: 0;
