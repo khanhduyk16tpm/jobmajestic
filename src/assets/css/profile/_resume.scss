@@ -138,6 +138,15 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
     margin-bottom: 5rem;
+    input[type="text"] {
+        border: none;
+        border-bottom: 1px solid #03a8f45e;
+        padding-bottom: 3px;
+    }
+    textarea {
+        width: 600px;
+        height: 200px;
+    }
     .font-w-bold {
         font-weight: 500;
     }
