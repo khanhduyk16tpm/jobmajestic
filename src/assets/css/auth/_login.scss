@@ -1,181 +1,188 @@
 @import "var";
 
-.container-fluid.px-md-5.page {
-    padding: 0 !important;
+.login-page {
+    margin-top: 39px;
+    max-width: 100%;
+    padding-left: 0;
 
-    .wrapper-section {
-        .login-page {
-            margin-top: 39px;
-            max-width: 100%;
-            padding-left: 0;
+    @include media-breakpoint-down(lg) {
+        margin-top: 25px;
+    }
 
-            @include media-breakpoint-down(lg) {
-                margin-top: 25px;
+    @include media-breakpoint-down(md) {
+        padding-left: 10px;
+    }
+
+    .content {
+        max-width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+
+        @include media-breakpoint-up(md) {
+            padding-bottom: 1px;
+
+            .background-auth {
+                margin-top: -10px;
+                background: url("../img/landingpage/mask-group-21-2x.png") no-repeat center,
+                    linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68));
+                background-size: cover;
+                height: 600px;
+            }
+        }
+    }
+
+    .login-modal-section {
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+
+        @include media-breakpoint-up(sm) {
+            width: 100%;
+        }
+    }
+
+    .login-section {
+        padding-left: 10%;
+        padding-right: 10%;
+
+        @include media-breakpoint-up(xxl) {
+            width: 66%;
+        }
+
+        @include media-breakpoint-between(xl, xxl) {
+            width: 75%;
+        }
+
+        @include media-breakpoint-between(lg, xl) {
+            width: 80%;
+        }
+
+        @include media-breakpoint-between(md, lg) {
+            width: 100%;
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            margin-bottom: 45px;
+        }
+    }
+
+    .login-section,
+    .login-modal-section {
+        .social-login {
+            @include media-breakpoint-up(xl) {
+                margin-left: 14%;
+                margin-right: 14%;
+            }
+
+            @include media-breakpoint-between(md, xl) {
+                margin-left: 11%;
+                margin-right: 11%;
             }
 
             @include media-breakpoint-down(md) {
-                padding-left: 10px;
+                margin-left: 15%;
+                margin-right: 15%;
             }
 
-            .content {
-                max-width: 100%;
-                padding-right: 0;
-                padding-left: 0;
+            a {
+                text-align: center;
+            }
 
-                @include media-breakpoint-up(md) {
-                    padding-bottom: 1px;
+            span.split {
+                border-left: 1px solid darkolivegreen;
+                padding: 8px 0;
+                margin-left: 5px;
+                margin-right: 10px;
+            }
 
-                    .background-auth {
-                        margin-top: -10px;
-                        background: url("../img/landingpage/mask-group-21-2x.png") no-repeat center,
-                            linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68));
-                        background-size: cover;
-                        height: 600px;
-                    }
+            .fa-linkedin {
+                margin-left: -12px;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            .text-muted {
+                width: 10%;
+            }
+
+            .custom-hr {
+                width: 45%;
+            }
+        }
+
+        .login-with {
+            text-align: center;
+        }
+
+        .login-with-majestic {
+            margin-top: 5px;
+            margin-bottom: 25px;
+        }
+
+        form {
+            font-size: 14px;
+
+            .custom-form-control,
+            .custom-btn {
+                border-radius: initial;
+                border: 1px solid #ced4da;
+                font-size: inherit;
+            }
+
+            .custom-action {
+                @include media-breakpoint-between(sm, md) {
+                    margin-top: 0 !important;
                 }
 
-                .login-section {
-                    padding-left: 10%;
-                    padding-right: 10%;
-
-                    @include media-breakpoint-up(xxl) {
-                        width: 66%;
-                    }
-
-                    @include media-breakpoint-between(xl, xxl) {
-                        width: 75%;
-                    }
-
-                    @include media-breakpoint-between(lg, xl) {
-                        width: 80%;
-                    }
-
-                    @include media-breakpoint-between(md, lg) {
-                        width: 100%;
-                    }
-
-                    @include media-breakpoint-down(md) {
-                        width: 100%;
-                        margin-bottom: 45px;
-                    }
-
-                    @include media-breakpoint-down(sm) {
-                    }
-
-                    .social-login {
-                        @include media-breakpoint-up(xl) {
-                            margin-left: 14%;
-                            margin-right: 14%;
-                        }
-
-                        @include media-breakpoint-between(md, xl) {
-                            margin-left: 11%;
-                            margin-right: 11%;
-                        }
-
-                        @include media-breakpoint-down(md) {
-                            margin-left: 15%;
-                            margin-right: 15%;
-                        }
-
-                        a {
-                            text-align: center;
-                        }
-
-                        span.split {
-                            border-left: 1px solid darkolivegreen;
-                            padding: 8px 0;
-                            margin-left: 5px;
-                            margin-right: 10px;
-                        }
-
-                        .fa-linkedin {
-                            margin-left: -12px;
-                        }
-                    }
-
-                    @include media-breakpoint-down(sm) {
-                        .text-muted {
-                            width: 10%;
-                        }
-
-                        .custom-hr {
-                            width: 45%;
-                        }
-                    }
-
-                    .login-with {
-                        text-align: center;
-                    }
-
-                    .login-with-majestic {
-                        margin-top: 5px;
-                        margin-bottom: 25px;
-                    }
-
-                    form {
-                        font-size: 14px;
-
-                        .custom-form-control,
-                        .custom-btn {
-                            border-radius: initial;
-                        }
-
-                        .custom-action {
-                            @include media-breakpoint-between(sm, md) {
-                                margin-top: 0 !important;
-                            }
-
-                            @include media-breakpoint-down(sm) {
-                                width: 50%;
-                                margin-top: 0 !important;
-                            }
-                        }
-
-                        .text-right {
-                            text-decoration: underline;
-                        }
-
-                        .btn-login {
-                            background-color: $yellowButton;
-                            width: 100px;
-
-                            @include media-breakpoint-down(sm) {
-                                width: 100%;
-                            }
-                        }
-
-                        .btn-signup {
-                            background-color: $prime8;
-                            color: $prime3;
-                            width: 100px;
-
-                            @include media-breakpoint-down(sm) {
-                                width: 100%;
-                            }
-                        }
-
-                        @include media-breakpoint-between(sm, md) {
-                            .no-margin {
-                                margin-top: 0 !important;
-                            }
-                        }
-                    }
-
-                    .desktop {
-                        margin: 25px 0px 20px;
-
-                        @include media-breakpoint-down(md) {
-                            display: none;
-                        }
-                    }
-
-                    .login-mobile {
-                        @include media-breakpoint-up(md) {
-                            display: none;
-                        }
-                    }
+                @include media-breakpoint-down(sm) {
+                    width: 50%;
+                    margin-top: 0 !important;
                 }
+            }
+
+            .text-right {
+                text-decoration: underline;
+            }
+
+            .btn-login {
+                background-color: $yellowButton;
+                width: 100px;
+
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                }
+            }
+
+            .btn-signup {
+                background-color: $prime8;
+                color: $prime3;
+                width: 100px;
+
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                }
+            }
+
+            @include media-breakpoint-between(sm, md) {
+                .no-margin {
+                    margin-top: 0 !important;
+                }
+            }
+        }
+
+        .desktop {
+            margin: 25px 0px 20px;
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+
+        .login-mobile {
+            @include media-breakpoint-up(md) {
+                display: none;
             }
         }
     }
