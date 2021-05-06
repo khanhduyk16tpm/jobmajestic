@@ -17,13 +17,12 @@
                   </ul>
               </div>
               <div class="col-12 upload-file">
-                <label class="file">
-                    <input type="file" id="file" aria-label="File browser example">
-                    <span class="file-custom"></span>
-                </label>
+                <div class="file-upload-wrapper" data-text="Choose file">
+                    <input name="file-upload-field" type="file" class="file-upload-field" value="">
+                </div>
               </div>
           </div>
-          <div class="row mt-4 px-3">
+          <div class="row mt-4">
             <div class="col-lg-6 btn-wrapper">
               <button type="button" class="btn-secondary form-control yellow-button upload-resume">Upload</button>
             </div>
@@ -42,15 +41,16 @@
           </div>
           <div class="row uploaded">
             <div class="col-lg-4"><strong>Uploaded</strong></div>
-            <div class="col-lg-3">31 Aug 2021</div>
-            <div class="col-lg-3">03:21PM</div>
+            <div class="col-lg-6"><span>31 Aug 2021 </span><span class="upload-time">03:21PM</span></div>
+            <!-- <div class="col-lg-3">31 Aug 2021</div>
+            <div class="col-lg-3">03:21PM</div> -->
           </div>
           <div class="row mt-3 resume-note">
               <ul>
                   <li>Note : All employers are accessible to your latest resume</li>
               </ul>
           </div>
-          <div class="row mt-4 px-3">
+          <div class="row mt-4">
             <div class="col-lg-6 btn-wrapper">
               <button type="button" class="btn-secondary form-control yellow-button upload-resume">View</button>
             </div>
