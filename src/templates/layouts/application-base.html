@@ -1,0 +1,31 @@
+{% extends "layouts/base.html" %}
+
+{% block js %}{% endblock %}
+
+
+{% block content %}
+<div class="page">
+    <div class="container-fluid company-search-box">
+        <img class="d-lg-none img-fluid" src="{{f.companies_main_img('company-header-mobile.png')}}">
+        <div class="container-sm container-md">
+            {% include 'partials/_application-search-box.html' %}
+        </div>
+    </div>
+    <div class="container company-body mt-1 pt-4 application-body">
+        <div class="company-nav-tab">
+            {% include 'partials/_application-nav-tab.html' %}
+        </div>
+        <div class="row mt-3 px-1">
+            <div class="col-lg-10 col-md-12 cold-sm-12">
+                {% block page %}
+
+                {% endblock %}
+            </div>
+            <div class="col-lg-2 d-none d-lg-block adv-imgs">
+                <img class="img-fluid" src="{{f.companies_overview_img('banner-adv-1-2x.png')}}">
+                <img class="img-fluid" src="{{f.companies_overview_img('banner-adv-2-2x.png')}}">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

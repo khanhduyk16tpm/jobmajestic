@@ -1,0 +1,16 @@
+
+{% import 'macros/path.html' as f %}
+{% import 'macros/site.html' as s %}
+
+{% set job_status = 'Interview' %}
+
+<div class="row">
+    {% for i in range(1,11) %}    
+        {% include 'partials/_job_application_card.html' %}
+   {% endfor %}
+</div>
+<div class="row">
+    <div class="mb-5">
+        <button class="form-control btn btn-secondary yellow-button py-3 mt-3"><strong>Click for more jobs</strong></button>
+    </div>
+</div>

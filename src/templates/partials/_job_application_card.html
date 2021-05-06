@@ -1,18 +1,12 @@
 {% import 'macros/path.html' as f %}
 {% import 'macros/site.html' as s %}
 
-{% set job_saved = false %}
-{% set job_applied = false %}
-{% if job_search_card %}
-<div class="job-card">
-{% else %}
-<div class="job-card col-lg-6 col-md-12 col-sm-12" id="job-card-{{i}}">
-{% endif %}
-    <div class="job-card-item-container">
+
+<div class="job-card col-lg-6 col-12 application-card mb-2">
+    <div class="job-application-item-container">
         <a href="{{ s.job_description_url() }}" target="_blank">
             <div class="job-card-container">
                 <div class="job-card-wrapper">
-
                     <div class="row job-type">
                         <span>Full time</span>
                     </div>
@@ -30,7 +24,7 @@
                         
                         
                     </div>
-                    <div class="row job-require">
+                    <div class="row job-require mt-3 mb-2">
                         <div class="col-lg-4 col-sm-12 col-md-12">
                             <span><i class="bi bi-geo-alt-fill"></i> Location</span>
                         </div>
@@ -48,9 +42,6 @@
                             </span>
                         </div>
                     </div>
-                    <div class="row job-description">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies, lacus nec accumsan elementum, eros risus gravida massa, eget ultricies dui quam id dui. Nulla tincidunt imperdiet nulla ac ultricies. Cras vitae enim fringilla, vulputate arcu vitae,</p>
-                    </div>
                 </div>
             
                 
@@ -58,27 +49,11 @@
         </a>
         <div class="card-footer">
             <div class="row">
-                <div class="col-lg-7 col-sm-12 col-md-12 posted-time-wrap">
-                    <p>Posted 2 Days ago</p>
+                <div class="col-lg-7 col-sm-12 col-md-12 posted-time-wrap ps-3">
+                    <p>Applied on : 12 Aug 2020</p>
                 </div>
                 <div class="col-lg-5 col-sm-12 col-md-12 share-apply-wrapper">
-                    <div class="row d-flex flex-lg-row-reverse ">
-                        <div class="col button-container">
-                          <button class="form-control btn btn-secondary yellow-button" data-bs-toggle="modal" data-bs-target="#apply-modal">Apply Now</button>
-                        </div>
-                        <div class="col share-container">
-                            {% if job_application_page %}
-                            <a href="#"><i class="bi bi-share-fill"></i></a>
-                            <span id="delete-saved-job" onclick="hideSavedJob({{i}})"><i class="bi bi-x-circle-fill"></i></span>
-                            {% else %}
-                            <a href="#"><i class="bi bi-bookmark"></i></a>
-                            <a href="#"><i class="bi bi-share-fill"></i></a>
-                            {% endif %}
-                            
-                        </div>
-                        
-                        
-                    </div>
+                    <button class="form-control btn btn-secondary yellow-button" data-bs-toggle="modal" data-bs-target="#apply-modal">{{job_status}}</button>
                 </div>
             </div>
         </div>

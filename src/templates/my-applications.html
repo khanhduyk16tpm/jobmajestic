@@ -1,0 +1,20 @@
+{% extends "layouts/application-base.html" %}
+{% block js %}
+<script src="{{ f.js('job.min.js') }}"></script>
+{% endblock %}
+{% block page %}
+<div class="tab-content" id="applicationTabContent">
+  <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+  	{% include 'partials/_application-all-tab.html' %}
+  </div>
+  <div class="tab-pane fade" id="job-sent" role="tabpanel" aria-labelledby="job-sent-tab">
+  	{% include 'partials/_application-job-sent-tab.html' %}
+  </div>
+  <div class="tab-pane fade" id="rejected" role="tabpanel" aria-labelledby="rejected-tab">
+  	{% include 'partials/_application-rejected-tab.html' %}
+  </div>
+  <div class="tab-pane fade" id="saved" role="tabpanel" aria-labelledby="saved-tab">
+  	{% include 'partials/_application-saved-tab.html' %}
+  </div>
+</div>
+{% endblock %}

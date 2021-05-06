@@ -1,0 +1,36 @@
+.application-card{
+	padding-top: 0px;
+	.job-application-item-container{
+		box-shadow: 0px 0px 12px #00000021;
+	}
+	.job-card-container{
+		box-shadow: unset;
+		@include media-breakpoint-down(lg)  {
+			padding-bottom: 10px;
+		}
+	}
+}
+.application-body{
+	@include media-breakpoint-down(lg)  {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	.share-apply-wrapper{
+		margin-bottom: 10px;
+	}
+}
+.application-saved-list-card{
+	.job-card{
+		padding-top: 0px;
+		padding-bottom: 15px;
+	}
+	.job-card-container{
+		box-shadow: unset;
+	}
+	.job-card-item-container{
+		box-shadow: 0px 0px 5px #00000080;
+	}
+	#delete-saved-job{
+		cursor: pointer;
+	}
+}

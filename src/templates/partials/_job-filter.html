@@ -36,14 +36,14 @@
 				<h5>Company</h5>
 			</div>
 			<div class="col-3">
-				<span class="clear-all">Clear</span>
+				<span class="clear-all" onclick="clearCheckbox('company-ckb')">Clear</span>
 			</div>	
 		</div>
 		<div class="row list-check-box">
 			{% for i in range(1,4) %}
 			<div class="form-check">
-			  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
-			  <label class="form-check-label" for="defaultCheck{i}}">
+			  <input class="form-check-input company-ckb" type="checkbox" value="" id="defaultCheck{{i}}">
+			  <label class="form-check-label" for="defaultCheck{{i}}">
 			    Sub Category
 			  </label>
 			</div>
@@ -51,8 +51,8 @@
 			<div class="row more" id="more-2">
 				{% for i in range(5,8) %}
 				<div class="form-check">
-				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
-				  <label class="form-check-label" for="defaultCheck{i}}">
+				  <input class="form-check-input company-ckb" type="checkbox" value="" id="defaultCheck{{i}}">
+				  <label class="form-check-label" for="defaultCheck{{i}}">
 				    Sub Category
 				  </label>
 				</div>
@@ -68,14 +68,14 @@
 				<h5>Categories</h5>
 			</div>
 			<div class="col-3">
-				<span class="clear-all">Clear</span>
+				<span class="clear-all" onclick="clearCheckbox('category-ckb')">Clear</span>
 			</div>	
 		</div>
 		<div class="row list-check-box">
 			{% for i in range(1,4) %}
 			<div class="form-check">
-			  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
-			  <label class="form-check-label" for="defaultCheck{i}}">
+			  <input class="form-check-input category-ckb" type="checkbox" value="" id="defaultCheck{{i}}">
+			  <label class="form-check-label" for="defaultCheck{{i}}">
 			    Sub Category
 			  </label>
 			</div>
@@ -83,8 +83,8 @@
 			<div class="row more" id="more-3">
 				{% for i in range(5,8) %}
 				<div class="form-check">
-				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
-				  <label class="form-check-label" for="defaultCheck{i}}">
+				  <input class="form-check-input category-ckb" type="checkbox" value="" id="defaultCheck{{i}}">
+				  <label class="form-check-label" for="defaultCheck{{i}}">
 				    Sub Category
 				  </label>
 				</div>
@@ -100,14 +100,14 @@
 				<h5>Related Categories</h5>
 			</div>
 			<div class="col-3">
-				<span class="clear-all">Clear</span>
+				<span class="clear-all" onclick="clearCheckbox('related-cat-ckb')">Clear</span>
 			</div>	
 		</div>
 		<div class="row list-check-box">
 			{% for i in range(1,4) %}
 			<div class="form-check">
-			  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
-			  <label class="form-check-label" for="defaultCheck{i}}">
+			  <input class="form-check-input related-cat-ckb" type="checkbox" value="" id="defaultCheck{{i}}">
+			  <label class="form-check-label" for="defaultCheck{{i}}">
 			    Sub Category
 			  </label>
 			</div>
@@ -115,8 +115,8 @@
 			<div class="row more" id="more-4">
 				{% for i in range(5,8) %}
 				<div class="form-check">
-				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
-				  <label class="form-check-label" for="defaultCheck{i}}">
+				  <input class="form-check-input related-cat-ckb" type="checkbox" value="" id="defaultCheck{{i}}">
+				  <label class="form-check-label" for="defaultCheck{{i}}">
 				    Sub Category
 				  </label>
 				</div>
@@ -132,14 +132,14 @@
 				<h5>Distance</h5>
 			</div>
 			<div class="col-3">
-				<span class="clear-all">Clear</span>
+				<span class="clear-all" onclick="clearCheckbox('distance-ckb')">Clear</span>
 			</div>	
 		</div>
 		<div class="row list-check-box">
 			{% for i in range(1,4) %}
 			<div class="form-check">
-			  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
-			  <label class="form-check-label" for="defaultCheck{i}}">
+			  <input class="form-check-input distance-ckb" type="checkbox" value="" id="defaultCheck{{i}}">
+			  <label class="form-check-label" for="defaultCheck{{i}}">
 			    Sub Category
 			  </label>
 			</div>
@@ -147,8 +147,8 @@
 			<div class="row more" id="more-5">
 				{% for i in range(5,8) %}
 				<div class="form-check">
-				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck{{i}}">
-				  <label class="form-check-label" for="defaultCheck{i}}">
+				  <input class="form-check-input distance-ckb" type="checkbox" value="" id="defaultCheck{{i}}">
+				  <label class="form-check-label" for="defaultCheck{{i}}">
 				    Sub Category
 				  </label>
 				</div>
