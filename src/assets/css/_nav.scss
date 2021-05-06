@@ -29,7 +29,7 @@ header {
             }
         }
         .container-fluid {
-            max-width: 1378px;
+            max-width: 1335px;
             width: 100%;
             padding-right: var(--bs-gutter-x, 0.75rem);
             padding-left: var(--bs-gutter-x, 0.75rem);
@@ -61,7 +61,6 @@ header {
                     .navbar-info {
                         @include media-breakpoint-up(lg) {
                             float: right;
-                            margin-right: 17px;
                         }
                         .navbar-text a {
                             margin-left: 20px;
