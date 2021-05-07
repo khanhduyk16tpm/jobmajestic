@@ -21,3 +21,15 @@ function filterToggle() {
   	el.classList.add("d-none");
   }
 }
+
+function hideSavedJob(id){
+  var jobCardEl = document.getElementById("job-card-"+id);
+  jobCardEl.classList.add("d-none");
+}
+
+function clearCheckbox(checkboxListClass){
+  var checkboxs = document.getElementsByClassName(checkboxListClass);
+  for (var i = 0; i < checkboxs.length; i++) {
+   checkboxs.item(i).checked = false;
+  } 
+}
