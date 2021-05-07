@@ -23,8 +23,14 @@
             {% for exp in experiences %}
             <div class="col-lg-3 col-md-12 col-sm-12 experience-title" id ='experience'>
                     {% if loop.index == 1 %}<div class="exp">Experience</div>{% endif %}
-                    <div class="time-duration">{{ exp.from ~' - ' ~ exp.to }}</div>
-                    <div class="duration">{{ exp.duration }}</div>
+                    <div class="time-duration">
+                        <span class="show-experience">{{ exp.from ~' - ' ~ exp.to }}</span>
+                        <span class="edit-experience d-none"><input type="text" value="{{ exp.from}}"></span> - <span class="edit-experience d-none"><input type="text" value="{{ exp.to }}"></span>
+                    </div>
+                    <div class="duration">
+                        <span class="show-experience">{{ exp.duration }}</span>
+                        <span class="edit-experience d-none"><input type="text" value="{{ exp.duration }}"></span>
+                    </div>
             </div>
             <div class="col-lg-9 col-md-12 col-sm-12 experience-content">
                     <div class="row job-title">
@@ -108,8 +114,14 @@
             </div>
             {% for row in educations %}
             <div class="col-lg-3 col-md-12 col-sm-12 education {% if loop.index > 1 %}education-top {% endif %}" >
-                    <div class="time-duration">{{ row.from ~' - '~row.to }}</div>
-                    <div class="duration">{{ row.duration }}</div>
+                    <div class="time-duration">
+                        <span class="show-education">{{ row.from ~' - '~row.to }}</span>
+                        <span class="edit-education d-none"><input type="text" value="{{ row.from}}"></span> - <span class="edit-education d-none"><input type="text" value="{{ row.to }}"></span>
+                    </div>
+                    <div class="duration">
+                        <span class="show-education">{{ row.duration }}</span>
+                        <span class="edit-education d-none"><input type="text" value="{{ row.duration }}"></span>
+                    </div>
             </div>
             <div class="col-lg-9 col-md-12 col-sm-12  education-main {% if loop.index > 1 %}education-top {% endif %}">
                     <div class="row course">
