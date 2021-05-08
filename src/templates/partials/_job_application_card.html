@@ -1,29 +1,29 @@
 {% import 'macros/path.html' as f %}
 {% import 'macros/site.html' as s %}
-
+{% import 'macros/user.html' as u %}
 
 <div class="job-card col-lg-6 col-12 application-card mb-2">
     <div class="job-application-item-container">
-        <a href="{{ s.job_description_url() }}" target="_blank">
+        
             <div class="job-card-container">
                 <div class="job-card-wrapper">
                     <div class="row job-type">
                         <span>Full time</span>
                     </div>
-                    <div class="row job-position">
-                        <div class="col-lg-9 col-8">
-                            <h4>Petroliam Nasional Berhad (PETRONAS)</h4>
-                            <h3>Project Manager</h3>
-                            <p>Manufacturing / Managing</p>
-                        </div>
-                        <div class="col-lg-3 col-4">
-                            <div class="company-icon">
-                                <img src="{{f.companies_overview_img('header-icon.png')}}">
+                    <a href="{{ s.job_description_url() }}" target="_blank">
+                        <div class="row job-position">
+                            <div class="col-lg-9 col-8">
+                                <h4>Petroliam Nasional Berhad (PETRONAS)</h4>
+                                <h3>Project Manager</h3>
+                                <p>Manufacturing / Managing</p>
+                            </div>
+                            <div class="col-lg-3 col-4">
+                                <div class="company-icon">
+                                    <img src="{{f.companies_overview_img('header-icon.png')}}">
+                                </div> 
                             </div> 
                         </div>
-                        
-                        
-                    </div>
+                    </a> 
                     <div class="row job-require mt-3 mb-2">
                         <div class="col-lg-4 col-sm-12 col-md-12">
                             <span><i class="bi bi-geo-alt-fill"></i> Location</span>
@@ -35,7 +35,7 @@
                             <span>
                                 <i class="bi bi-cash"></i>
                                 {% if is_guest %}
-                                    Salary <i class="bi bi-lock-fill"></i>
+                                    <a href="{{ u.login_url() }}" class="grey-text" target="_blank">Salary <i class="bi bi-lock-fill"></i></a>
                                 {% else %}
                                     RM 6789.00
                                 {% endif %}
@@ -46,14 +46,14 @@
             
                 
             </div>
-        </a>
+     
         <div class="card-footer">
             <div class="row">
                 <div class="col-lg-7 col-sm-12 col-md-12 posted-time-wrap ps-3">
                     <p>Applied on : 12 Aug 2020</p>
                 </div>
                 <div class="col-lg-5 col-sm-12 col-md-12 share-apply-wrapper">
-                    <button class="form-control btn btn-secondary yellow-button" data-bs-toggle="modal" data-bs-target="#apply-modal">{{job_status}}</button>
+                    <button class="form-control btn btn-secondary yellow-button">{{job_status}}</button>
                 </div>
             </div>
         </div>

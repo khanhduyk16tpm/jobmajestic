@@ -36,20 +36,10 @@
           
         /* @apply w-6 h-6 appearance-none pointer-events-auto; */
         }
-
-        @include media-breakpoint-up(lg)  {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            overflow: auto;
-            /*padding: 40px;*/
+        select{
+          border-radius: 0px;
+          border: none;
+          color: $textGrayColor;
         }
         @include media-breakpoint-down(lg)  {
             padding: 10px;

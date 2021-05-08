@@ -17,28 +17,30 @@
 			<div class="col-lg-5 col-md-12 col-sm-12 herobanner-title">
 				<h3>Lorem ipsum dolor sit amet, consecteturs</h3>
 				<div class="search-box">
-					<div class="row">
-						<div class="input-container" id="search-by-title-skill">
-							<input type="text" class="form-control"
-								placeholder="&#xF002;  Search by Job Title, Company or Skills"
-								name="search-by-title-skill">
+					<form id="jobSearchForm" method="post" action="/job-search" data-end="false"> 
+						<div class="row">
+							<div class="input-container" id="search-by-title-skill">
+								<input type="text" class="form-control"
+									placeholder="&#xF002;  Search by Job Title, Company or Skills"
+									name="search-by-title-skill">
+							</div>
+							<div class="input-container" id="search-by-location">
+								<input type="text" class="form-control" placeholder="&#xF041;  Location"
+									name="search-by-localtion">
+							</div>
+							<div class="input-container" id="search-by-category">
+								<input type="text" class="form-control" placeholder="&#xF0B1;  Job Categories"
+									name="search-by-categories">
+							</div>
+							<div class="input-container" id="search-button">
+								<button type="submit" class="btn btn-secondary">Search</button>
+							</div>
 						</div>
-						<div class="input-container" id="search-by-location">
-							<input type="text" class="form-control" placeholder="&#xF041;  Location"
-								name="search-by-localtion">
+						<div class="row advanced-search">
+							<a href="{{ s.job_search_url() }}" data-bs-toggle="modal" data-bs-target="#advance-search-modal">Advanced Search</a>
+							
 						</div>
-						<div class="input-container" id="search-by-category">
-							<input type="text" class="form-control" placeholder="&#xF0B1;  Job Categories"
-								name="search-by-categories">
-						</div>
-						<div class="input-container" id="search-button">
-							<button class="btn btn-secondary">Search</button>
-						</div>
-					</div>
-					<div class="row advanced-search">
-						<a href="{{ s.job_search_url() }}" data-bs-toggle="modal" data-bs-target="#advance-search-modal">Advanced Search</a>
-						
-					</div>
+					</form>
 				</div>
 				<p>Or discover categories</p>
 				<div class="categories">

@@ -2,12 +2,14 @@
 
 <div class="job-righr-side-bar d-none d-lg-block ps-5">
 <h5>Get your dream job news first hand</h5>
-{% if is_guest %}
-	<input type="email" class="form-control shadow-sm mt-4" id="inputEmail1" aria-describedby="emailHelp">
-{% else %}
-	<input type="email" class="form-control shadow-sm mt-4" id="inputEmail1" aria-describedby="emailHelp" value="john.doe@gmail.com">
-{% endif %}
-<button class="form-control yellow-button mt-2 mb-3">Subscribe Now</button>
+<form id="subscribeForm" method="post" action="/job-search/subscribe" data-end="false"> 
+	{% if is_guest %}
+		<input type="email" class="form-control shadow-sm mt-4" id="inputEmail1" aria-describedby="emailHelp">
+	{% else %}
+		<input type="email" class="form-control shadow-sm mt-4" id="inputEmail1" aria-describedby="emailHelp" value="john.doe@gmail.com">
+	{% endif %}
+	<button type="submit" class="form-control yellow-button mt-2 mb-3">Subscribe Now</button>
+</form>
 <h5 class="mt-2 mb-3">Popular Company</h5>
 	{% for i in range(1,9) %}
 	<div class="row mt-2 mb-2 popular-company-container">
