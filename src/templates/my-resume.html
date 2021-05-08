@@ -1,284 +1,268 @@
 {% extends "layouts/profile-base.html" %}
+{% import 'macros/path.html' as f %}
 {% set is_profile = false %}
 {% set is_resume = true %}
 {% set complete_percent = 62 %}
+{% set skills = ['Advanced', 'Intermediate', 'Basic'] %}
+{% set languages = ['Bahasa Malaysia (Primary)', 'English', 'Language 3' ] %}
+{% set extraInfo = [{'title': 'Item 1', 'content': 'Information'}, {'title': 'Item 2', 'content': 'Information'}, {'title': 'Item 3', 'content': 'Information'}] %}
+{% set experiences = [{'from': 'MM/YY', 'to': 'MM/YY', 'duration': 'Duration', 'job_title': 'Job Title', 'company_name': 'Company Name', 'location': 'Location',
+'industry': 'Advertising / Marketing / Promotion /PR', 'specialization' : 'Advertising / Media Planning', 'role': 'Creative', 'level': 'Manager', 
+'salary': 'MYR 0,000',
+'description': 'Job Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur urna viverra odio viverra ultrices. Aenean eu eros sollicitudin, tristique tortor vel, ultricies augue. Nunc pharetra ullamcorper tristique. Morbi id tempor orci. In suscipit purus ac velit eleifend consectetur. Proin quam odio, volutpat non dolor ac, sagittis mattis nunc. In hac habitasse platea dictumst. Aliquam erat volutpat. Nam tempus lectus sit amet turpis lobortis semper. Vestibulum a dolor mi. Nam vel placerat nisl.'}] %}
+{% set educations = [{'from': 'MM/YY', 'to': 'MM/YY', 'duration': 'Duration', 'course_name': 'Education Course Name', 'college': 'University/College/School', 'location': 'Location', 
+'details': {'Item 1': 'Information', 'Item 2': 'Information', 'Item 3': 'Information'}, 'description': '' },
+{'from': 'MM/YY', 'to': 'MM/YY', 'duration': 'Duration', 'course_name': 'Education Course Name', 'college': 'University/College/School', 'location': 'Location', 
+'details': {'Item 1': 'Information', 'Item 2': 'Information', 'Item 3': 'Information'}, 'description': '' }] %}
+
 {% block page %}
 <div class="row">
    <div class="col-lg-10 col-md-12 col-sm-12 resume-block">
        <form id='experience'>
-       <div class="row row-experience">
-           <div class="col-lg-3 col-md-12 col-sm-12 experience-title" id ='experience'>
-                <div class="exp">Experience</div>
-                <div class="time-duration">MM/YY - MM/YY</div>
-                <div class="duration">Duration</div>
-           </div>
-           <div class="col-lg-9 col-md-12 col-sm-12 experience-content">
-                <div class="row job-title">
-                    <div class="col-lg-12">
-                        Job Title
+        <div class="row row-experience">
+            {% for exp in experiences %}
+            <div class="col-lg-3 col-md-12 col-sm-12 experience-title" id ='experience'>
+                    {% if loop.index == 1 %}<div class="exp">Experience</div>{% endif %}
+                    <div class="time-duration">
+                        <span class="show-experience">{{ exp.from ~' - ' ~ exp.to }}</span>
+                        <span class="edit-experience d-none"><input type="text" value="{{ exp.from}}"></span> - <span class="edit-experience d-none"><input type="text" value="{{ exp.to }}"></span>
                     </div>
-                </div>
-                <div class="row job-location">
-                    <div class="col-lg-12">
-                        Company Name | Location
+                    <div class="duration">
+                        <span class="show-experience">{{ exp.duration }}</span>
+                        <span class="edit-experience d-none"><input type="text" value="{{ exp.duration }}"></span>
                     </div>
-                </div>
-                <div class="row mt-2 job-field">
-                    <div class="col-lg-3">
-                        Industry
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 experience-content">
+                    <div class="row job-title">
+                        <div class="col-lg-12">
+                            <div class="show-experience">{{ exp.job_title }}</div>
+                            <div class="edit-experience d-none"><input type="text" value="{{ exp.job_title }}"></div>
+                        </div>
                     </div>
-                    <div class="col-lg-9 font-w-bold">
-                        Advertising / Marketing / Promotion /PR
+                    <div class="row job-location">
+                        <div class="col-lg-12">
+                            <span class="show-experience">{{ exp.company_name }}</span> 
+                            <span class="edit-experience d-none"><input type="text" value="{{ exp.company_name }}"></span>
+                            | 
+                            <span class="show-experience">{{ exp.location }}</span>
+                            <span class="edit-experience d-none"><input type="text" value="{{ exp.location }}"></span>
+                        </div>
                     </div>
-                </div>
-                <div class="row specialization">
-                    <div class="col-lg-3">
-                        Specialization
+                    <div class="row mt-2 job-field">
+                        <div class="col-lg-3">
+                            Industry
+                        </div>
+                        <div class="col-lg-9 font-w-bold">
+                            <span class="show-experience">{{ exp.industry }}</span>
+                            <span class="edit-experience d-none"><input type="text" value="{{ exp.industry }}"></span>
+                        </div>
                     </div>
-                    <div class="col-lg-9 font-w-bold">
-                        Advertising / Media Planning
+                    <div class="row specialization">
+                        <div class="col-lg-3">
+                            Specialization
+                        </div>
+                        <div class="col-lg-9 font-w-bold">
+                            <span class="show-experience">{{ exp.specialization }}</span>
+                            <span class="edit-experience d-none"><input type="text" value="{{ exp.specialization }}"></span>
+                        </div>
                     </div>
-                </div>
-                <div class="row role">
-                    <div class="col-lg-3">
-                        Role
+                    <div class="row role">
+                        <div class="col-lg-3">
+                            Role
+                        </div>
+                        <div class="col-lg-9 font-w-bold">
+                            <span class="show-experience">{{ exp.role }}</span>
+                            <span class="edit-experience d-none"><input type="text" value="{{ exp.role }}"></span>
+                        </div>
                     </div>
-                    <div class="col-lg-9 font-w-bold">
-                        Creative
+                    <div class="row position-level">
+                        <div class="col-lg-3">
+                            Position Level
+                        </div>
+                        <div class="col-lg-9 font-w-bold">
+                            <span class="show-experience">{{ exp.level }}</span>
+                            <span class="edit-experience d-none"><input type="text" value="{{ exp.level }}"></span>
+                        </div>
                     </div>
-                </div>
-                <div class="row position-level">
-                    <div class="col-lg-3">
-                        Position Level
+                    <div class="row salary">
+                        <div class="col-lg-3">
+                            Monthly Salary
+                        </div>
+                        <div class="col-lg-9 font-w-bold">
+                            <span class="show-experience">{{ exp.salary }}</span>
+                            <span class="edit-experience d-none"><input type="text" value="{{ exp.salary }}"></span>
+                        </div>                    
                     </div>
-                    <div class="col-lg-9 font-w-bold">
-                        Manager
+                    <div class="row mt-3 description">
+                        <div class="col-lg-12">
+                            <span class="show-experience">{{ exp.description }}</span>
+                            <span class="edit-experience d-none"><textarea>{{ exp.description }}</textarea></span>
+                        </div>
                     </div>
-                </div>
-                <div class="row salary">
-                    <div class="col-lg-3">
-                        Monthly Salary
-                    </div>
-                    <div class="col-lg-9 font-w-bold">
-                        MYR 0,000
-                    </div>                    
-                </div>
-                <div class="row mt-3 description">
-                    <div class="col-lg-12">
-                        Job Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur urna viverra odio viverra ultrices. Aenean eu eros sollicitudin, tristique tortor vel, ultricies augue. Nunc pharetra ullamcorper tristique. Morbi id tempor orci. In suscipit purus ac velit eleifend consectetur. Proin quam odio, volutpat non dolor ac, sagittis mattis nunc. In hac habitasse platea dictumst. Aliquam erat volutpat. Nam tempus lectus sit amet turpis lobortis semper. Vestibulum a dolor mi. Nam vel placerat nisl.
-                    </div>
-                </div>
-           </div>
-           <div class="col-lg-12 edit"><button class="btn-edit">Edit</button></div>
-       </div>
+            </div>
+            {% endfor %}
+            <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-experience" onclick="editExp()">Edit</button></div>
+        </div>
        </form>
        <form id="education">
-       <div class="row mt-5 row-education">
-           <div class="col-lg-3 col-md-12 col-sm-12" id ='education'>
+        <div class="row mt-5 row-education">
+            <div class="col-lg-3 col-md-12 col-sm-12" id ='education'>
                 <div class="edu-title">Education</div>
-           </div>
-           <div class="col-lg-9 col-md-12 col-sm-12">
-                
-           </div>
-           {% for i in range(1,3) %}
-           <div class="col-lg-3 col-md-12 col-sm-12 education {% if i> 1 %}education-top {% endif %}" >
-                <div class="time-duration">MM/YY - MM/YY</div>
-                <div class="duration">Duration</div>
-           </div>
-           <div class="col-lg-9 col-md-12 col-sm-12  education-main {% if i> 1 %}education-top {% endif %}">
-                <div class="row course">
-                    <div class="col-lg-12 font-w-bold">
-                        Education Course Name
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12">
+                    
+            </div>
+            {% for row in educations %}
+            <div class="col-lg-3 col-md-12 col-sm-12 education {% if loop.index > 1 %}education-top {% endif %}" >
+                    <div class="time-duration">
+                        <span class="show-education">{{ row.from ~' - '~row.to }}</span>
+                        <span class="edit-education d-none"><input type="text" value="{{ row.from}}"></span> - <span class="edit-education d-none"><input type="text" value="{{ row.to }}"></span>
                     </div>
-                </div>
-                <div class="row college">
-                    <div class="col-lg-12 font-w-bold">
-                        University/College/School | Location
+                    <div class="duration">
+                        <span class="show-education">{{ row.duration }}</span>
+                        <span class="edit-education d-none"><input type="text" value="{{ row.duration }}"></span>
                     </div>
-                </div>
-               <div class="row item first">
-                    <div class="col-lg-2">
-                       Item 1
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12  education-main {% if loop.index > 1 %}education-top {% endif %}">
+                    <div class="row course">
+                        <div class="col-lg-12 font-w-bold">
+                            <span class="show-education">{{ row.course_name }}</span>
+                            <span class="edit-education d-none"><input type="text" value="{{ row.course_name }}"></span>
+                        </div>
                     </div>
-                    <div class="col-lg-9 font-w-bold">
-                        Information
+                    <div class="row college">
+                        <div class="col-lg-12 font-w-bold">
+                            <span class="show-education">{{ row.college }} | {{ row.location }}</span>
+                            <span class="edit-education d-none"><input type="text" value="{{ row.college }}"> | </span>
+                            <span class="edit-education d-none"><input type="text" value="{{ row.location }}"></span>
+                        </div>
                     </div>
-                </div>
-                <div class="row item">
-                    <div class="col-lg-2">
-                        Item 2
+                    {% for key, val in row.details %}
+                    <div class="row item {% if loop.index == 1%}first{% endif %}">
+                        <div class="col-lg-2">
+                        {{ key }}
+                        </div>
+                        <div class="col-lg-9 font-w-bold">
+                            <span class="show-education">{{ val }}</span>
+                            <span class="edit-education d-none"><input type="text" value="{{ val }}"></span>
+                        </div>
                     </div>
-                    <div class="col-lg-9 font-w-bold">
-                        Information
-                    </div>
-                </div>
-                <div class="row item">
-                    <div class="col-lg-2">
-                        Item 3
-                    </div>
-                    <div class="col-lg-9 font-w-bold">
-                        Information
-                    </div>                    
-                </div>
-           </div>
-           <div class="col-lg-3 col-md-12"></div>
-           <div class="col-lg-9 col-md-12 mt-3 description">
-               Description lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam, tortor pharetra cursus efficitur, leo ex egestas dui, id mattis magna dolor porttitor eros. In a facilisis ante.
-           </div>
-           {% endfor %}
-           <div class="col-lg-12 edit"><button class="btn-edit">Edit</button></div>
-       </div>
+                    {% endfor %}
+            </div>
+            <div class="col-lg-3 col-md-12"></div>
+            <div class="col-lg-9 col-md-12 mt-3 description">
+                <span class="show-education">Description lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam, tortor pharetra cursus efficitur, leo ex egestas dui, id mattis magna dolor porttitor eros. In a facilisis ante.</span>
+                <span class="edit-education d-none"><textarea>Description lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam, tortor pharetra cursus efficitur, leo ex egestas dui, id mattis magna dolor porttitor eros. In a facilisis ante.</textarea></span>
+            </div>
+            {% endfor %}
+            <div class="col-lg-12 edit"><button type = "button" class="btn-edit" id="btn-edit-education" onclick="editEducation()">Edit</button></div>
+        </div>
        </form>
        <form id="skills">
-       <div class="row mt-5 row-skills">
-           <div class="col-lg-3 col-md-12 col-sm-12" id ='skills'>
-                <div class="skill-title">Skills</div>
-           </div>
-           <div class="col-lg-9 col-md-12 col-sm-12">
-                
-           </div>
-           <div class="col-lg-3 col-md-12 col-sm-12" >
-                <div class="skill-level">Advanced</div>
-           </div>
-           <div class="col-lg-9 col-md-12 col-sm-12">
-                <div class="skill-list">Skill 1, Skill 2, Skill 3</div>
-                <div class="skill-list-mobile"><p>Skill 1</p> <p>Skill 2</p> <p>Skill 3</p></div>
-           </div>
-           <div class="col-lg-3 col-md-12 col-sm-12" >
-                <div class="skill-level">Intermediate</div>
-           </div>
-           <div class="col-lg-9 col-md-12 col-sm-12">
-                <div class="skill-list">Skill 1, Skill 2, Skill 3</div>
-                <div class="skill-list-mobile"><p>Skill 1</p> <p>Skill 2</p> <p>Skill 3</p></div>
-           </div>
-           <div class="col-lg-3 col-md-12 col-sm-12" >
-                <div class="skill-level">Basic</div>
-           </div>
-           <div class="col-lg-9 col-md-12 col-sm-12">
-                <div class="skill-list">Skill 1, Skill 2, Skill 3</div>
-                <div class="skill-list-mobile"><p>Skill 1</p> <p>Skill 2</p> <p>Skill 3</p></div>
-           </div>
-           <div class="col-lg-12 edit"><button class="btn-edit">Edit</button></div>
-       </div>
+        <div class="row mt-5 row-skills">
+            <div class="col-lg-3 col-md-12 col-sm-12" id ='skills'>
+                    <div class="skill-title">Skills</div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12">
+                    
+            </div>
+            {% for skill in skills %}
+            <div class="col-lg-3 col-md-12 col-sm-12" >
+                    <div class="skill-level">{{ skill }}</div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12">
+                    <div class="skill-list">
+                        <span class="show-skill">Skill 1, Skill 2, Skill 3</span>
+                        <span class="edit-skill d-none"><input type="text" value="Skill 1, Skill 2, Skill 3"></span>
+                    </div>
+                    <div class="skill-list-mobile"><p>Skill 1</p> <p>Skill 2</p> <p>Skill 3</p></div>
+            </div>
+            {% endfor %}
+            <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-skill" onclick="editSkill()">Edit</button></div>
+        </div>
        </form>
        <form id="languages">
-       <div class="row mt-5 row-languages-mobile">
-           <div class="col-lg-3 col-md-12 title">
-               Languages
-               <p>Proficiency level: 0 - Poor, 10 - Excellent</p>
-           </div>
-           <div class="col-lg-9 col-md-12">
+        <div class="row mt-5 row-languages-mobile">
+            <div class="col-lg-3 col-md-12 title">
+                Languages
+                <p>Proficiency level: 0 - Poor, 10 - Excellent</p>
+            </div>
+            <div class="col-lg-9 col-md-12">
 
-           </div>
-           <div class="row">
-                <div class="col-lg-12 col-md-12 name">Bahasa Malaysia (Primary)</div>
-           </div>
-           <div class="row">
-            <div class="col-3 score">Spoken</div>
-            <div class="col-3">10</div>
-           </div>
-           <div class="row">
-                <div class="col-3 score">Written</div>
+            </div>
+            {% for lang in languages %}
+            <div class="row {% if loop.index > 1 %}mt-3{% endif %}">
+                    <div class="col-lg-12 col-md-12 name">{{ lang }}</div>
+            </div>
+            <div class="row">
+                <div class="col-3 score">Spoken</div>
                 <div class="col-3">10</div>
-           </div>
-           <div class="row mt-3">
-                <div class="col-lg-12 col-md-12 name">English</div>
-           </div>
-           <div class="row">
-            <div class="col-3 score">Spoken</div>
-            <div class="col-3">10</div>
-           </div>
-           <div class="row">
-                <div class="col-3 score">Written</div>
-                <div class="col-3">10</div>
-           </div>
-           <div class="row mt-3">
-                <div class="col-lg-12 col-md-12 name">Language 3</div>
-           </div>
-           <div class="row">
-            <div class="col-3 score">Spoken</div>
-            <div class="col-3">10</div>
-           </div>
-           <div class="row">
-                <div class="col-3 score">Written</div>
-                <div class="col-3">10</div>
-           </div>
-       </div>
-       <div class="row mt-5 row-languages">
-           <div class="col-lg-3 col-md-12">
-                <div class="language">Languages</div>
-               <p class="proficiency">Proficiency level: 0 - Poor, 10 - Excellent</p>
-           </div>
-           <div class="col-lg-9 col-md-12">
+            </div>
+            <div class="row">
+                    <div class="col-3 score">Written</div>
+                    <div class="col-3">10</div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row mt-5 row-languages">
+            <div class="col-lg-3 col-md-12">
+                    <div class="language">Languages</div>
+                <p class="proficiency">Proficiency level: 0 - Poor, 10 - Excellent</p>
+            </div>
+            <div class="col-lg-9 col-md-12">
 
-           </div>
-           <div class="col-lg-3 col-md-12">
+            </div>
+            <div class="col-lg-3 col-md-12">
 
-           </div>
-           <div class="col-lg-9 col-md-12">
-               <div class="row">
-                   <div class="col-lg-2 col-md-12">Spoken</div>
-                   <div class="col-lg-2 col-md-12">Written</div>
-               </div>
-           </div>
-           <div class="col-lg-3 col-md-12">
-                <div class="lang-name">Bahasa Malaysia (Primary)</div>
-           </div>
-           <div class="col-lg-9 col-md-12">
-               <div class="row">
-                   <div class="col-lg-2 col-md-12">10</div>
-                   <div class="col-lg-2 col-md-12">10</div>
-               </div>
-           </div>
-           <div class="col-lg-3 col-md-12">
-                <div class="lang-name">English</div>
-           </div>
-           <div class="col-lg-9 col-md-12">
-               <div class="row">
-                   <div class="col-lg-2 col-md-12">10</div>
-                   <div class="col-lg-2 col-md-12">10</div>
-               </div>
-           </div>
-           <div class="col-lg-3 col-md-12">
-                <div class="lang-name">Language 3</div>
-           </div>
-           <div class="col-lg-9 col-md-12">
-               <div class="row">
-                   <div class="col-lg-2 col-md-12">10</div>
-                   <div class="col-lg-2 col-md-12">10</div>
-               </div>
-           </div>
-           <div class="col-lg-12 edit"><button class="btn-edit">Edit</button></div>
-       </div>
+            </div>
+            <div class="col-lg-9 col-md-12">
+                <div class="row">
+                    <div class="col-lg-2 col-md-12">Spoken</div>
+                    <div class="col-lg-2 col-md-12">Written</div>
+                </div>
+            </div>
+            {% for lang in languages %}
+            <div class="col-lg-3 col-md-12">
+                    <div class="lang-name">{{ lang }}</div>
+            </div>
+            <div class="col-lg-9 col-md-12">
+                <div class="row">
+                    <div class="col-lg-2 col-md-12">
+                        <span class="show-score">10</span>
+                        <span class="edit-score d-none"><input type="number" min=0 max=10 step=1></span>
+                        </div>
+                    <div class="col-lg-2 col-md-12">
+                        <span class="show-score">10</span>
+                        <span class="edit-score d-none"><input type="number" min=0 max=10 step=1></span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-score" onclick="editScore()">Edit</button></div>
+        </div>
        </form>
        <form id="extra-info">
-       <div class="row mt-5 row-extra-info">
-           <div class="col-lg-3 col-md-12">
-                <div class="title">Additional Info</div>
-           </div>
-           <div class="col-lg-9 col-md-12">
+        <div class="row mt-5 row-extra-info">
+            <div class="col-lg-3 col-md-12">
+                    <div class="title">Additional Info</div>
+            </div>
+            <div class="col-lg-9 col-md-12">
 
-           </div>
-           <div class="col-lg-3 col-md-12">
-                <div class="item">Item 1</div>
-           </div>
-           <div class="col-lg-9 col-md-12">
-                <div class="info">Information</div>
-           </div>
-           <div class="col-lg-3 col-md-12">
-                <div class="item">Item 2</div>
-           </div>
-           <div class="col-lg-9 col-md-12">
-                <div class="info">Information</div>
-           </div>
-           <div class="col-lg-3 col-md-12">
-                <div class="item">Item 3</div>
-           </div>
-           <div class="col-lg-9 col-md-12">
-                <div class="info">Information</div>
-           </div>
-           <div class="col-lg-12 edit"><button class="btn-edit">Edit</button></div>
-       </div>
+            </div>
+            {% for item in extraInfo %}
+            <div class="col-lg-3 col-md-12">
+                    <div class="item">{{ item.title }}</div>
+            </div>
+            <div class="col-lg-9 col-md-12">
+                    <div class="info">
+                    <span class="show-extra">{{ item.content }}</span>
+                    <span class="edit-extra d-none"><input type="text" value="{{ item.content }}"></span>
+                    </div>
+            </div>
+            {% endfor %}
+            <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-extra" onclick="editExtraInfo()">Edit</button></div>
+        </div>
        </form>
        <div class="row mt-5 mb-5 row-about">
            <div class="col-lg-3 col-md-12">
@@ -312,4 +296,7 @@
         <img class="img-fluid" src="{{f.profile_img('banner-adv-2-2x.png')}}">
    </div>
 </div>
+{% block js %}
+<script src="{{ f.js('resume.min.js') }}"></script>
+{% endblock %}
 {% endblock %}
