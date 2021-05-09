@@ -3,7 +3,7 @@
 {% set is_profile = false %}
 {% set is_resume = true %}
 {% set complete_percent = 62 %}
-{% set skills = ['Advanced', 'Intermediate', 'Basic'] %}
+{% set skillLists = [{'level': 'Advanced', 'skills':  ['Skill 1', 'Skill 2', 'Skill 3'] }, {'level': 'Intermediate', 'skills': ['Skill 1', 'Skill 2', 'Skill 3'] }, {'level': 'Basic', 'skills': ['Skill 1', 'Skill 2', 'Skill 3']}] %}
 {% set languages = ['Bahasa Malaysia (Primary)', 'English', 'Language 3' ] %}
 {% set extraInfo = [{'title': 'Item 1', 'content': 'Information'}, {'title': 'Item 2', 'content': 'Information'}, {'title': 'Item 3', 'content': 'Information'}] %}
 {% set experiences = [{'from': 'MM/YY', 'to': 'MM/YY', 'duration': 'Duration', 'job_title': 'Job Title', 'company_name': 'Company Name', 'location': 'Location',
@@ -22,10 +22,14 @@
         <div class="row row-experience">
             {% for exp in experiences %}
             <div class="col-lg-3 col-md-12 col-sm-12 experience-title" id ='experience'>
-                    {% if loop.index == 1 %}<div class="exp">Experience</div>{% endif %}
+                    {% if loop.index == 1 %}
+                    <div class="exp">Experience
+                        <div class="edit-mobile"><button type="button" class="btn-edit" id="btn-edit-experience-mobile" onclick="editExp(event, 'mobile')">Edit</button></div>
+                    </div>
+                    {% endif %}
                     <div class="time-duration">
                         <span class="show-experience">{{ exp.from ~' - ' ~ exp.to }}</span>
-                        <span class="edit-experience d-none"><input type="text" value="{{ exp.from}}"></span> - <span class="edit-experience d-none"><input type="text" value="{{ exp.to }}"></span>
+                        <span class="edit-experience d-none"><input type="text" value="{{ exp.from}}"> - </span><span class="edit-experience d-none"><input type="text" value="{{ exp.to }}"></span>
                     </div>
                     <div class="duration">
                         <span class="show-experience">{{ exp.duration }}</span>
@@ -101,13 +105,16 @@
                     </div>
             </div>
             {% endfor %}
-            <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-experience" onclick="editExp()">Edit</button></div>
+            <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-experience" onclick="editExp(event)">Edit</button></div>
         </div>
        </form>
        <form id="education">
         <div class="row mt-5 row-education">
             <div class="col-lg-3 col-md-12 col-sm-12" id ='education'>
-                <div class="edu-title">Education</div>
+                <div class="edu-title">
+                     Education
+                </div>
+                <div class="edit-mobile"><button type="button" class="btn-edit" id="btn-edit-education-mobile" onclick="editEducation(event, 'mobile')">Edit</button></div>
             </div>
             <div class="col-lg-9 col-md-12 col-sm-12">
                     
@@ -116,7 +123,7 @@
             <div class="col-lg-3 col-md-12 col-sm-12 education {% if loop.index > 1 %}education-top {% endif %}" >
                     <div class="time-duration">
                         <span class="show-education">{{ row.from ~' - '~row.to }}</span>
-                        <span class="edit-education d-none"><input type="text" value="{{ row.from}}"></span> - <span class="edit-education d-none"><input type="text" value="{{ row.to }}"></span>
+                        <span class="edit-education d-none"><input type="text" value="{{ row.from}}"> - </span><span class="edit-education d-none"><input type="text" value="{{ row.to }}"></span>
                     </div>
                     <div class="duration">
                         <span class="show-education">{{ row.duration }}</span>
@@ -155,30 +162,46 @@
                 <span class="edit-education d-none"><textarea>Description lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam, tortor pharetra cursus efficitur, leo ex egestas dui, id mattis magna dolor porttitor eros. In a facilisis ante.</textarea></span>
             </div>
             {% endfor %}
-            <div class="col-lg-12 edit"><button type = "button" class="btn-edit" id="btn-edit-education" onclick="editEducation()">Edit</button></div>
+            <div class="col-lg-12 edit"><button type = "button" class="btn-edit" id="btn-edit-education" onclick="editEducation(event)">Edit</button></div>
         </div>
        </form>
        <form id="skills">
         <div class="row mt-5 row-skills">
             <div class="col-lg-3 col-md-12 col-sm-12" id ='skills'>
-                    <div class="skill-title">Skills</div>
+                <div class="skill-title">Skills</div>
+                <div class="edit-mobile"><button type="button" class="btn-edit" id="btn-edit-skill-mobile" onclick="editSkill(event, 'mobile')">Edit</button></div>
             </div>
             <div class="col-lg-9 col-md-12 col-sm-12">
                     
             </div>
-            {% for skill in skills %}
+            {% for item in skillLists %}
             <div class="col-lg-3 col-md-12 col-sm-12" >
-                    <div class="skill-level">{{ skill }}</div>
+                    <div class="skill-level">{{ item.level }}</div>
             </div>
             <div class="col-lg-9 col-md-12 col-sm-12">
                     <div class="skill-list">
-                        <span class="show-skill">Skill 1, Skill 2, Skill 3</span>
+                        <span class="show-skill">
+                            {% for skill in item.skills %}
+                                {{ skill }}{% if not loop.last %},{% endif %}
+                            {% endfor %}
+                        </span>
                         <span class="edit-skill d-none"><input type="text" value="Skill 1, Skill 2, Skill 3"></span>
                     </div>
-                    <div class="skill-list-mobile"><p>Skill 1</p> <p>Skill 2</p> <p>Skill 3</p></div>
+                    <div class="skill-list-mobile">
+                        <span class="show-skill">
+                            {% for skill in item.skills %}
+                                <p>{{ skill }}</p>
+                            {% endfor %}
+                        </span>
+                        <span class="edit-skill d-none">
+                            {% for skill in item.skills %}
+                                <input type="text" value="{{ skill }}">
+                            {% endfor %}
+                        </span>
+                    </div>
             </div>
             {% endfor %}
-            <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-skill" onclick="editSkill()">Edit</button></div>
+            <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-skill" onclick="editSkill(event)">Edit</button></div>
         </div>
        </form>
        <form id="languages">
@@ -186,27 +209,37 @@
             <div class="col-lg-3 col-md-12 title">
                 Languages
                 <p>Proficiency level: 0 - Poor, 10 - Excellent</p>
+                <div class="edit-mobile"><button type="button" class="btn-edit" id="btn-edit-score-mobile" onclick="editScore(event, 'mobile')">Edit</button></div>
             </div>
             <div class="col-lg-9 col-md-12">
 
             </div>
             {% for lang in languages %}
             <div class="row {% if loop.index > 1 %}mt-3{% endif %}">
-                    <div class="col-lg-12 col-md-12 name">{{ lang }}</div>
+                <div class="col-lg-12 col-md-12 name">
+                    <span class="show-score">{{ lang }}</span>
+                    <span class="edit-score d-none"><input type="text" value="{{ lang }}"></span>
+                </div>
             </div>
             <div class="row">
                 <div class="col-3 score">Spoken</div>
-                <div class="col-3">10</div>
+                <div class="col-3">
+                    <span class="show-score">10</span>
+                    <span class="edit-score d-none"><input type="number" min=0 max=10 step=1></span>
+                </div>
             </div>
             <div class="row">
-                    <div class="col-3 score">Written</div>
-                    <div class="col-3">10</div>
+                <div class="col-3 score">Written</div>
+                <div class="col-3">
+                    <span class="show-score">10</span>
+                    <span class="edit-score d-none"><input type="number" min=0 max=10 step=1></span>
+                </div>
             </div>
             {% endfor %}
         </div>
         <div class="row mt-5 row-languages">
             <div class="col-lg-3 col-md-12">
-                    <div class="language">Languages</div>
+                <div class="language">Languages</div>
                 <p class="proficiency">Proficiency level: 0 - Poor, 10 - Excellent</p>
             </div>
             <div class="col-lg-9 col-md-12">
@@ -223,7 +256,10 @@
             </div>
             {% for lang in languages %}
             <div class="col-lg-3 col-md-12">
-                    <div class="lang-name">{{ lang }}</div>
+                <div class="lang-name">
+                    <span class="show-score">{{ lang }}</span>
+                    <span class="edit-score d-none"><input type="text" value="{{ lang }}"></span>
+                </div>
             </div>
             <div class="col-lg-9 col-md-12">
                 <div class="row">
@@ -239,13 +275,14 @@
             </div>
             {% endfor %}
 
-            <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-score" onclick="editScore()">Edit</button></div>
+            <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-score" onclick="editScore(event)">Edit</button></div>
         </div>
        </form>
        <form id="extra-info">
         <div class="row mt-5 row-extra-info">
             <div class="col-lg-3 col-md-12">
-                    <div class="title">Additional Info</div>
+                <div class="title">Additional Info</div>
+                <div class="edit-mobile"><button type="button" class="btn-edit" id="btn-edit-extra-mobile" onclick="editExtraInfo(event, 'mobile')">Edit</button></div>
             </div>
             <div class="col-lg-9 col-md-12">
 
@@ -261,7 +298,7 @@
                     </div>
             </div>
             {% endfor %}
-            <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-extra" onclick="editExtraInfo()">Edit</button></div>
+            <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-extra" onclick="editExtraInfo(event)">Edit</button></div>
         </div>
        </form>
        <div class="row mt-5 mb-5 row-about">

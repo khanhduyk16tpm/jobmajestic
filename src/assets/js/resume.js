@@ -43,28 +43,43 @@ function toggleButtonLabel(btn) {
     }
 }
 
-function editExp(evt) {
+function editExp(evt, type=null) {
     showHideElement(edit_experiences);
     showHideElement(show_experiences);
+    if (type == 'mobile') {
+        btn_edit_exp = document.querySelector('#btn-edit-experience-mobile');
+    }
     toggleButtonLabel(btn_edit_exp);
 }
-function editEducation() {
+function editEducation(evt, type=null) {
     showHideElement(edit_educations);
     showHideElement(show_educations);
+    if (type == 'mobile') {
+        btn_edit_education = document.querySelector('#btn-edit-education-mobile');
+    }
     toggleButtonLabel(btn_edit_education);
 }
-function editSkill() {
+function editSkill(evt, type=null) {
     showHideElement(edit_skills);
     showHideElement(show_skills);
+    if (type == 'mobile') {
+        btn_edit_skill = document.querySelector('#btn-edit-skill-mobile');
+    }
     toggleButtonLabel(btn_edit_skill);
 }
-function editScore() {
+function editScore(evt, type=null) {
     showHideElement(edit_score);
     showHideElement(show_score);
+    if (type == 'mobile') {
+        btn_edit_score = document.querySelector('#btn-edit-score-mobile');
+    }
     toggleButtonLabel(btn_edit_score);
 }
-function editExtraInfo() {
+function editExtraInfo(evt, type=null) {
     showHideElement(edit_extra);
     showHideElement(show_extra);
+    if (type == 'mobile') {
+        btn_edit_extra = document.querySelector('#btn-edit-extra-mobile');
+    }
     toggleButtonLabel(btn_edit_extra);
 }
