@@ -146,6 +146,10 @@
     textarea {
         width: 600px;
         height: 200px;
+        @include media-breakpoint-down(lg) {
+            width: 280px;
+            height: 150px;
+        }
     }
     .font-w-bold {
         font-weight: 500;
@@ -161,6 +165,21 @@
             letter-spacing: 0px;
             color: #222E3C;
             opacity: 1;
+        }
+    }
+    .edit-mobile {
+        display: none;
+        font-size: 18px;
+        @include media-breakpoint-down(lg) {
+            display: block;
+            .btn-edit {
+                float: right;
+                border: none;
+                background: none;
+                letter-spacing: 0px;
+                color: #222E3C;
+                opacity: 1;
+            }
         }
     }
 }
