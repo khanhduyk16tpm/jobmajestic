@@ -20,14 +20,21 @@
             {% include 'partials/_profile-basic.html' %}
         </div>
         {% endif %}
-        {% if is_resume %}
+        {% if is_resume or is_account %}
         <div class="row r-avatar">
             {% include 'partials/_resume-basic.html' %}
         </div>
+        {% endif %}
+        {% if is_resume %}
         <div class="row resume-nav-tab">
             {% include 'partials/_resume-nav-tab.html' %}
         </div>
         {% endif %}
+        {% if is_account %}
+        <div class="row resume-nav-tab">
+            {% include 'partials/_account-nav-tab.html' %}
+        </div>
+        {% endif %}                
         {% block page %}
 
         {% endblock %}

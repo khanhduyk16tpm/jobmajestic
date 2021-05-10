@@ -1,0 +1,19 @@
+{% extends "layouts/profile-base.html" %}
+{% import 'macros/path.html' as f %}
+{% set is_profile = false %}
+{% set is_resume = false %}
+{% set is_account = true %}
+{% set complete_percent = 62 %}
+
+{% block page %}
+<div class="row">
+
+   <div class="col-lg-2 d-none d-lg-block adv-imgs mt-2">
+        <img class="img-fluid" src="{{f.profile_img('banner-adv-1-2x.png')}}">
+        <img class="img-fluid" src="{{f.profile_img('banner-adv-2-2x.png')}}">
+   </div>
+</div>
+{% block js %}
+<script src="{{ f.js('resume.min.js') }}"></script>
+{% endblock %}
+{% endblock %}
