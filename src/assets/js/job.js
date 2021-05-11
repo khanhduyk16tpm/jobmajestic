@@ -33,3 +33,49 @@ function clearCheckbox(checkboxListClass){
    checkboxs.item(i).checked = false;
   } 
 }
+
+
+var bookmark = new Toggle(".bookmark",{
+    onOn: function(n) {
+        n.innerHTML = '<i class="bi bi-bookmark-check-fill"></i>'
+    },
+    onOff: function(n) {
+        n.innerHTML = '<i class="bi bi-bookmark"></i>'
+    },
+    success: function() {
+        return !0
+    }
+}),bookmarkJobDescription = new Toggle(".bookmark-job-description",{
+    onOn: function(n) {
+        n.innerHTML = '<i class="bi bi-bookmark-check-fill"></i> SAVED'
+    },
+    onOff: function(n) {
+        n.innerHTML = '<i class="bi bi-bookmark"></i> SAVE'
+    },
+    success: function() {
+        return !0
+    }
+}), applied = new Toggle(".apply-job-btn",{
+    onOn: function(n) {
+        n.innerHTML = '<i class="bi bi-envelope-fill"></i> Applied'
+    },
+    onOff: function(n) {
+        n.innerHTML = 'Apply Now'
+    },
+    success: function() {
+        return !0
+    }
+}), appliedModal = new Toggle(".apply-job-modal-btn",{
+    onOn: function(n) {
+        n.innerHTML = '<i class="bi bi-envelope-fill"></i> Applied'
+        document.getElementById("apply-modal-btn").innerHTML = '<i class="bi bi-envelope-fill"></i> APPLIED'
+    },
+    onOff: function(n) {
+        n.innerHTML = 'Apply Now'
+        document.getElementById("apply-modal-btn").innerHTML = 'APPLY NOW'
+    },
+    success: function() {
+        return !0
+    }
+})
+

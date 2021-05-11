@@ -32,6 +32,10 @@ body {
         background-color: $yellowButton;
         color: $bigBtnFontColor;
     }
+    .border-radius-none{
+        border-radius: 0px;
+        border: none;
+    }
     .grey-text{
         color: $textGrayColor;
     }

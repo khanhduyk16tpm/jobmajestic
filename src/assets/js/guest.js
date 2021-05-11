@@ -1,28 +1,28 @@
-const signUpToggle = new PasswordToggle ('.new-password',{
-    onOn: (btn) => {
-        btn.classList.add('btn');
-        btn.innerHTML = '<i class="fas fa-eye-slash"></i>';
+var signUpToggle = new PasswordToggle(".new-password",{
+    onOn: function(s) {
+        s.classList.add("btn"),
+        s.innerHTML = '<i class="bi bi-eye-slash-fill"></i>'
     },
-    onOff: (btn) => {
-        btn.classList.add('btn');
-        btn.innerHTML = '<i class="fas fa-eye"></i>';
+    onOff: function(s) {
+        s.classList.add("btn"),
+        s.innerHTML = '<i class="bi bi-eye-fill"></i>'
     }
-});
-
-const loginToggle = new PasswordToggle ('.current-password',{
-    onOn: (btn) => {
-        btn.classList.add('btn');
-        btn.innerHTML = '<i class="fas fa-eye-slash"></i>';
+})
+  , loginToggle = new PasswordToggle(".current-password",{
+    onOn: function(s) {
+        s.classList.add("btn"),
+        s.innerHTML = '<i class="bi bi-eye-slash-fill"></i>'
     },
-    onOff: (btn) => {
-        btn.classList.add('btn');
-        btn.innerHTML = '<i class="fas fa-eye"></i>';
+    onOff: function(s) {
+        s.classList.add("btn"),
+        s.innerHTML = '<i class="bi bi-eye-fill"></i>'
     }
-});
-
-const forms = document.querySelectorAll('.signupform');
-forms.forEach(form => {
-    form.addEventListener('submit', function(){
-        form.signupbtn.disabled = true;
-    });
-});
+})
+  , forms = document.querySelectorAll(".signupform");
+forms.forEach((function(s) {
+    s.addEventListener("submit", (function() {
+        s.signupbtn.disabled = !0
+    }
+    ))
+}
+));

@@ -4,7 +4,10 @@
 
 {% set newsletter_subscription = true %}
 
-{% block js %}{% endblock %}
+{% block js %} 
+{{ f.module(['toggle']) }} 
+<script src="{{ f.js('job.min.js') }}"></script>
+{% endblock %}
 
 {% block content %}
 <div class="full-width">
@@ -17,20 +20,34 @@
 			<div class="col-lg-5 col-md-12 col-sm-12 herobanner-title">
 				<h3>Lorem ipsum dolor sit amet, consecteturs</h3>
 				<div class="search-box">
-					<form id="jobSearchForm" method="post" action="/job-search" data-end="false"> 
+					<form method="post" action="/job-search" data-end="false"> 
 						<div class="row">
 							<div class="input-container" id="search-by-title-skill">
-								<input type="text" class="form-control"
-									placeholder="&#xF002;  Search by Job Title, Company or Skills"
-									name="search-by-title-skill">
+								<div class="input-group"> 
+									<div class="input-group-prepend"> 
+										<div class="input-group-text border-radius-none">
+											<i class="bi bi-search"></i>
+										</div> 
+									</div> 
+								<input type="text" class="form-control" placeholder="Job title/ keywords" maxlength="80" name="title" value=""> </div>
 							</div>
 							<div class="input-container" id="search-by-location">
-								<input type="text" class="form-control" placeholder="&#xF041;  Location"
-									name="search-by-localtion">
+								<div class="input-group"> 
+									<div class="input-group-prepend"> 
+										<div class="input-group-text border-radius-none">
+											<i class="bi bi-geo-alt-fill"></i>
+										</div> 
+									</div> 
+								<input type="text" class="form-control" placeholder="Location" maxlength="80" name="location" value=""> </div>
 							</div>
 							<div class="input-container" id="search-by-category">
-								<input type="text" class="form-control" placeholder="&#xF0B1;  Job Categories"
-									name="search-by-categories">
+								<div class="input-group"> 
+									<div class="input-group-prepend"> 
+										<div class="input-group-text border-radius-none">
+											<i class="bi bi-briefcase-fill"></i>
+										</div> 
+									</div> 
+								<input type="text" class="form-control" placeholder="Job Categories" maxlength="80" name="categories" value=""> </div>
 							</div>
 							<div class="input-container" id="search-button">
 								<button type="submit" class="btn btn-secondary">Search</button>

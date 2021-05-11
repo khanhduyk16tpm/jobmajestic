@@ -1,5 +1,9 @@
  {% extends "layouts/job-description-base.html" %} 
  {% set similar_job_slide= true %}
+ {% block js %} 
+{{ f.module(['toggle']) }} 
+<script src="{{ f.js('job.min.js') }}"></script>
+{% endblock %}
 {% block description %}
 
     <div class="row mt-5 mb-5" id="job-scope">

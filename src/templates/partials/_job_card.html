@@ -15,7 +15,7 @@
                     <div class="row job-type">
                         <span>Full time</span>
                     </div>
-                    <a href="{{ s.job_description_url() }}" target="_blank">
+                    <a href="{{ s.job_description_url() }}">
                         <div class="row job-position">
                             <div class="col-lg-9 col-8">
                                 <h4>Petroliam Nasional Berhad (PETRONAS)</h4>
@@ -40,7 +40,7 @@
                             <span>
                                 <i class="bi bi-cash"></i>
                                 {% if is_guest %}
-                                    <a href="{{ u.login_url() }}" class="grey-text" target="_blank">Salary <i class="bi bi-lock-fill"></i></a>
+                                    <a href="javascript:void(0)" rel="nofollow" class="grey-text" data-bs-toggle="modal" data-bs-target="#loginModalForm">Salary <i class="bi bi-lock-fill"></i></a>
                                 {% else %}
                                     RM 6789.00
                                 {% endif %}
@@ -63,14 +63,14 @@
                 <div class="col-lg-5 col-sm-12 col-md-12 share-apply-wrapper">
                     <div class="row d-flex flex-lg-row-reverse ">
                         <div class="col button-container">
-                          <button class="form-control btn btn-secondary yellow-button" data-bs-toggle="modal" data-bs-target="#apply-modal">Apply Now</button>
+                          <button class="form-control btn btn-secondary yellow-button {% if is_guest == false %} apply-job-btn {%endif%}" {% if is_guest%} data-bs-toggle="modal" data-bs-target="#loginModalForm"{%endif%}>Apply Now</button>
                         </div>
                         <div class="col share-container">
                             {% if job_application_page %}
                             <a href="#"><i class="bi bi-share-fill"></i></a>
                             <span id="delete-saved-job" onclick="hideSavedJob({{i}})"><i class="bi bi-x-circle-fill"></i></span>
                             {% else %}
-                            <a href="#"><i class="bi bi-bookmark"></i></a>
+                            <a href="javascript:void(0)" rel="nofollow" data-url="" {% if is_guest %} data-bs-toggle="modal" data-bs-target="#loginModalForm" {% else %} class="bookmark"  {% endif %}><i class="bi bi-bookmark"></i></a> 
                             <a href="#"><i class="bi bi-share-fill"></i></a>
                             {% endif %}
                             

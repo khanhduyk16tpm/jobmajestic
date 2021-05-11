@@ -13,7 +13,7 @@
         <div class="container job-nav-bar">
             <div class="row">
                 <div class="col-lg-3 col-6 nav-item">
-                    <button class="form-control btn btn-secondary"><i class="bi bi-bookmark"></i> SAVE</button>
+                    <button class="form-control btn btn-secondary {% if is_guest == false %} bookmark-job-description {%endif%}" {% if is_guest %} data-bs-toggle="modal" data-bs-target="#loginModalForm" {%endif%}><i class="bi bi-bookmark"></i> SAVE</button>
                 </div>
                 <div class="col-lg-3 col-6 nav-item">
                     <button class="form-control btn btn-secondary"><i class="bi bi-share"></i> SHARE</button>
@@ -22,7 +22,7 @@
                     <button class="form-control btn btn-secondary"><i class="bi bi-geo"></i></i> VIEW LOCATION</button>
                 </div>
                 <div class="col-lg-3 col-6 d-none d-lg-block nav-item">
-                    <button class="form-control btn btn-secondary yellow-button" data-bs-toggle="modal" data-bs-target="#apply-modal">APPLY NOW</button>
+                    <button class="form-control btn btn-secondary yellow-button" {%if is_guest == false %} data-bs-toggle="modal" data-bs-target="#apply-modal" id="apply-modal-btn" {% else %} data-bs-toggle="modal" data-bs-target="#loginModalForm" {%endif%}>APPLY NOW</button>
                 </div>
             </div>
             
@@ -50,11 +50,11 @@
 
                     {% endblock %}
                 </div>
-                <div class="col-lg-2 d-none d-lg-block adv-imgs">
-                    <img class="img-fluid" src="{{f.companies_overview_img('banner-adv-1-2x.png')}}">
-                    <img class="img-fluid" src="{{f.companies_overview_img('banner-adv-2-2x.png')}}">
+                <div class="col-lg-2 d-none d-lg-block">
+                    <img class="img-fluid" src="{{f.jobs_search_img('adv-banner-3.png')}}">
+                    <img class="img-fluid" src="{{f.jobs_search_img('adv-banner-2.png')}}">
                 </div>
-                <button class="form-control btn btn-secondary yellow-button d-lg-none mt-3" data-bs-toggle="modal" data-bs-target="#apply-modal">APPLY NOW</button>
+                <button class="form-control btn btn-secondary yellow-button d-lg-none mt-3" {%if is_guest == false %} data-bs-toggle="modal" data-bs-target="#apply-modal" id="apply-modal-btn" {% else %} data-bs-toggle="modal" data-bs-target="#loginModalForm" {%endif%}>>APPLY NOW</button>
             </div>
 
         </div>

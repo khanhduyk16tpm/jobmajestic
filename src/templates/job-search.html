@@ -2,7 +2,10 @@
 
 {% set job_search_box = true %}
 {% set job_search_card = true %}
-{% block js %} {{ f.module(['rangeSlider']) }} {% endblock %}
+{% block js %} 
+{{ f.module(['toggle']) }} 
+<script src="{{ f.js('job.min.js') }}"></script>
+{% endblock %}
 {% block jobSearchPage %}
 
 <div class="row sort-by-container">

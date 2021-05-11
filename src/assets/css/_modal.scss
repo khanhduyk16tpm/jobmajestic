@@ -114,10 +114,6 @@
 }
 
 #upload-resume {
-   /* width: 600px;
-    @include media-breakpoint-down(lg) {
-        width: 280px;
-    }*/
     .modal-dialog {
         @include media-breakpoint-up(lg) {
             max-width: 1136px;
@@ -130,9 +126,6 @@
         }
         .title {
             padding-left: 0.5rem;
-        }
-        .upload-file {
-            padding-left: 1rem;
         }
         .file,
         .uploaded {
@@ -150,6 +143,9 @@
             padding: 10px;
             width: 100%;
             margin-bottom: 0.5rem;
+        }
+        #remove-btn{
+            background: #222e3c 0 0 no-repeat padding-box;
         }
     }
     .file-upload-wrapper {

@@ -4,7 +4,6 @@
 {% import 'macros/candidate.html' as c %}
 
 {% set extra_class = '' %}
-{% set is_guest = false %}
 
 {% if alert %}
 {% set extra_class = 'with-alert' %}
@@ -39,16 +38,18 @@
                 <span class="ml-md-auto"></span>
                 <div class="language-navbar">
                     <div class="navbar-info">
+                        <div class="btn-group my-2">
+                            <div class="dropdown language-picker me-4">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                </button>
+                                <ul class="dropdown-menu {% if is_guest %}language-not-login{% endif %}" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item dropdown-item-checked" href="#">English</a></li>
+                                    <li><a class="dropdown-item" href="#">Chinese</a></li>
+                                </ul>
+                            </div>
                         {% if is_guest %}
-                        <div class="dropdown language-picker">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item dropdown-item-checked" href="#">English</a></li>
-                                <li><a class="dropdown-item" href="#">Chinese</a></li>
-                            </ul>
-                        </div>
+                        
                         <span class="navbar-text">
                             <a href="{{ s.post_job_url() }}" class="btn btn-post-job mr-3 px-5">Post a job</a>
                             <a href="{{ user.login_url() }}" rel="nofollow" data-bs-toggle="modal"
@@ -57,7 +58,8 @@
                                 data-bs-target="#signupModalForm">Sign Up</a>
                         </span>
                         {% else %}
-                        <div class="btn-group my-2">
+                        
+                            
                             <div class="dropdown message-dropdown">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
                                     data-bs-toggle="dropdown" aria-expanded="false"><span class="badge">9</span>
@@ -102,8 +104,9 @@
                                                 src="{{f.landing_page_img('gear-fill.svg')}}" alt="">Setting</a></li>
                                 </ul>
                             </div>
-                        </div>
+                        
                         {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -155,18 +158,16 @@
                             <div class="input-group">
                                 <input type="password" id="current-password"
                                     class="form-control custom-form-control current-password" maxlength="20" required=""
-                                    name="password" style="padding-right: 40px;">
-                                <span class="hide-pw btn" style="position: absolute; z-index: 5; right: 0px;"><i
-                                        class="fa fa-eye"></i>
-                                </span>
+                                    name="password">
+                                
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6 custom-action">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck" checked="">
-                                <label class="form-check-label" for="gridCheck">
+                                <input class="form-check-input" type="checkbox" id="gridCheckLogin" checked="">
+                                <label class="form-check-label" for="gridCheckLogin">
                                     Remember me </label>
                             </div>
                         </div>
@@ -258,14 +259,11 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <label for="current-password">Password</label>
+                            <label for="new-password">Password</label>
                             <div class="input-group">
-                                <input type="password" id="current-password"
-                                    class="form-control custom-form-control current-password" maxlength="20" required=""
-                                    name="password" style="padding-right: 40px;">
-                                <span class="hide-pw btn" style="position: absolute; z-index: 5; right: 0px;"><i
-                                        class="fa fa-eye"></i>
-                                </span>
+                                <input type="password" id="new-password"
+                                    class="form-control custom-form-control new-password" maxlength="20" required=""
+                                    name="password">
                             </div>
                         </div>
                     </div>
