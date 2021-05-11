@@ -3,6 +3,8 @@
 {% import 'macros/user.html' as user %}
 {% import 'macros/candidate.html' as c %}
 
+{% block js %}{% endblock %}
+
 {% set extra_class = '' %}
 
 {% if alert %}
@@ -122,12 +124,12 @@
             <div class="login-modal-section">
                 <p class="login-with">Log in with</p>
                 <div class="row py-2 social-login">
-                    <a href="/en/auth/social-signup/1" rlogin-desktopel="nofollow"
+                    <a href="#" rlogin-desktopel="nofollow"
                         class="btn btn-secondary btn-facebook col-12 mb-2">
                         <i class="fa fa-facebook"></i>
                         Continue with Facebook
                     </a>
-                    <a href="/en/auth/social-signup/2" rel="nofollow"
+                    <a href="#" rel="nofollow"
                         class="btn btn-secondary btn-linkedin col-12 mb-2">
                         <i class="fa fa-linkedin"></i>
                         <span class="split"></span>Sign in with LinkedIn
@@ -159,7 +161,6 @@
                                 <input type="password" id="current-password"
                                     class="form-control custom-form-control current-password" maxlength="20" required=""
                                     name="password">
-                                
                             </div>
                         </div>
                     </div>
@@ -172,7 +173,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 text-right mt-2 mt-md-0 custom-action">
-                            <a class="text-underline" href="/en/auth/password-recovery" rel="nofollow">Forgot
+                            <a class="text-underline" href="/password-recovery.html" rel="nofollow">Forgot
                                 password?</a>
                         </div>
                     </div>
@@ -181,7 +182,9 @@
                             <button type="submit" class="btn custom-btn btn-login col-12">Login</button>
                         </div>
                         <div class="col-sm-6 text-right mt-2 mt-md-0 no-margin">
-                            <button type="submit" class="btn custom-btn btn-signup col-12">Sign Up</button>
+                            <a href="{{ user.signup_url() }}" rel="nofollow" data-bs-toggle="modal"
+                                data-bs-dismiss="modal" data-bs-target="#signupModalForm"
+                                class="btn custom-btn btn-signup">Sign Up</a>
                         </div>
                     </div>
                 </form>
@@ -192,17 +195,17 @@
 
 <!-- SIGNUP MODAL FORM -->
 <div class="modal fade" id="signupModalForm" tabindex="-1" aria-labelledby="signupModalForm" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content signup-page">
             <div class="signup-modal-section">
                 <p class="signup-with">Sign up with</p>
                 <div class="row py-2 social-signup">
-                    <a href="/en/auth/social-signup/1" rsignup-desktopel="nofollow"
+                    <a href="#" rsignup-desktopel="nofollow"
                         class="btn btn-secondary btn-facebook col-12 mb-2">
                         <i class="fa fa-facebook"></i>
                         Continue with Facebook
                     </a>
-                    <a href="/en/auth/social-signup/2" rel="nofollow"
+                    <a href="#" rel="nofollow"
                         class="btn btn-secondary btn-linkedin col-12 mb-2">
                         <i class="fa fa-linkedin"></i>
                         <span class="split"></span>Sign in with LinkedIn
@@ -276,7 +279,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 text-right mt-2 mt-md-0 custom-action">
-                            <a class="text-underline" href="/en/auth/password-recovery" rel="nofollow">Forgot
+                            <a class="text-underline" href="/password-recovery.html" rel="nofollow">Forgot
                                 password?</a>
                         </div>
                     </div>

@@ -25,13 +25,11 @@
                         <p class="login-with desktop">Log in with</p>
                         <p class="login-with mobile">Log in with Job Majestic</p>
                         <div class="row py-2 social-login">
-                            <a href="/en/auth/social-signup/1" rlogin-desktopel="nofollow"
-                                class="btn btn-secondary btn-facebook col-12 mb-2">
+                            <a href="#" rlogin-desktopel="nofollow" class="btn btn-secondary btn-facebook col-12 mb-2">
                                 <i class="fa fa-facebook"></i>
                                 Continue with Facebook
                             </a>
-                            <a href="/en/auth/social-signup/2" rel="nofollow"
-                                class="btn btn-secondary btn-linkedin col-12 mb-2">
+                            <a href="#" rel="nofollow" class="btn btn-secondary btn-linkedin col-12 mb-2">
                                 <i class="fa fa-linkedin"></i>
                                 <span class="split"></span>Sign in with LinkedIn
                             </a>
@@ -49,18 +47,18 @@
                         <form action="/en/auth/login" class="login-form" method="post" autocomplete="off">
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    <label for="email-login">Email</label>
-                                    <input type="email" id="email-login" class="form-control custom-form-control"
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" class="form-control custom-form-control"
                                         maxlength="50" autocomplete="email" autofocus="" required="" name="email"
                                         placeholder="yourname@youremail.com">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    <label for="current-password">Password</label>
+                                    <label for="current-password-login">Password</label>
                                     <div class="input-group">
-                                        <input type="password" id="current-password"
-                                            class="form-control custom-form-control current-password" maxlength="12"
+                                        <input type="password" id="current-password-login"
+                                            class="form-control custom-form-control current-password-login" maxlength="12"
                                             required="" name="password">
                                     </div>
                                 </div>
@@ -68,13 +66,14 @@
                             <div class="form-group row">
                                 <div class="col-sm-6 custom-action">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck" checked="">
-                                        <label class="form-check-label" for="gridCheck">
+                                        <input class="form-check-input" type="checkbox" id="gridCheckLoginPage" checked="">
+                                        <label class="form-check-label" for="gridCheckLoginPage">
                                             Remember me </label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right mt-2 mt-md-0 custom-action">
-                                    <a class="text-underline" href="/password-recovery.html" rel="nofollow">Forgot password?</a>
+                                    <a class="text-underline" href="/password-recovery.html" rel="nofollow">Forgot
+                                        password?</a>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -82,7 +81,7 @@
                                     <button type="submit" class="btn custom-btn btn-login col-12">Login</button>
                                 </div>
                                 <div class="col-sm-6 text-right mt-2 mt-md-0 no-margin">
-                                    <button type="submit" class="btn custom-btn btn-signup col-12">Sign Up</button>
+                                    <a href="/signup.html" class="btn custom-btn btn-signup">Sign Up</a>
                                 </div>
                             </div>
                         </form>

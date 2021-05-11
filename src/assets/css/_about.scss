@@ -31,7 +31,7 @@
             }
         }
         .about-page {
-            max-width: 1378px;
+            max-width: 1335px;
 
             @include media-breakpoint-down(lg) {
                 .background-about {
@@ -46,7 +46,7 @@
                 }
             }
             .content {
-                max-width: 1378px;
+                max-width: 1335px;
 
                 @include media-breakpoint-down(md) {
                     background-color: $prime3;

@@ -1,3 +1,4 @@
+
 var signUpToggle = new PasswordToggle(".new-password",{
     onOn: function(s) {
         s.classList.add("btn"),
@@ -26,3 +27,4 @@ forms.forEach((function(s) {
     ))
 }
 ));
+
