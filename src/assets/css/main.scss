@@ -68,7 +68,7 @@ body {
 
     .social-buttons i,
     .social-buttons a {
-        color: $prime6;
+        color: $prime5;
         font-size: 20px;
         margin-right: 5px;
 
@@ -160,21 +160,6 @@ body {
             margin-left: 0;
             margin-right: 0;
         }
-    }
-    .social-buttons .circle {
-        border-radius: 50%;
-    }
-    .fa-facebook {
-        background: $prime3;
-        color: $prime6;
-        padding: 0.15em 0.35em;
-    }
-    .fa-instagram,
-    .fa-twitter,
-    .fa-linkedin-square {
-        background: $prime3;
-        color: $prime6;
-        padding: 0.15em 0.2em !important;
     }
 
     // CUSTOM FORM CONTROL

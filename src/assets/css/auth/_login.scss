@@ -88,11 +88,14 @@
 
             a {
                 text-align: center;
+                .bi-linkedin {
+                    margin-left: -5px;
+                }
             }
 
             span.split {
                 border-left: 1px solid darkolivegreen;
-                padding: 8px 0;
+                padding: 7px 0;
                 margin-left: 5px;
                 margin-right: 10px;
             }
