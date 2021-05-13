@@ -1,22 +1,4 @@
 
-// var hideSavedJob = new NoCallbackToggle(".delete-saved-job",{
-//     onOn: function(n) {
-//       var jobCard = document.getElementById("job-card-" + n.getAttribute('data-card-id'));
-//       jobCard.classList.add("d-none");
-//     },
-//     callback: function(a) {
-//         $.ajax({
-//             type: "get",
-//             url: a.dataset.url,
-//             contentType: "application/json",
-//             dataType: "json",
-//             success: function(o) {
-//                 "success" == o.status && ("add" == o.action || "delete" == o.action && bookmark.triggerOff(a))
-//             }
-//         })
-//     }
-// });
-
 var clearCheckbox = new NoCallbackToggle(".clear-all",{
     onOn: function(n) {
       var checkboxs = document.getElementsByClassName(n.getAttribute('data-chk-class'));
