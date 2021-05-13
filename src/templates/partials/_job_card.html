@@ -63,14 +63,14 @@
                 <div class="col-lg-5 col-sm-12 col-md-12 share-apply-wrapper">
                     <div class="row d-flex flex-lg-row-reverse ">
                         <div class="col button-container">
-                          <button class="form-control btn btn-secondary yellow-button {% if is_guest == false %} apply-job-btn {%endif%}" {% if is_guest%} data-bs-toggle="modal" data-bs-target="#loginModalForm"{%endif%}>Apply Now</button>
+                          <button class="form-control btn btn-secondary yellow-button toggle-off {% if is_guest == false %} apply {%endif%}" data-url="/en/job/2113/apply" data-job= "Project Manager" data-company="Petroliam Nasional Berhad (PETRONAS)" {% if is_guest%} data-bs-toggle="modal" data-bs-target="#loginModalForm"{%endif%}>Apply Now</button>
                         </div>
                         <div class="col share-container">
                             {% if job_application_page %}
                             <a href="#"><i class="bi bi-share-fill"></i></a>
-                            <span id="delete-saved-job" onclick="hideSavedJob({{i}})"><i class="bi bi-x-circle-fill"></i></span>
+                            <a href="javascript:void(0)" rel="nofollow" class="ml-2 bookmark-off" data-url="/en/job/1719/bookmark" data-reload="true"><i class="bi bi-x-circle-fill"></i></a>
                             {% else %}
-                            <a href="javascript:void(0)" rel="nofollow" data-url="" {% if is_guest %} data-bs-toggle="modal" data-bs-target="#loginModalForm" {% else %} class="bookmark"  {% endif %}><i class="bi bi-bookmark"></i></a> 
+                            <a href="javascript:void(0)" rel="nofollow" data-url="" {% if is_guest %} data-bs-toggle="modal" data-bs-target="#loginModalForm" {% else %} class="bookmark"  {% endif %} data-url="/en/job/2119/bookmark"><i class="bi bi-bookmark"></i></a> 
                             <a href="#"><i class="bi bi-share-fill"></i></a>
                             {% endif %}
                             

@@ -1,6 +1,11 @@
 {% extends "layouts/application-base.html" %}
-{% block js %}
+{% block js %} 
+{{ f.module(['toggle']) }} 
+<script src="{{ f.js('nocallback-toggle.min.js') }}"></script>
+<script>var exports = {"__esModule": true};</script>
+<script src="{{ f.js('boot-pop-1.0.min.js') }}"></script>
 <script src="{{ f.js('job.min.js') }}"></script>
+<script src="{{ f.js('application.saved.min.js') }}"></script>
 {% endblock %}
 {% block page %}
 <div class="tab-content" id="applicationTabContent">

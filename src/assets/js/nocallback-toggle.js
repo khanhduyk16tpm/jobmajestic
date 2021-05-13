@@ -8,11 +8,9 @@
  * @copyright 2020 Web Discovery Solutions
  *
  */
-
-
 ;(function (root, factory) {
     // Set the plugin name
-    const pluginName = 'Toggle';
+    const pluginName = 'NoCallbackToggle';
 
     if (typeof exports === 'object') {
         module.exports = factory();
@@ -37,7 +35,7 @@
         }, // handler when the button is OFF mode
         onWait: (element) => {
         }, // handler when the button is WAITING mode
-        callback: (element) => {
+        success: (element) => {
             return true;
         } // handler for determine ON mode or OFF mode
     };
@@ -69,7 +67,13 @@
         if (!nClass.contains(o.disabledClass) && !nClass.contains(o.waitingClass)) {
             nClass.add(o.waitingClass);
             o.onWait(a);
-            o.callback(a); 
+            if (o.success(a)) {
+                if (nClass.contains(o.onClass)) {
+                    offMode(a, o);
+                } else {
+                    onMode(a, o);
+                }
+            }
         }
     };
 
@@ -94,7 +98,7 @@
         el.classList.remove(o.onClass, o.waitingClass);
         o.onOff(el);
     };
-    
+
     /**
      * Public variables and methods.
      * @type {object}
@@ -129,7 +133,7 @@
         triggerOff: function (el) {
             offMode(el, this.options);
         },
-        
+
         /**
          * Disable the button element
          *

@@ -22,7 +22,7 @@
                     <button class="form-control btn btn-secondary"><i class="bi bi-geo"></i></i> VIEW LOCATION</button>
                 </div>
                 <div class="col-lg-3 col-6 d-none d-lg-block nav-item">
-                    <button class="form-control btn btn-secondary yellow-button" {%if is_guest == false %} data-bs-toggle="modal" data-bs-target="#apply-modal" id="apply-modal-btn" {% else %} data-bs-toggle="modal" data-bs-target="#loginModalForm" {%endif%}>APPLY NOW</button>
+                    <button class="form-control btn btn-secondary yellow-button apply-modal-btn" {%if is_guest == false %} data-bs-toggle="modal" data-bs-target="#apply-modal" {% else %} data-bs-toggle="modal" data-bs-target="#loginModalForm" {%endif%}>APPLY NOW</button>
                 </div>
             </div>
             
@@ -54,7 +54,7 @@
                     <img class="img-fluid" src="{{f.jobs_search_img('adv-banner-3.png')}}">
                     <img class="img-fluid" src="{{f.jobs_search_img('adv-banner-2.png')}}">
                 </div>
-                <button class="form-control btn btn-secondary yellow-button d-lg-none mt-3" {%if is_guest == false %} data-bs-toggle="modal" data-bs-target="#apply-modal" id="apply-modal-btn" {% else %} data-bs-toggle="modal" data-bs-target="#loginModalForm" {%endif%}>>APPLY NOW</button>
+                <button class="form-control btn btn-secondary yellow-button d-lg-none mt-3 apply-modal-btn" {%if is_guest == false %} data-bs-toggle="modal" data-bs-target="#apply-modal" {% else %} data-bs-toggle="modal" data-bs-target="#loginModalForm" {%endif%}>APPLY NOW</button>
             </div>
 
         </div>

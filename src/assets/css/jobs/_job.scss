@@ -40,6 +40,9 @@
           border-radius: 0px;
           border: none;
           color: $textGrayColor;
+           @include media-breakpoint-down(lg)  {
+            margin-bottom: 15px;
+            }
         }
         @include media-breakpoint-down(lg)  {
             padding: 10px;
@@ -48,9 +51,6 @@
             font-family:Arial, FontAwesome;
             border-radius: 0px;
             border: none;
-            @include media-breakpoint-down(lg)  {
-                margin-top: 10px;
-            }
         }
         button{
             height: 100px;

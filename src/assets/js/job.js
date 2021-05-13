@@ -1,51 +1,71 @@
-function toggleMoreLess(moreId, toggleBtn) {
-  var moreText = document.getElementById(moreId);
-  var aText = document.getElementById(toggleBtn);
 
-  if (moreText.style.display === "inline") {
-    aText.innerHTML = '<i class="fa fa-chevron-down" aria-hidden="true"></i> More';
-    moreText.style.display = "none";
-  } else {
-    aText.innerHTML = '<i class="fa fa-chevron-up" aria-hidden="true"></i> Less';
-    moreText.style.display = "inline";
-  }
-}
+// var hideSavedJob = new NoCallbackToggle(".delete-saved-job",{
+//     onOn: function(n) {
+//       var jobCard = document.getElementById("job-card-" + n.getAttribute('data-card-id'));
+//       jobCard.classList.add("d-none");
+//     },
+//     callback: function(a) {
+//         $.ajax({
+//             type: "get",
+//             url: a.dataset.url,
+//             contentType: "application/json",
+//             dataType: "json",
+//             success: function(o) {
+//                 "success" == o.status && ("add" == o.action || "delete" == o.action && bookmark.triggerOff(a))
+//             }
+//         })
+//     }
+// });
 
-
-
-function filterToggle() {
-  const el = document.querySelector('.job-filter-side-bar');
-  if (el.classList.contains("d-none")) {
-    el.classList.remove("d-none");
-  }else{
-  	el.classList.add("d-none");
-  }
-}
-
-function hideSavedJob(id){
-  var jobCardEl = document.getElementById("job-card-"+id);
-  jobCardEl.classList.add("d-none");
-}
-
-function clearCheckbox(checkboxListClass){
-  var checkboxs = document.getElementsByClassName(checkboxListClass);
-  for (var i = 0; i < checkboxs.length; i++) {
-   checkboxs.item(i).checked = false;
-  } 
-}
-
-
-var bookmark = new Toggle(".bookmark",{
+var clearCheckbox = new NoCallbackToggle(".clear-all",{
     onOn: function(n) {
-        n.innerHTML = '<i class="bi bi-bookmark-check-fill"></i>'
+      var checkboxs = document.getElementsByClassName(n.getAttribute('data-chk-class'));
+      for (var i = 0; i < checkboxs.length; i++) {
+       checkboxs.item(i).checked = false;
+      }
+    }
+});
+
+var filterToggle = new NoCallbackToggle("#filter-by-btn",{
+    onOn: function(n) {
+      const el = document.querySelector('.job-filter-side-bar');
+      el.classList.remove("d-none");
     },
     onOff: function(n) {
-        n.innerHTML = '<i class="bi bi-bookmark"></i>'
+      const el = document.querySelector('.job-filter-side-bar');
+      el.classList.add("d-none");
     },
     success: function() {
         return !0
     }
-}),bookmarkJobDescription = new Toggle(".bookmark-job-description",{
+});
+
+var toggleMoreLess = new NoCallbackToggle(".show-more",{
+    onOn: function(n) {
+      var listCheckbox = document.getElementById(n.getAttribute('data-id'));
+      var moreLessBtn = document.getElementById(n.getAttribute('data-button-id'));
+      moreLessBtn.innerHTML = '<i class="bi bi-chevron-up"></i> Less';
+      listCheckbox.style.display = "inline";
+    },
+    onOff: function(n) {
+        var listCheckbox = document.getElementById(n.getAttribute('data-id'));
+        var moreLessBtn = document.getElementById(n.getAttribute('data-button-id'));
+        moreLessBtn.innerHTML = '<i class="bi bi-chevron-down"></i> More';
+        listCheckbox.style.display = "none";
+    },
+    success: function() {
+        return !0
+    }
+});
+
+var bookmark = new NoCallbackToggle(".bookmark",{
+    onOn: function(a) {
+        a.innerHTML = '<i class="bi bi-bookmark-check-fill"></i>'
+    },
+    onOff: function(a) {
+        a.innerHTML = '<i class="bi bi-bookmark"></i>'
+    }
+}),bookmarkJobDescription = new NoCallbackToggle(".bookmark-job-description",{
     onOn: function(n) {
         n.innerHTML = '<i class="bi bi-bookmark-check-fill"></i> SAVED'
     },
@@ -55,27 +75,73 @@ var bookmark = new Toggle(".bookmark",{
     success: function() {
         return !0
     }
-}), applied = new Toggle(".apply-job-btn",{
-    onOn: function(n) {
-        n.innerHTML = '<i class="bi bi-envelope-fill"></i> Applied'
+}), apply = new Toggle(".apply",{
+    onOn: function(a) {
+        a.innerHTML   = '<i class="bi bi-envelope-fill"></i> Applied'
+        apply.disable(a)
     },
-    onOff: function(n) {
-        n.innerHTML = 'Apply Now'
+    onOff: function(a) {
+        a.innerHTML = 'Apply Now'
     },
-    success: function() {
-        return !0
+    onWait: function(a) {
+        a.innerHTML = '<i class="bi bi-arrow-clockwise"></i>'
+    },
+    callback: function(a) {
+        BootPop.show({
+            title: "Apply",
+            message: "You are about to apply for the job " + "<b>".concat(a.dataset.job, "</b> from ") + "<b>".concat(a.dataset.company, "</b>, click ") + "<b>'Yes'</b> to proceed.",
+            size: BootPop.SIZE.MEDIUM,
+            buttons: {
+                confirm: {
+                    label: "Yes",
+                    className: "btn-primary col-2",
+                    callback: function() {
+                        // $.ajax({
+                        //     type: "get",
+                        //     url: a.dataset.url,
+                        //     contentType: "application/json",
+                        //     dataType: "json",
+                        //     success: function(n) {
+                        //         "success" == n.status && ("add" == n.action ? apply.triggerOn(a) : "delete" == n.action && apply.triggerOff(a))
+                        //     }
+                        // })
+                        apply.triggerOn(a)
+                    }
+                },
+                cancel: {
+                    label: "No",
+                    className: "btn-primary bg-danger col-2",
+                    callback: function() {
+                        apply.triggerOff(a)
+                    }
+                }
+            }
+        })
     }
 }), appliedModal = new Toggle(".apply-job-modal-btn",{
     onOn: function(n) {
         n.innerHTML = '<i class="bi bi-envelope-fill"></i> Applied'
-        document.getElementById("apply-modal-btn").innerHTML = '<i class="bi bi-envelope-fill"></i> APPLIED'
+        var applyBtns = document.getElementsByClassName("apply-modal-btn")
+        for (var i = 0; i < applyBtns.length; i++) {
+          applyBtns.item(i).innerHTML = '<i class="bi bi-envelope-fill"></i> APPLIED'
+          applyBtns.item(i).classList.add("disabled");
+        }
+        
     },
-    onOff: function(n) {
-        n.innerHTML = 'Apply Now'
-        document.getElementById("apply-modal-btn").innerHTML = 'APPLY NOW'
+    onWait: function(a) {
+        a.innerHTML = '<i class="bi bi-arrow-clockwise"></i>'
     },
-    success: function() {
-        return !0
+    callback: function(a) {
+        // $.ajax({
+        //     type: "get",
+        //     url: a.dataset.url,
+        //     contentType: "application/json",
+        //     dataType: "json",
+        //     success: function(n) {
+        //         "success" == n.status && ("add" == n.action ? apply.triggerOn(a) : "delete" == n.action && apply.triggerOff(a))
+        //     }
+        // })
+        appliedModal.triggerOn(a)
     }
 })
 
