@@ -1,314 +1,322 @@
 {% import 'macros/path.html' as f %}
 
-<div class="row resume-block">
-   <form id='experience'>
-    <div class="row row-experience">
-        {% for exp in experiences %}
-        <div class="col-lg-3 col-md-12 col-sm-12 experience-title" id ='experience'>
-                {% if loop.index == 1 %}
-                <div class="exp">Experience
-                    <div class="edit-mobile"><button type="button" class="btn-edit" id="btn-edit-experience-mobile" onclick="editExp(event, 'mobile')">Edit</button></div>
-                </div>
-                {% endif %}
-                <div class="time-duration">
-                    <span class="show-experience">{{ exp.from ~' - ' ~ exp.to }}</span>
-                    <span class="edit-experience d-none"><input type="text" value="{{ exp.from}}"> - </span><span class="edit-experience d-none"><input type="text" value="{{ exp.to }}"></span>
-                </div>
-                <div class="duration">
-                    <span class="show-experience">{{ exp.duration }}</span>
-                    <span class="edit-experience d-none"><input type="text" value="{{ exp.duration }}"></span>
-                </div>
-        </div>
-        <div class="col-lg-9 col-md-12 col-sm-12 experience-content">
-                <div class="row job-title">
-                    <div class="col-lg-12">
-                        <div class="show-experience">{{ exp.job_title }}</div>
-                        <div class="edit-experience d-none"><input type="text" value="{{ exp.job_title }}"></div>
-                    </div>
-                </div>
-                <div class="row job-location">
-                    <div class="col-lg-12">
-                        <span class="show-experience">{{ exp.company_name }}</span> 
-                        <span class="edit-experience d-none"><input type="text" value="{{ exp.company_name }}"></span>
-                        | 
-                        <span class="show-experience">{{ exp.location }}</span>
-                        <span class="edit-experience d-none"><input type="text" value="{{ exp.location }}"></span>
-                    </div>
-                </div>
-                <div class="row mt-2 job-field">
-                    <div class="col-lg-3">
-                        Industry
-                    </div>
-                    <div class="col-lg-9 font-w-bold">
-                        <span class="show-experience">{{ exp.industry }}</span>
-                        <span class="edit-experience d-none"><input type="text" value="{{ exp.industry }}"></span>
-                    </div>
-                </div>
-                <div class="row specialization">
-                    <div class="col-lg-3">
-                        Specialization
-                    </div>
-                    <div class="col-lg-9 font-w-bold">
-                        <span class="show-experience">{{ exp.specialization }}</span>
-                        <span class="edit-experience d-none"><input type="text" value="{{ exp.specialization }}"></span>
-                    </div>
-                </div>
-                <div class="row role">
-                    <div class="col-lg-3">
-                        Role
-                    </div>
-                    <div class="col-lg-9 font-w-bold">
-                        <span class="show-experience">{{ exp.role }}</span>
-                        <span class="edit-experience d-none"><input type="text" value="{{ exp.role }}"></span>
-                    </div>
-                </div>
-                <div class="row position-level">
-                    <div class="col-lg-3">
-                        Position Level
-                    </div>
-                    <div class="col-lg-9 font-w-bold">
-                        <span class="show-experience">{{ exp.level }}</span>
-                        <span class="edit-experience d-none"><input type="text" value="{{ exp.level }}"></span>
-                    </div>
-                </div>
-                <div class="row salary">
-                    <div class="col-lg-3">
-                        Monthly Salary
-                    </div>
-                    <div class="col-lg-9 font-w-bold">
-                        <span class="show-experience">{{ exp.salary }}</span>
-                        <span class="edit-experience d-none"><input type="text" value="{{ exp.salary }}"></span>
-                    </div>                    
-                </div>
-                <div class="row mt-3 description">
-                    <div class="col-lg-12">
-                        <span class="show-experience">{{ exp.description }}</span>
-                        <span class="edit-experience d-none"><textarea>{{ exp.description }}</textarea></span>
-                    </div>
-                </div>
-        </div>
-        {% endfor %}
-        <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-experience" onclick="editExp(event)">Edit</button></div>
-    </div>
-   </form>
-   <form id="education">
-    <div class="row mt-5 row-education">
-        <div class="col-lg-3 col-md-12 col-sm-12" id ='education'>
-            <div class="edu-title">
-                 Education
+<div class="row resume-overview py-lg-3 px-lg-3 py-2 px-2">
+    <form method="post">
+        <div class="row mb-4">
+            <div class="col-9">
+                <h3>Experience</h3>
             </div>
-            <div class="edit-mobile"><button type="button" class="btn-edit" id="btn-edit-education-mobile" onclick="editEducation(event, 'mobile')">Edit</button></div>
-        </div>
-        <div class="col-lg-9 col-md-12 col-sm-12">
-                
-        </div>
-        {% for row in educations %}
-        <div class="col-lg-3 col-md-12 col-sm-12 education {% if loop.index > 1 %}education-top {% endif %}" >
-                <div class="time-duration">
-                    <span class="show-education">{{ row.from ~' - '~row.to }}</span>
-                    <span class="edit-education d-none"><input type="text" value="{{ row.from}}"> - </span><span class="edit-education d-none"><input type="text" value="{{ row.to }}"></span>
-                </div>
-                <div class="duration">
-                    <span class="show-education">{{ row.duration }}</span>
-                    <span class="edit-education d-none"><input type="text" value="{{ row.duration }}"></span>
-                </div>
-        </div>
-        <div class="col-lg-9 col-md-12 col-sm-12  education-main {% if loop.index > 1 %}education-top {% endif %}">
-                <div class="row course">
-                    <div class="col-lg-12 font-w-bold">
-                        <span class="show-education">{{ row.course_name }}</span>
-                        <span class="edit-education d-none"><input type="text" value="{{ row.course_name }}"></span>
-                    </div>
-                </div>
-                <div class="row college">
-                    <div class="col-lg-12 font-w-bold">
-                        <span class="show-education">{{ row.college }} | {{ row.location }}</span>
-                        <span class="edit-education d-none"><input type="text" value="{{ row.college }}"> | </span>
-                        <span class="edit-education d-none"><input type="text" value="{{ row.location }}"></span>
-                    </div>
-                </div>
-                {% for key, val in row.details %}
-                <div class="row item {% if loop.index == 1%}first{% endif %}">
-                    <div class="col-lg-2">
-                    {{ key }}
-                    </div>
-                    <div class="col-lg-9 font-w-bold">
-                        <span class="show-education">{{ val }}</span>
-                        <span class="edit-education d-none"><input type="text" value="{{ val }}"></span>
-                    </div>
-                </div>
-                {% endfor %}
-        </div>
-        <div class="col-lg-3 col-md-12"></div>
-        <div class="col-lg-9 col-md-12 mt-3 description">
-            <span class="show-education">Description lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam, tortor pharetra cursus efficitur, leo ex egestas dui, id mattis magna dolor porttitor eros. In a facilisis ante.</span>
-            <span class="edit-education d-none"><textarea>Description lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam, tortor pharetra cursus efficitur, leo ex egestas dui, id mattis magna dolor porttitor eros. In a facilisis ante.</textarea></span>
-        </div>
-        {% endfor %}
-        <div class="col-lg-12 edit"><button type = "button" class="btn-edit" id="btn-edit-education" onclick="editEducation(event)">Edit</button></div>
-    </div>
-   </form>
-   <form id="skills">
-    <div class="row mt-5 row-skills">
-        <div class="col-lg-3 col-md-12 col-sm-12" id ='skills'>
-            <div class="skill-title">Skills</div>
-            <div class="edit-mobile"><button type="button" class="btn-edit" id="btn-edit-skill-mobile" onclick="editSkill(event, 'mobile')">Edit</button></div>
-        </div>
-        <div class="col-lg-9 col-md-12 col-sm-12">
-                
-        </div>
-        {% for item in skillLists %}
-        <div class="col-lg-3 col-md-12 col-sm-12" >
-                <div class="skill-level">{{ item.level }}</div>
-        </div>
-        <div class="col-lg-9 col-md-12 col-sm-12">
-                <div class="skill-list">
-                    <span class="show-skill">
-                        {% for skill in item.skills %}
-                            {{ skill }}{% if not loop.last %},{% endif %}
-                        {% endfor %}
-                    </span>
-                    <span class="edit-skill d-none"><input type="text" value="Skill 1, Skill 2, Skill 3"></span>
-                </div>
-                <div class="skill-list-mobile">
-                    <span class="show-skill">
-                        {% for skill in item.skills %}
-                            <p>{{ skill }}</p>
-                        {% endfor %}
-                    </span>
-                    <span class="edit-skill d-none">
-                        {% for skill in item.skills %}
-                            <input type="text" value="{{ skill }}">
-                        {% endfor %}
-                    </span>
-                </div>
-        </div>
-        {% endfor %}
-        <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-skill" onclick="editSkill(event)">Edit</button></div>
-    </div>
-   </form>
-   <form id="languages">
-    <div class="row mt-5 row-languages-mobile">
-        <div class="col-lg-3 col-md-12 title">
-            Languages
-            <p>Proficiency level: 0 - Poor, 10 - Excellent</p>
-            <div class="edit-mobile"><button type="button" class="btn-edit" id="btn-edit-score-mobile" onclick="editScore(event, 'mobile')">Edit</button></div>
-        </div>
-        <div class="col-lg-9 col-md-12">
-
-        </div>
-        {% for lang in languages %}
-        <div class="row {% if loop.index > 1 %}mt-3{% endif %}">
-            <div class="col-lg-12 col-md-12 name">
-                <span class="show-score">{{ lang }}</span>
-                <span class="edit-score d-none"><input type="text" value="{{ lang }}"></span>
+            <div class="col-3">
+                <button type="button" class="grey-text float-end edit-btn" data-input-class="input-experience" data-text-class = "text-experience">Edit</button>
+                <button type="button" class="grey-text float-end d-none save-btn" data-input-class="input-experience" data-text-class = "text-experience">Save</button>
             </div>
         </div>
         <div class="row">
-            <div class="col-3 score">Spoken</div>
+            <div class="col-lg-4">
+                <h4 id="duration" class="text-experience">MM/YY - MM/YY</h4>
+                <input type="text" class="form-control d-none input-experience" maxlength="50" id="experience-duration" required="" name="employments[experience-duration]" value="MM/YY - MM/YY" data-text-id = "duration">
+                <p class="grey-text">Duration</p>
+
+            </div>
+            <div class="col-lg-8">
+                <h4 id="job-title" class="text-experience">Job Title</h4>
+                <input type="text" class="form-control d-none input-experience" maxlength="50" required="" name="employments[experience-duration]" value="Job Title" data-text-id = "job-title">
+                <h4 id="company-name" class="text-experience">Company Name | Location</h4>
+                <input type="text" class="form-control d-none input-experience" maxlength="50" required="" name="employments[company-name]" value="Company Name | Location" data-text-id = "company-name">
+                <div class="row">
+                    <div class="col-lg-3 col-4">
+                        <p class="grey-text">Industry</p>
+                    </div>
+                    <div class="col-lg-9 col-8">
+                        <p id="industry" class="text-experience">Advertising / Marketing / Promotion /PR</p>
+                        <input type="text" class="form-control d-none input-experience" maxlength="50" required="" name="employments[industry]" value="Advertising / Marketing / Promotion /PR" data-text-id = "industry">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-4">
+                        <p class="grey-text">Specialization</p>
+                    </div>
+                    <div class="col-lg-9 col-8">
+                        <p id="specialization" class="text-experience">Advertising / Media Planning</p>
+                        <input type="text" class="form-control d-none input-experience" maxlength="50" required="" name="employments[specialization]" value="Advertising / Media Planning" data-text-id = "specialization">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-4">
+                        <p class="grey-text">Role</p>
+                    </div>
+                    <div class="col-lg-9 col-8">
+                        <p id="role" class="text-experience">Creative</p>
+                        <input type="text" class="form-control d-none input-experience" maxlength="50" required="" name="employments[role]" value="Creative" data-text-id = "role">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-4">
+                        <p class="grey-text">Position Level</p>
+                    </div>
+                    <div class="col-lg-9 col-8">
+                        <p id="position-level" class="text-experience">Manager</p>
+                        <input type="text" class="form-control d-none input-experience" maxlength="50" required="" name="employments[position-level]" value="Manager" data-text-id = "position-level">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-4">
+                        <p class="grey-text">Monthly Salary</p>
+                    </div>
+                    <div class="col-lg-9 col-8">
+                        <p id="monthly-salary" class="text-experience">MYR 1,000</p>
+                        <input type="text" class="form-control d-none input-experience" maxlength="50" required="" name="employments[monthly-salary]" value="MYR 1,000" data-text-id = "monthly-salary">
+                    </div>
+                </div>
+                <p id="experience-description" class="text-experience">Job Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur urna viverra odio viverra ultrices. Aenean eu eros sollicitudin, tristique tortor vel, ultricies augue. Nunc pharetra ullamcorper tristique. Morbi id tempor orci. In suscipit purus ac velit eleifend consectetur. Proin quam odio, volutpat non dolor ac, sagittis mattis nunc. In hac habitasse platea dictumst. Aliquam erat volutpat. Nam tempus lectus sit amet turpis lobortis semper. Vestibulum a dolor mi. Nam vel placerat nisl.</p>
+                <textarea rows="6" cols="50" class="form-control d-none input-experience" required="" name="employments[xperience-description]" data-text-id = "experience-description">Job Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur urna viverra odio viverra ultrices. Aenean eu eros sollicitudin, tristique tortor vel, ultricies augue. Nunc pharetra ullamcorper tristique. Morbi id tempor orci. In suscipit purus ac velit eleifend consectetur. Proin quam odio, volutpat non dolor ac, sagittis mattis nunc. In hac habitasse platea dictumst. Aliquam erat volutpat. Nam tempus lectus sit amet turpis lobortis semper. Vestibulum a dolor mi. Nam vel placerat nisl.
+                </textarea>
+            </div>
+        </div>
+
+        <div class="row mb-4 mt-4">
+            <div class="col-9">
+                <h3>Education</h3>
+            </div>
             <div class="col-3">
-                <span class="show-score">10</span>
-                <span class="edit-score d-none"><input type="number" min=0 max=10 step=1></span>
+                <button type="button" class="grey-text float-end edit-btn" data-input-class="input-education" data-text-class = "text-education">Edit</button>
+                <button type="button" class="grey-text float-end d-none save-btn" data-input-class="input-education" data-text-class = "text-education">Save</button>
             </div>
         </div>
         <div class="row">
-            <div class="col-3 score">Written</div>
-            <div class="col-3">
-                <span class="show-score">10</span>
-                <span class="edit-score d-none"><input type="number" min=0 max=10 step=1></span>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-    <div class="row mt-5 row-languages">
-        <div class="col-lg-3 col-md-12">
-            <div class="language">Languages</div>
-            <p class="proficiency">Proficiency level: 0 - Poor, 10 - Excellent</p>
-        </div>
-        <div class="col-lg-9 col-md-12">
+            <div class="col-lg-4">
+                <h4 id="duration" class="text-education">MM/YY - MM/YY</h4>
+                <input type="text" class="form-control d-none input-education" maxlength="50" id="education-duration" required="" name="employments[education-duration]" value="MM/YY - MM/YY" data-text-id = "duration">
+                <p class="grey-text">Duration</p>
 
-        </div>
-        <div class="col-lg-3 col-md-12">
-
-        </div>
-        <div class="col-lg-9 col-md-12">
-            <div class="row">
-                <div class="col-lg-2 col-md-12">Spoken</div>
-                <div class="col-lg-2 col-md-12">Written</div>
             </div>
-        </div>
-        {% for lang in languages %}
-        <div class="col-lg-3 col-md-12">
-            <div class="lang-name">
-                <span class="show-score">{{ lang }}</span>
-                <span class="edit-score d-none"><input type="text" value="{{ lang }}"></span>
-            </div>
-        </div>
-        <div class="col-lg-9 col-md-12">
-            <div class="row">
-                <div class="col-lg-2 col-md-12">
-                    <span class="show-score">10</span>
-                    <span class="edit-score d-none"><input type="number" min=0 max=10 step=1></span>
+            <div class="col-lg-8">
+                <h4 id="course-name" class="text-education">Education Course Name</h4>
+                <input type="text" class="form-control d-none input-education" maxlength="50" required="" name="employments[education-course-name]" value="JEducation Course Name" data-text-id = "course-name">
+                <h4 id="university" class="text-education">University/College/School | Location</h4>
+                <input type="text" class="form-control d-none input-education" maxlength="50" required="" name="employments[university]" value="University/College/School | Location" data-text-id = "university">
+                <div class="row">
+                    <div class="col-lg-3 col-4">
+                        <p class="grey-text">Item 1</p>
                     </div>
-                <div class="col-lg-2 col-md-12">
-                    <span class="show-score">10</span>
-                    <span class="edit-score d-none"><input type="number" min=0 max=10 step=1></span>
+                    <div class="col-lg-9 col-8">
+                        <p id="item-1" class="text-education">Information</p>
+                        <input type="text" class="form-control d-none input-education" maxlength="50" required="" name="employments[item-1]" value="Information" data-text-id = "item-1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-4">
+                        <p class="grey-text">Item 2</p>
+                    </div>
+                    <div class="col-lg-9 col-8">
+                        <p id="item-2" class="text-education">Information</p>
+                        <input type="text" class="form-control d-none input-education" maxlength="50" required="" name="employments[item-2]" value="Information" data-text-id = "item-2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-4">
+                        <p class="grey-text">Item 3</p>
+                    </div>
+                    <div class="col-lg-9 col-8">
+                        <p id="item-3" class="text-education">Information</p>
+                        <input type="text" class="form-control d-none input-education" maxlength="50" required="" name="employments[item-3]" value="Information" data-text-id = "item-3">
+                    </div>
+                </div>
+                <p id="education-description" class="text-education">Description lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam, tortor pharetra cursus efficitur, leo ex egestas dui, id mattis magna dolor porttitor eros. In a facilisis ante.</p>
+                <textarea rows="6" cols="50" class="form-control d-none input-education" required="" name="employments[xperience-description]" data-text-id = "education-description">Description lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam, tortor pharetra cursus efficitur, leo ex egestas dui, id mattis magna dolor porttitor eros. In a facilisis ante.
+                </textarea>
+            </div>
+        </div>
+
+        <div class="row mb-4 mt-4">
+            <div class="col-9">
+                <h3>Skills</h3>
+            </div>
+            <div class="col-3">
+                <button type="button" class="grey-text float-end edit-btn" data-input-class="input-skill" data-text-class = "text-skill">Edit</button>
+                <button type="button" class="grey-text float-end d-none save-btn" data-input-class="input-skill" data-text-class = "text-skill">Save</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Advanced</p>
+            </div>
+            <div class="col-lg-8">
+                <p id="advanced" class="text-skill">Skill 1, Skill 2, Skill 3</p>
+                <input type="text" class="form-control d-none input-skill" maxlength="50" required="" name="employments[advanced]" value="Skill 1, Skill 2, Skill 3" data-text-id = "advanced">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Intermediate</p>
+            </div>
+            <div class="col-lg-8">
+                <p id="intermediate" class="text-skill">Skill 1, Skill 2, Skill 3</p>
+                <input type="text" class="form-control d-none input-skill" maxlength="50" required="" name="employments[intermediate]" value="Skill 1, Skill 2, Skill 3" data-text-id = "intermediate">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Basic</p>
+            </div>
+            <div class="col-lg-8">
+                <p id="basic" class="text-skill">Skill 1, Skill 2, Skill 3</p>
+                <input type="text" class="form-control d-none input-skill" maxlength="50" required="" name="employments[basic]" value="Skill 1, Skill 2, Skill 3" data-text-id = "basic">
+            </div>
+        </div>
+
+        <div class="row mb-4 mt-4">
+            <div class="col-9">
+                <h3>Languages</h3>
+                <p class="grey-text">Proficiency level: 0 - Poor, 10 - Excellent</p>
+            </div>
+            <div class="col-3">
+                <button type="button" class="grey-text float-end edit-btn" data-input-class="input-language" data-text-class = "text-language">Edit</button>
+                <button type="button" class="grey-text float-end d-none save-btn" data-input-class="input-language" data-text-class = "text-language">Save</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-3 col-lg-2">
+                        <p>Spoken</p>
+                    </div>
+                    <div class="col-3 col-lg-2">
+                        <p>Written</p>
+                    </div>
                 </div>
             </div>
         </div>
-        {% endfor %}
-
-        <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-score" onclick="editScore(event)">Edit</button></div>
-    </div>
-   </form>
-   <form id="extra-info">
-    <div class="row mt-5 row-extra-info">
-        <div class="col-lg-3 col-md-12">
-            <div class="title">Additional Info</div>
-            <div class="edit-mobile"><button type="button" class="btn-edit" id="btn-edit-extra-mobile" onclick="editExtraInfo(event, 'mobile')">Edit</button></div>
-        </div>
-        <div class="col-lg-9 col-md-12">
-
-        </div>
-        {% for item in extraInfo %}
-        <div class="col-lg-3 col-md-12">
-                <div class="item">{{ item.title }}</div>
-        </div>
-        <div class="col-lg-9 col-md-12">
-                <div class="info">
-                <span class="show-extra">{{ item.content }}</span>
-                <span class="edit-extra d-none"><input type="text" value="{{ item.content }}"></span>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Bahasa Malaysia (Primary)</p>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-3 col-lg-2">
+                        <p id="language-bahasa-spoken" class="text-language">10</p>
+                        <input type="number" class="form-control d-none input-language" maxlength="50" required="" name="employments[language-bahasa-spoken]" value="10" data-text-id = "language-bahasa-spoken">
+                    </div>
+                    <div class="col-3 col-lg-2">
+                        <p id="language-bahasa-written" class="text-language">10</p>
+                        <input type="number" class="form-control d-none input-language" maxlength="50" required="" name="employments[language-bahasa-written]" value="10" data-text-id = "language-bahasa-written">
+                    </div>
                 </div>
+                
+            </div>
         </div>
-        {% endfor %}
-        <div class="col-lg-12 edit"><button type="button" class="btn-edit" id="btn-edit-extra" onclick="editExtraInfo(event)">Edit</button></div>
-    </div>
-   </form>
-   <div class="row mt-5 mb-5 row-about">
-       <div class="col-lg-3 col-md-12">
-            <div class="title">About me</div>
-       </div>
-       <div class="col-lg-9 col-md-12">
+        <div class="row">
+            <div class="col-lg-4">
+                <p>English</p>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-3 col-lg-2">
+                        <p id="language-english-spoken" class="text-language">10</p>
+                        <input type="number" class="form-control d-none input-language" maxlength="50" required="" name="employments[language-english-spoken]" value="10" data-text-id = "language-english-spoken">
+                    </div>
+                    <div class="col-3 col-lg-2">
+                        <p id="language-english-written" class="text-language">10</p>
+                        <input type="number" class="form-control d-none input-language" maxlength="50" required="" name="employments[language-english-written]" value="10" data-text-id = "language-english-written">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Chinese</p>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-3 col-lg-2">
+                        <p id="language-chinese-spoken" class="text-language">10</p>
+                        <input type="number" class="form-control d-none input-language" maxlength="50" required="" name="employments[language-chinese-spoken]" value="10" data-text-id = "language-chinese-spoken">
+                    </div>
+                    <div class="col-3 col-lg-2">
+                        <p id="language-chinese-written" class="text-language">10</p>
+                        <input type="number" class="form-control d-none input-language" maxlength="50" required="" name="employments[language-chinese-written]" value="10" data-text-id = "language-chinese-written">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
 
-       </div>
-       <div class="col-lg-3 col-md-12">
-            <div class="item">Address</div>
-       </div>
-       <div class="col-lg-9 col-md-12">
-            <div class="info">Information</div>
-       </div>
-       <div class="col-lg-3 col-md-12">
-            <div class="item">Nationality</div>
-       </div>
-       <div class="col-lg-9 col-md-12">
-            <div class="info">Information</div>
-       </div>
-       <div class="col-lg-3 col-md-12">
-            <div class="item">Item 3</div>
-       </div>
-       <div class="col-lg-9 col-md-12">
-            <div class="info">Information</div>
-       </div>
-   </div>
+        <div class="row mb-4 mt-4">
+            <div class="col-9">
+                <h3>Additional Info</h3>
+            </div>
+            <div class="col-3">
+                <button type="button" class="grey-text float-end edit-btn" data-input-class="input-additional-info" data-text-class = "text-additional-info">Edit</button>
+                <button type="button" class="grey-text float-end d-none save-btn" data-input-class="input-additional-info" data-text-class = "text-additional-info">Save</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Item 1</p>
+            </div>
+            <div class="col-lg-8">
+                <p id="additional-info-1" class="text-additional-info">Information</p>
+                <input type="text" class="form-control d-none input-additional-info" maxlength="50" required="" name="employments[additional-info-1]" value="Information" data-text-id = "additional-info-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Item 2</p>
+            </div>
+            <div class="col-lg-8">
+                <p id="additional-info-2" class="text-additional-info">Information</p>
+                <input type="text" class="form-control d-none input-additional-info" maxlength="50" required="" name="employments[additional-info-2]" value="Information" data-text-id = "additional-info-2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Item 3</p>
+            </div>
+            <div class="col-lg-8">
+                <p id="additional-info-3" class="text-additional-info">Information</p>
+                <input type="text" class="form-control d-none input-additional-info" maxlength="50" required="" name="employments[additional-info-3]" value="Information" data-text-id = "additional-info-3">
+            </div>
+        </div>
+
+         <div class="row mb-4 mt-4">
+            <div class="col-9">
+                <h3>About Me</h3>
+            </div>
+            <div class="col-3">
+                <button type="button" class="grey-text float-end edit-btn" data-input-class="input-about-me" data-text-class = "text-about-me">Edit</button>
+                <button type="button" class="grey-text float-end d-none save-btn" data-input-class="input-about-me" data-text-class = "text-about-me">Save</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Address</p>
+            </div>
+            <div class="col-lg-8">
+                <p id="address" class="text-about-me">Information</p>
+                <input type="text" class="form-control d-none input-about-me" maxlength="50" required="" name="employments[address]" value="Information" data-text-id = "address">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Nationality</p>
+            </div>
+            <div class="col-lg-8">
+                <p id="nationality" class="text-about-me">Information</p>
+                <input type="text" class="form-control d-none input-about-me" maxlength="50" required="" name="employments[nationality]" value="Information" data-text-id = "nationality">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Item 3</p>
+            </div>
+            <div class="col-lg-8">
+                <p id="about-me-3" class="text-about-me">Information</p>
+                <input type="text" class="form-control d-none input-about-me" maxlength="50" required="" name="employments[about-me-3]" value="Information" data-text-id = "about-me-3">
+            </div>
+        </div>
+    </form>
 </div>
-       
