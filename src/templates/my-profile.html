@@ -3,7 +3,7 @@
 {% set complete_percent = 62 %}
 {% block page %}
 <div class="row profile-middle-section">
-    <div class="col-lg-10 col-sm-12 col-md-12">
+    <div class="col-lg-12 col-sm-12 col-md-12">
         <div class="row">
             <div class="col-lg-6 col-sm-6 col-md-6 profile-item-container">
                 <div class="profile-box-list profile-view">
@@ -29,13 +29,9 @@
             {% include 'partials/_announcement_alert_section.html' %}
         </div>
     </div>
-   <div class="col-lg-2 d-none d-lg-block adv-imgs mt-2">
-        <img class="img-fluid" src="{{f.profile_img('banner-adv-1-2x.png')}}">
-        <img class="img-fluid" src="{{f.profile_img('banner-adv-2-2x.png')}}">
-   </div>
 </div>
 <div class="row mb-5">
-    <div class="col-lg-10 col-md-12 col-sm-12">
+    <div class="col-12">
         <div class="row package-text">Packages</div>
         <div class="row">
             {% for i in range(1,4)%}

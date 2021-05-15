@@ -82,7 +82,6 @@
 		padding-top: 10px;//40px
 	}
     .profile-middle-section {
-        margin-top: 1.5rem;
         @include media-breakpoint-down(lg)  {
             margin-top: 0;
          }
