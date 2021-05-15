@@ -1,0 +1,112 @@
+{% import 'macros/path.html' as f %}
+<div class="row setting-account py-3 px-2">
+    <form method="post">
+        <div class="row mb-4">
+            <h3>Display Info</h3>
+            <div class="col-lg-3 col-12">
+                <label for="userName">Username <span class="red">*</span></label>
+            </div>
+            <div class="col-lg-3 col-8">
+                <p class="text-username grey-text" id= "user-name">Jane Doe</p>
+                <input type="text" class="form-control d-none input-username" maxlength="50" id="userName" required="" name="profile[user-name]" value="Jane Doe" data-text-id = "user-name">
+            </div>
+            <div class="col-lg-6 col-4">
+                <button type="button" class="grey-text float-end edit-btn" data-input-class="input-username" data-text-class = "text-username">Edit</button>
+                <button type="button" class="grey-text float-end d-none save-btn" data-input-class="input-username" data-text-class = "text-username">Save</button>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <h3>Change password</h3>
+            <div class="col-lg-3 col-12">
+                <label for="password">Password <span class="red">*</span></label>
+            </div>
+            <div class="col-lg-3 col-8">
+                <input type="password" class="text-password grey-text" id= "password" value="********" disabled>
+                <input type="password" class="form-control input-password d-none" maxlength="20" id="oldPassword" name="old_password" required="" autofocus="" value="" data-text-id = "password">
+            </div>
+            <div class="col-lg-6 col-4">
+                <button type="button" class="grey-text float-end edit-btn" data-input-class="input-password" data-text-class = "text-password">Edit</button>
+                <button type="button" class="grey-text float-end d-none save-btn" data-input-class="input-password" data-text-class = "text-password">Save</button>
+            </div>
+     
+        </div>
+
+        <div class="row">
+            <h3>Contact Info</h3>
+            <div class="col-lg-3 col-12">
+                <label for="email">Email <span class="red">*</span></label>
+            </div>
+            <div class="col-lg-3 col-8">
+                <p class="text-email grey-text" id= "email">Janedoe123@gmail.com</p>
+                <input type="email" class="form-control d-none input-email" maxlength="50" id="userEmail" required="" name="profile[email]" value="Janedoe123@gmail.com" data-text-id = "email">
+            </div>
+            <div class="col-lg-6 col-4">
+                <button type="button" class="grey-text float-end edit-btn" data-input-class="input-email" data-text-class = "text-email">Edit</button>
+                <button type="button" class="grey-text float-end d-none save-btn" data-input-class="input-email" data-text-class = "text-email">Save</button>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-lg-3 col-12">
+                <label for="phone">Phone Number</label>
+            </div>
+            <div class="col-lg-3 col-8">
+                <p class="text-phone grey-text" id= "phone">012 345 6789</p>
+                <input type="text" class="form-control d-none input-phone" maxlength="50" id="mobileNumber" required="" name="profile[mobileNationalNumber_]" value="012 345 6789" data-text-id = "phone">
+            </div>
+            <div class="col-lg-6 col-4">
+                <button type="button" class="grey-text float-end edit-btn" data-input-class="input-phone" data-text-class = "text-phone">Edit</button>
+                <button type="button" class="grey-text float-end d-none save-btn" data-input-class="input-phone" data-text-class = "text-phone">Save</button>
+            </div>
+     
+        </div>
+
+        <div class="row">
+            <h3>Subscription</h3>
+            <div class="col-lg-3 col-12">
+                <label for="alert-email">Receive Job Alerts Email</label>
+            </div>
+            <div class="col-lg-3 col-8">
+                <p class="text-alert-email grey-text" id= "alert-email">Enable</p>
+                <select class="form-select d-none alert-email-select" data-text-id = "alert-email">
+                  <option value="Enable">Enable</option>
+                  <option value="Disable">Disable</option>
+                </select>
+            </div>
+            <div class="col-lg-6 col-4">
+                <button type="button" class="grey-text float-end edit-btn" data-input-class="alert-email-select" data-text-class = "text-alert-email">Edit</button>
+                <button type="button" class="grey-text float-end d-none save-btn" data-input-class="alert-email-select" data-text-class = "text-alert-email">Save</button>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-lg-3 col-12">
+                <label for="update-reminder">Receive Profile Update Reminder</label>
+            </div>
+            <div class="col-lg-3 col-8">
+                <p class="text-update-reminder grey-text" id= "update-reminder">Enable</p>
+                <select class="form-select d-none update-reminder-select" data-text-id = "update-reminder">
+                  <option value="Enable">Enable</option>
+                  <option value="Disable">Disable</option>
+                </select>
+            </div>
+            <div class="col-lg-6 col-4">
+                <button type="button" class="grey-text float-end edit-btn" data-input-class="update-reminder-select" data-text-class = "text-update-reminder">Edit</button>
+                <button type="button" class="grey-text float-end d-none save-btn" data-input-class="update-reminder-select" data-text-class = "text-update-reminder">Save</button>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-lg-3 col-12">
+                <label for="social">Social Account</label>
+            </div>
+            <div class="col-lg-3 col-8">
+                <button type="button">Unlink</button>
+                <div class="row">
+                    <span><i class="bi bi-facebook ms-1"></i><i class="bi bi-twitter ms-2"></i></span>
+                </div>
+            </div>
+            
+     
+        </div>
+    </form>
+</div>

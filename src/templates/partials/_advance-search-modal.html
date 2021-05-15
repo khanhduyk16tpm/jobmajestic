@@ -8,17 +8,34 @@
             <div class="row mt-4">
               <div class="col-lg-6 col-12">
                 <label for="job-search-input" class="form-label">Key Skills</label>
-                <input type="text" class="form-control" id="job-search-input" placeholder="&#xF002;  Job Keywords">
+                <div class="input-container"> 
+                  <div class="input-group"> 
+                    <div class="input-group-prepend"> 
+                      <div class="input-group-text border-radius-none border">
+                        <i class="bi bi-search"></i>
+                      </div> 
+                    </div> 
+                    <input type="text" class="form-control border border-radius-none" placeholder="Job title/ keywords" maxlength="80" name="title" value=""> 
+                  </div>
+                </div>
               </div>
               <div class="col-lg-6 col-12">
                 <label for="job-search-input" class="form-label">Location</label>
-                <input type="text" class="form-control" id="job-location-input" placeholder="&#xF041;  Location">
+                <div class="input-container" id="search-by-location">
+                  <div class="input-group"> 
+                    <div class="input-group-prepend"> 
+                      <div class="input-group-text border-radius-none border">
+                        <i class="bi bi-geo-alt-fill"></i>
+                      </div> 
+                    </div> 
+                  <input type="text" class="form-control border border-radius-none" placeholder="Location" maxlength="80" name="location" value=""> </div>
+                </div>
               </div>
             </div>
             <div class="row">
               <label class="form-label">Experience</label>
               <div class="col-lg-6 col-12">
-                <select class="form-select" aria-label="Years">
+                <select class="form-select border border-radius-none" aria-label="Years">
                   <option selected>Years</option>
                   {% for i in range(1,11) %}
                   <option value="{{i}}">{{i}}</option>
@@ -26,7 +43,7 @@
                 </select>
               </div>
               <div class="col-lg-6 col-12 month-select-wrapper">
-                <select class="form-select" aria-label="Months">
+                <select class="form-select border border-radius-none" aria-label="Months">
                   <option selected>Months</option>
                   {% for i in range(1,11) %}
                   <option value="{{i}}">{{i}}</option>
@@ -37,7 +54,7 @@
              <div class="row">
               <div class="col-lg-6 col-12">
                 <label for="job-search-input" class="form-label">Industry</label>
-                <select class="form-select" aria-label="Industry">
+                <select class="form-select border border-radius-none" aria-label="Industry">
                   <option selected>Industry</option>
                   <option value="1">Option 1</option>
                   <option value="2">Option 2</option>
@@ -46,7 +63,7 @@
               </div>
               <div class="col-lg-6 col-12">
                 <label for="job-search-input" class="form-label">Function</label>
-                <select class="form-select" aria-label="Function">
+                <select class="form-select border border-radius-none" aria-label="Function">
                   <option selected>Function</option>
                   <option value="1">Option 1</option>
                   <option value="2">Option 2</option>

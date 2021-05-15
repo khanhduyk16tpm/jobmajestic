@@ -4,8 +4,6 @@
     input,
     select {
         font-family: Arial, FontAwesome;
-        border: 1px solid #707070;
-        border-radius: 0px;
         color: $textGrayColor;
         font-size: 18px;
         @include media-breakpoint-down(lg) {
@@ -48,6 +46,12 @@
                 margin-bottom: 25px;
                 @include media-breakpoint-down(lg) {
                     margin-bottom: 15px;
+                }
+            }
+            i{
+                font-size: 18px;
+                @include media-breakpoint-down(lg) {
+                    font-size: 14px;
                 }
             }
         }

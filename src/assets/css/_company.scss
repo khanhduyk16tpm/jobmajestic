@@ -54,9 +54,6 @@
 			font-family:Arial, FontAwesome;
 			border-radius: 0px;
 			border: none;
-			@include media-breakpoint-down(lg)  {
-				margin-top: 10px;
-			}
 		}
 		select, button{
 			border-radius: 0px;

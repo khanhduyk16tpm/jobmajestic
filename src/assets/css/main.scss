@@ -13,6 +13,7 @@
 @import "about";
 @import "profile/profile";
 @import "profile/resume";
+@import "profile/resume_setting.scss";
 @import "auth/login";
 @import "auth/signup";
 @import "footer.scss";
@@ -38,6 +39,9 @@ body {
     }
     .grey-text{
         color: $textGrayColor;
+    }
+    .red{
+        color: #D5365B;
     }
     .alert {
         background-color: $alertColor;

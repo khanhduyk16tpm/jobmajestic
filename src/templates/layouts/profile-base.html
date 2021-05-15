@@ -28,9 +28,18 @@
             {% include 'partials/_resume-nav-tab.html' %}
         </div>
         {% endif %}
-        {% block page %}
+        <div class="row mt-3 resume-body">
+            <div class="col-lg-10 col-md-12 col-sm-12">
+                {% block page %}
 
-        {% endblock %}
+                {% endblock %}
+            </div>
+            <div class="col-lg-2 d-none d-lg-block">
+                <img class="img-fluid" src="{{f.jobs_search_img('adv-banner-3.png')}}">
+                <img class="img-fluid" src="{{f.jobs_search_img('adv-banner-2.png')}}">
+            </div>
+        </div>
+        
     </div>
 </div>
 {% endblock %}
